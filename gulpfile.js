@@ -25,7 +25,7 @@ gulp.task('reddify', function() {
     var replace = require('gulp-replace');
 
     return gulp.src(['subreddit.css'])
-        .pipe(replace('"crs-8.png"', '%%crs-8%%'))
+        .pipe(replace('"jcsat14.png"', '%%jcsat14%%'))
         .pipe(replace('"dragon.png"', '%%dragonNew%%'))
         .pipe(replace('"spacex.png"', '%%spacex%%'))
         .pipe(replace('"sprites.png"', '%%sprites%%'))
@@ -38,7 +38,7 @@ gulp.task('reddify', function() {
         .pipe(replace('"banner.png"', '%%banner%%'))
         .pipe(replace('"flairsprites.png"', '%%flair-sprites%%'))
         .pipe(replace('"mission-sprites.png"', '%%mission-sprites%%'))
-        .pipe(replace('"mission-sprites-2.png"', '%%mission-sprites2%%'))
+        .pipe(replace('"mission-sprites-2.png"', '%%mission-sprites-2%%'))
         .pipe(replace('"notificationsprites.png"', '%%notificationsprites%%'))
         .pipe(gulp.dest('build/'));
 });

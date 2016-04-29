@@ -57,6 +57,11 @@ body > .content {
                     color:lighten($lightslate, 15%);
                     font-weight:bold;
                     font-size:11px;
+
+                    .newComments {
+                        padding:0;
+                        color:orangered; // Default RES color
+                    }
                 }
             }
 
@@ -184,7 +189,7 @@ body, body.res-nightmode {
 
         &[href*="twitter"] {
             font-size:0;
-            &:before { content:"from Twitter"; }
+            &:before { content:"from twitter"; }
         }
 
         &[href*="nasa.gov"] {

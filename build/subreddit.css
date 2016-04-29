@@ -5,7 +5,7 @@
 .morelink a:active, body.res-nightmode .morelink a:active, .side .titlebox span.subscribe-button:active, .side .titlebox .subButtons span.RESshortcutside:active, .side .titlebox .subButtons span.RESDashboardToggle:active, button:active, .nextprev a:active, .next-suggestions a:active, #suggest-title button:active, div.spacer > button.btn:active { top: 1px; border-bottom: 2px solid #154a6b !important; }
 
 /* CHANGE THE MISSION PATCH HERE. YOU SHOULD ONLY NEED TO ADJUST THESE PARAMETERS */
-.side, body.res-nightmode .side { background-image: url(%%crs-8%%); /* Place a relevant mission patch here, speckle is the background image, don't change */ padding: 285px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: center -8px; background-size: 333px 296px; /* Scale the background size if needed */ }
+.side, body.res-nightmode .side { background-image: url(%%jcsat14%%); /* Place a relevant mission patch here, speckle is the background image, don't change */ padding: 315px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: 0 5px; background-size: 300px 316px; /* Scale the background size if needed */ }
 
 /* USE THE COMMENTED OUT STYLES BELOW TO PROVIDE A THUMBNAIL FOR A SUBMISSION */
 /* #thing_t3_{{id}} a.thumbnail { height: 70px; background: 0 0 url(%%image%%) no-repeat; background-size:70px 60px; }*/
@@ -133,11 +133,11 @@ div.linkinfo input#shortlink-text:focus { border: 2px solid #CCAC55 !important; 
 
 body.res-nightmode div.linkinfo { background-color: transparent !important; }
 
-body.listing-page div.side .spacer:first-child { margin: 5px 0; }
+body.listing-page.loggedin div.side .spacer:first-child { margin: 5px 0; }
 
-body.listing-page div.side .spacer:nth-child(2), body.listing-page div.side .spacer:nth-child(4), body.listing-page div.side .spacer:nth-child(5), body.listing-page div.side .spacer:nth-last-child(3) { margin: 0; padding: 0; }
+body.listing-page.loggedin div.side .spacer:nth-child(2), body.listing-page.loggedin div.side .spacer:nth-child(4), body.listing-page.loggedin div.side .spacer:nth-child(5), body.listing-page.loggedin div.side .spacer:nth-last-child(3) { margin: 0; padding: 0; }
 
-body.listing-page div.side .spacer:nth-child(3), body.listing-page div.side .spacer:nth-child(6), body.listing-page div.side .spacer:nth-last-child(2), body.listing-page div.side .spacer:last-child { display: none; }
+body.listing-page.loggedin div.side .spacer:nth-child(3), body.listing-page.loggedin div.side .spacer:nth-child(6), body.listing-page.loggedin div.side .spacer:nth-last-child(2), body.listing-page.loggedin div.side .spacer:last-child { display: none; }
 
 body.comments-page div.side .spacer:nth-child(3) { margin: 5px 0; }
 
@@ -318,11 +318,11 @@ div.bottom span.flair { display: none; }
 
 .side .titlebox .md h3:nth-of-type(4) a:before { content: ""; display: block; position: absolute; width: 50px; height: 50px; background-size: 200px 50px; background-image: url(%%notificationsprites%%); -webkit-transform: scale(0.8); transform: scale(0.8); overflow: hidden; top: 0; left: 0; }
 
-.side .titlebox .md h3:nth-of-type(4) a[title="Campaign"]:before { background-position: 50px 0; }
+.side .titlebox .md h3:nth-of-type(4) a[title="Campaign"]:before { background-position: -50px 0; }
 
-.side .titlebox .md h3:nth-of-type(4) a[title="Ask Anything"]:before { background-position: 150px 0; }
+.side .titlebox .md h3:nth-of-type(4) a[title="Ask Anything"]:before { background-position: -150px 0; }
 
-.side .titlebox .md h3:nth-of-type(4) a[title="Launch"]:before { background-position: 100px 0; }
+.side .titlebox .md h3:nth-of-type(4) a[title="Launch"]:before { background-position: -100px 0; }
 
 .side .titlebox .md h3:nth-of-type(4) a[title="Media"]:before { background-position: 0 0; }
 
@@ -369,6 +369,8 @@ body > .content { margin: 100px 340px 20px 0; background-color: #fafafa; }
 #siteTable .entry .flat-list.buttons li.first { margin: 0 10px 0 0; }
 
 #siteTable .entry .flat-list.buttons li.first a { color: #424e56; font-weight: bold; font-size: 11px; }
+
+#siteTable .entry .flat-list.buttons li.first a .newComments { padding: 0; color: orangered; }
 
 #siteTable .entry .flat-list.buttons li a, #siteTable .entry .flat-list.buttons li span { color: #849199; padding: 2px; }
 
@@ -499,6 +501,10 @@ textarea { border: 1px solid #849199; -webkit-transition: border 0.2s ease 0s; t
 
 textarea:focus { border: 1px solid #CCAC55; }
 
+.flat-list.buttons { color: #849199; }
+
+.flat-list.buttons .reply-button { color: #424e56; }
+
 body.submit-page, body.submit-page > .content { background-color: #374148 !important; }
 
 div.content > h1 { display: none; }
@@ -563,13 +569,13 @@ div.spacer > button.btn { width: 100%; padding: 10px 0 !important; font-size: 16
 
 .linkflairlabel { vertical-align: middle; height: 18px; line-height: 19px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: bold; padding: 0 8px 0 24px !important; border-radius: 2px; border: none; border-bottom: 3px solid #1a5980 !important; background-color: #2276AB !important; color: #fafafa !important; background-repeat: no-repeat; background-image: url(%%flair-sprites%%); background-size: 24px 85px; text-shadow: 0 0 #849199; position: relative; display: none; }
 
-.linkflair-liveupdates .linkflairlabel, .linkflair-official .linkflairlabel, .linkflair-communitycontent .linkflairlabel, .linkflair-directlink .linkflairlabel, .linkflair-warning .linkflairlabel, .linkflair-happeningnow .linkflairlabel, .linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel { display: inline-block; }
+.linkflair-liveupdates .linkflairlabel, .linkflair-official .linkflairlabel, .linkflair-community .linkflairlabel, .linkflair-directlink .linkflairlabel, .linkflair-warning .linkflairlabel, .linkflair-happeningnow .linkflairlabel, .linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel { display: inline-block; }
 
 .linkflair-liveupdates .linkflairlabel, .flairselector .linkflair-liveupdates .linkflairlabel { background-position: 4px 1px; }
 
 .linkflair-official .linkflairlabel, .flairselector .linkflair-official .linkflairlabel { background-position: 2px -16px; }
 
-.linkflair-communitycontent .linkflairlabel, .flairselector .linkflair-communitycontent .linkflairlabel { background-position: 4px -33px; }
+.linkflair-community .linkflairlabel, .flairselector .linkflair-community .linkflairlabel { background-position: 4px -33px; }
 
 .linkflair-directlink .linkflairlabel, .flairselector .linkflair-directlink .linkflairlabel { background-position: 4px -50px; }
 
@@ -601,7 +607,7 @@ div.spacer > button.btn { width: 100%; padding: 10px 0 !important; font-size: 16
 
 .linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel, .flairselector .linkflair-other .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel { background-image: none; padding: 0 8px; }
 
-.linkflair-sourcesrequired .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel { background-color: #CCAC55; border-color: #a38531; text-shadow: none; }
+.linkflair-sourcesrequired .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel { background-color: #CCAC55 !important; border-color: #a38531 !important; text-shadow: none; }
 
 p.title a.title { vertical-align: middle; }
 
@@ -617,13 +623,13 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 .linklisting [class*="sprite-1"]:after { background-image: url(%%mission-sprites%%); }
 
-.linklisting [class*="sprite-2"]:after { background-image: url(%%mission-sprites2%%); }
+.linklisting [class*="sprite-2"]:after { background-image: url(%%mission-sprites-2%%); }
 
 .linklisting .linkflair-mission-f1f1:after { content: "Falcon 1 Flight 1"; background-position: 0 0; }
 
-.linklisting .linkflair-mission-f1f2:after { content: "Falcon 1 Flight 2"; background-position: 100px 0; }
+.linklisting .linkflair-mission-f1f2:after { content: "Falcon 1 Flight 2"; background-position: 50px 0; }
 
-.linklisting .linkflair-mission-f1f3:after { content: "Falcon 1 Flight 3"; background-position: 200px 0; }
+.linklisting .linkflair-mission-f1f3:after { content: "Falcon 1 Flight 3"; background-position: 100px 0; }
 
 .linklisting .linkflair-mission-f1f4:after { content: "RatSat"; background-position: 300px 0; }
 
@@ -663,19 +669,19 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 .linklisting .linkflair-mission-crs-6:after { content: "CRS-6"; background-position: 100px 400px; }
 
-.linklisting .linkflair-mission-crs-7:after { content: "CRS-7"; background-position: 300px 400px; }
+.linklisting .linkflair-mission-crs-7:after { content: "CRS-7"; background-position: -300px 400px; }
 
-.linklisting .linkflair-mission-turkmenalem:after { content: "TurkmenAlem 52E"; background-position: 200px 400px; }
+.linklisting .linkflair-mission-turkmenalem:after { content: "TurkmenAlem 52E"; background-position: -200px 400px; }
 
-.linklisting .linkflair-mission-og2-2:after { content: "Orbcomm OG2 Launch 2"; background-position: 400px 400px; }
+.linklisting .linkflair-mission-og2-2:after { content: "Orbcomm OG2 Launch 2"; background-position: -400px 400px; }
 
 .linklisting .linkflair-mission-jason-3:after { content: "Jason-3"; background-position: 0 0; }
 
-.linklisting .linkflair-mission-ses-9:after { content: "SES-9"; background-position: 50px 0; }
+.linklisting .linkflair-mission-ses-9:after { content: "SES-9"; background-position: -50px 0; }
 
-.linklisting .linkflair-mission-crs-8:after { content: "CRS-8"; background-position: 100px 0; }
+.linklisting .linkflair-mission-crs-8:after { content: "CRS-8"; background-position: -100px 0; }
 
-.linklisting .linkflair-mission-jcsat-14:after { content: "JCSAT-14"; background-position: 150px 0; }
+.linklisting .linkflair-mission-jcsat-14:after { content: "JCSAT-14"; background-position: -150px 0; }
 
 @media (max-width: 1366px) { [class*="linkflair-mission"] :after { display: none; } }
 

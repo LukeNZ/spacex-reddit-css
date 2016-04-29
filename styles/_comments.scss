@@ -204,3 +204,13 @@ textarea {
         border:1px solid $gold;
     }
 }
+
+// Make comment reply button highlighted
+
+.flat-list.buttons {
+    color:$grey;
+
+    .reply-button {
+        color:lighten($lightslate, 15%);
+    }
+}

@@ -67,7 +67,7 @@ body.res-nightmode div.linkinfo {
     background-color:transparent !important;
 }
 
-body.listing-page {
+body.listing-page.loggedin {
     div.side {
         // Make a post
         .spacer:first-child {
