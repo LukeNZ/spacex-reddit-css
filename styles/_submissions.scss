@@ -1,0 +1,177 @@
+body.submit-page, body.submit-page > .content {
+    background-color:lighten($lightslate, 10%) !important;
+}
+
+div.content > h1 {
+    display:none;
+}
+
+form#newlink {
+    margin-left:auto;
+    margin-right:auto;
+    width:620px;
+    padding:10px;
+}
+
+form .spacer + .spacer {
+    margin:0;
+}
+
+// Tabs
+ul.tabmenu.formtab {
+    position:relative;
+    width:640px;
+    padding:0;
+    left:-10px;
+    border:1px dashed $grey;
+
+    li {
+        display:inline-block;
+        width:50%;
+        height:30px;
+
+        &.selected {
+            background-color:$gold;
+        }
+
+        a {
+            width:100%;
+            text-align:center;
+            font-size:16px !important;
+            text-transform: uppercase;
+            background-color:transparent !important;
+            border:none !important;
+            padding:0;
+            margin:0;
+            line-height:30px;
+            display:inline-block;
+            color:$white;
+            font-family: $helvetica;
+            font-weight:300;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+// Submission body
+form#newlink {
+    border:none !important;
+
+    .spacer:first-child, #reddit-field, .roundfield.info-notice {
+        display:none;
+    }
+
+    .spacer .roundfield {
+        background-color:transparent !important;
+    }
+
+    // Allow for custom message to be displayed
+    .spacer:nth-child(2) {
+        padding-top:240px;
+    }
+}
+
+// Position box which contiains message to submitters
+div.formtabs-content {
+    border:none;
+
+    .spacer:nth-child(6) {
+        position:absolute;
+        top:150px;
+        height:0;
+    }
+}
+.res div.formtabs-content {
+    border:none;
+
+    .spacer:nth-child(7) {
+        position:absolute;
+        top:150px;
+        height:0;
+    }
+}
+
+.roundfield span {
+    color:$white;
+
+    &.gray {
+        display:none;
+    }
+}
+
+.roundfield {
+    width:600px;
+
+    textarea, input[type="text"], input[type="url"], input[type="password"], input[type="number"] {
+        border:2px solid $slate;
+        transition:border ease $fast;
+        box-sizing:content-box !important;
+        width:592px;
+
+        &:focus {
+            border:2px solid $gold;
+        }
+    }
+
+    .roundfield-content label {
+        color:$grey;
+    }
+}
+
+// Submit text message
+.submit_text.roundfield.enabled {
+    height:250px;
+    max-height:250px;
+    margin:0;
+    padding:0 10px;
+    overflow-y:scroll;
+
+    .md, .md ul, .md li, .md p {
+        font-size:12px;
+        color:white;
+    }
+
+    .md ul {
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+    .md {
+        &:before {
+            content:"Please read the community rules before posting! Also, please remember:";
+            font-weight:bold;
+        }
+
+        &:after {
+            content:"Failure to adhere to these rules may result in your submission being removed. If you still have questions, feel free to ask the moderators. Thank you for ensuring /r/SpaceX continues to set the bar for quality in the spaceflight community!";
+        }
+    }
+
+    h1:before {
+        content:"You are ";
+        display:inline;
+    }
+
+    h1, .sr {
+        color:$grey;
+        font-family:$helvetica;
+        font-weight:100;
+        text-align:center;
+        margin:5px 0;
+    }
+}
+
+#suggest-title button {
+    @extend %button;
+}
+
+// Submission button
+div.spacer > button.btn {
+    width:100%;
+    padding:10px 0 !important;
+    font-size:16px;
+    font-family:$helvetica;
+    position:relative;
+    border:none;
+    @extend %button;
+}

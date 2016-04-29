@@ -1,0 +1,134 @@
+.wiki-page {
+    .wiki-page-content {
+        margin:10px !important;
+
+        h1, h2, h3, h4, h5, h6 {
+            padding-top:20px;
+        }
+    }
+}
+
+// FAQ table
+[id$="faqtable"] {
+    display:none;
+
+    + table {
+        border:none;
+        margin:0 auto;
+
+        th, td {
+            width:250px;
+            border:none;
+        }
+
+        th, tr:nth-child(even) td {
+            height:100px;
+
+            a {
+                display:block;
+                width:120px;
+                height:120px;
+                margin:0 auto;
+                background-repeat:no-repeat;
+                background-size:120px 120px;
+                background-image:url("wikisprites.png");
+                overflow:hidden;
+            }
+        }
+
+        tr:nth-child(odd) td {
+            font-size:18px;
+            text-align:center;
+            padding-bottom:20px;
+
+             a {
+                 color:$slate;
+                 border-bottom:2px solid transparent;
+                 transition:border-bottom 0.2s;
+                 padding-bottom:2px;
+                 background:none;
+
+                 &:hover {
+                     border-bottom:2px solid $gold;
+                 }
+             }
+        }
+
+        [href$="Watching"] { background-position:0 0; }
+        [href$="launchprep"] { background-position:200px 0; }
+        [href$="Falcon"] { background-position:400px 0; }
+        [href$="Dragon"] { background-position:600px 0; }
+        [href$="reusability"] { }
+        [href$="ElonMusk"] { }
+        [href$="company"] { }
+        [href$="workingat"] { }
+        [href$="orbits"] { }
+        [href$="Mars"] { }
+        [href$="researchanddev"] { }
+        [href$="nasa"] { }
+    }
+}
+
+// Timeline coloring
+.wiki-page-content .md {
+    a[href$="#green"] {
+        color:#090;
+        cursor:default;
+    }
+
+    a[href$="#amber"] {
+        color:#FB0;
+        cursor:default;
+    }
+
+    a[href$="#red"] {
+        color:#F00;
+        cursor:default;
+    }
+}
+
+// Wiki Index Hover
+.md.wiki div.toc + ul,
+.md.wiki div.toc + ul li ul {
+    margin: 0;
+    list-style: none;
+}
+.md.wiki div.toc + ul li a {
+    padding: 6px 10px;
+    display: block;
+    width: 250px;
+    background: #E7E7E7;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #222;
+
+    &:hover {
+        background: $white;
+        color: #2980B9;
+    }
+}
+
+.wiki-page .wiki-page-content .md.wiki div.toc + ul > li > a,
+.wiki-page .wiki-page-content .md.wiki div.toc + ul > li > a:hover {
+    font-size: 15px;
+    color: #333;
+}
+.md.wiki div.toc + ul li a + ul {
+    display: none;
+    margin: 0;
+}
+.md.wiki div.toc + ul li a:hover + ul,
+.md.wiki div.toc + ul li a + ul:hover { /* show sub menu */
+    display: block;
+}
+.md.wiki div.toc + ul li a + ul li a {
+    background: #F5F5F5;
+    border-color: #EEE;
+    color: #2980B9;
+
+    a:hover {
+        background: #C6C6C6;
+        color: #2980B9;
+    }
+}

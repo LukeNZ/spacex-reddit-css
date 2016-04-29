@@ -1,0 +1,10 @@
+{
+  "name": "rspacex",
+  "version": "3.0.0",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-replace":"^0.5.4"
+  }
+}

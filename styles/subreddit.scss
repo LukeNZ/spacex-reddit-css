@@ -1,0 +1,67 @@
+// Swatches, fonts, and constants related to the clean design aesthetic of the subreddit.
+@import 'design';
+
+// Parts of the design which are frequently needed to be edited by moderators.
+@import 'modeditable';
+
+// Styles and design of the header and containing elements of the subreddit.
+@import 'header';
+
+// Styles related to Reddit-created infobars (such as archived, locked, etc)
+@import "infobars";
+
+// Styles and design of the notifications panel beneath the header (editable through the sidebar).
+@import 'sidebar';
+
+// Styles and design of the posts on the front page of the subreddit.
+@import "notifications";
+
+// Styles relating to the search tool and the search page.
+@import "search";
+
+// Styles and design of the right hand sidebar and containing elements of the subreddit.
+@import 'frontpage';
+
+// Styles and design relating to the comment sections of posts on the subreddit.
+@import 'comments';
+
+// Styles and design of the submissions page
+@import "submissions";
+
+// Styles relating to user and post flairs on the subreddit.
+@import 'flair';
+
+// Styles relating to cross-sub markdown (paragraphs, headers, tables, sub and superscipt support).
+@import 'markdown';
+
+//Styles related to the wiki.
+@import "wiki";
+
+// Styles and design for the footer of the subreddit.
+@import "footer";
+
+// RES specfiic nightmode styling
+@import "res";
+
+html {
+    height:100%;
+    background:url('banner.png');
+    background-size:2560px 200px;
+    background-attachment: fixed;
+}
+
+body {
+    margin:0 30px;
+    top: 150px;
+    position: absolute;
+    width: calc(100% - 60px);
+    box-shadow:0 0 10px 2px $slate;
+    background-color:$white;
+}
+
+:focus {
+    outline:none !important;
+}
+
+// TODO
+// Mission flair design

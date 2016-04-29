@@ -1,0 +1,21 @@
+.reddit-infobar {
+    top:10px;
+    margin:0 10px 20px 10px;
+
+    &.archived-infobar {
+        border-color:$grey;
+        background-color:transparent;
+
+        &:before {
+            background-color:$grey;
+        }
+    }
+}
+
+// Gold info
+.gold-accent {
+    background-color:rgba($gold,0.2) !important;
+    border:1px solid #CCAC55;
+    border-radius:0;
+    color:white;
+}

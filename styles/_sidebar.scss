@@ -1,0 +1,571 @@
+$sidebarWidth: 320px;
+$sidebarPadding: 10px;
+$sidebarHeadingHeight: 40px;
+
+.side {
+    width:$sidebarWidth;
+    margin:0;
+    color:$white;
+    overflow:hidden;
+}
+
+.side, body.res-nightmode .side {
+    background-color:lighten($lightslate, 10%);
+    background-repeat: no-repeat;
+    font-family:$lucidagrande;
+
+    .md {
+        color:$white;
+
+        h4 {
+            margin-top:0;
+            margin-bottom:0;
+        }
+    }
+}
+
+// Information about each post
+div.linkinfo {
+    background-color:transparent;
+    border:none;
+    border-bottom:1px dashed $grey;
+    padding-bottom:10px;
+    margin-bottom:0px;
+    position:relative;
+    border-radius:0px;
+
+    .date, .score, .totalvotes, .shortlink {
+        text-align:center;
+        color:$grey;
+    }
+
+    .totalvotes {
+        display:block;
+    }
+
+    time, .score {
+        color:$white;
+    }
+
+    input#shortlink-text {
+        background-color:transparent !important;
+        color:$grey;
+        border:2px solid $slate !important;
+        transition:border $fast ease 0s;
+
+        &::selection {
+            background:$white;
+        }
+
+        &:focus {
+            border:2px solid $gold !important;
+        }
+    }
+}
+
+body.res-nightmode div.linkinfo {
+    background-color:transparent !important;
+}
+
+body.listing-page {
+    div.side {
+        // Make a post
+        .spacer:first-child {
+            margin:5px 0;
+        }
+
+        .spacer:nth-child(2), .spacer:nth-child(4), .spacer:nth-child(5), .spacer:nth-last-child(3) {
+            margin:0;
+            padding:0;
+        }
+
+        // Selfpost, Create your own subreddit, Recently Viewed Links, Account Activity
+        .spacer:nth-child(3), .spacer:nth-child(6), .spacer:nth-last-child(2), .spacer:last-child {
+            display:none;
+        }
+    }
+}
+
+body.comments-page {
+    div.side {
+        // Make a post
+        .spacer:nth-child(3) {
+            margin:5px 0;
+        }
+
+        .spacer:nth-child(2), .spacer:nth-child(4), .spacer:nth-child(5), .spacer:nth-last-child(3) {
+            margin:0;
+            padding:0;
+        }
+
+        // Selfpost, Create your own subreddit, Recently Viewed Links, Account Activity
+        .spacer:nth-child(4), .spacer:nth-last-child(2), .spacer:last-child {
+            display:none;
+        }
+    }
+}
+
+body.search-page {
+    div.side {
+        .spacer:nth-child(2), .spacer:nth-last-child(4), .spacer:nth-last-child(2) {
+            display:none;
+        }
+    }
+}
+
+// Post button and Falcon graphic
+.morelink, body.res-nightmode .morelink {
+    position: relative;
+    border:none;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 40px;
+    height: 40px;
+    text-align:center;
+    letter-spacing:0;
+    background: url('falcon.png') !important;
+    background-position:0 7px !important;
+    background-size:320px 27px !important;
+    background-repeat: no-repeat !important;
+
+    a {
+        display:inline;
+        position:relative;
+        padding:5px 10px;
+        font-size:14px;
+        font-family:$lucidagrande;
+        @extend %button;
+        background-color:rgba($webcastblue,0.75) !important;
+
+        &:hover {
+            background-color:lighten($webcastblue, 10%) !important;
+        }
+    }
+
+    .nub {
+        display:none;
+    }
+}
+
+div.sidebox.submit {
+    background-color: transparent !important;
+    border:none !important;
+
+    // Styles for disabled submissions during launches
+    &.disabled .morelink {
+        background-image: none !important;
+        background-color: transparent !important;
+
+        a {
+            transition:none 0s ease 0s;
+            background-color: $red;
+            border-bottom: none;
+        }
+
+        .spacer.no-icon {
+            font-size:0;
+
+            &:after {
+                font-size:10px;
+                color:$grey;
+                display:inline-block;
+                text-align:center;
+                position:relative;
+                content:"Immediately before, during, and after a launch, submissions are restricted to moderators only, to prevent low quality posts. Please try again soon.";
+                top:-5px;
+            }
+        }
+    }
+}
+
+// SpaceX text, subscription, theme, subscriber count, moderator notice, etc
+.side .titlebox {
+    background-color: transparent !important;
+
+    // The "SpaceX" text
+    h1.redditname {
+        background-color:transparent !important;
+
+        a {
+            display:none;
+        }
+
+        &:before {
+            color:$purewhite;
+            display:block;
+            text-align:center;
+            content:"SpaceX";
+            font-family:$brandongrotesque;
+            letter-spacing:1px;
+            font-weight:100;
+            font-size:36px;
+            margin-bottom:5px;
+            background-color: transparent !important;
+        }
+    }
+
+    // RES show subreddit style
+    div[data-res-css] {
+        text-align:center;
+    }
+
+    // Subscribe and unsubscribe buttons
+    span.subscribe-button {
+        text-align:center;
+        width:90px;
+        height:21px;
+        display:block;
+        margin:0 auto;
+        padding:0 3px;
+        position:relative;
+        @extend %button;
+
+        a {
+            background-color:transparent;
+            border:none;
+            background-image:none;
+            font-weight:100;
+            font-size:12px;
+            line-height:21px;
+        }
+    }
+
+    // RES subscribe/unsubscribe buttons
+    .subButtons {
+        width:$sidebarWidth;
+        text-align:center;
+        height:auto;
+        padding-top:5px;
+
+        span.subscribe-button {
+            display:inline-block;
+        }
+
+        span.RESshortcutside, span.RESDashboardToggle {
+            width:90px;
+            height:21px;
+            line-height:21px;
+            margin:0 0 0 6px;
+            padding:0;
+            border:none;
+            font-weight:100;
+            font-size:12px;
+            border-radius:4px;
+            display:inline-block;
+            vertical-align:top;
+            position:relative;
+            text-align:center;
+            cursor:pointer;
+            background-image:none; // Stop RES
+            @extend %button;
+        }
+    }
+
+    // Subscriber count and active users
+    span.subscribers, p.users-online {
+        display:block;
+        width:$sidebarWidth / 2;
+        height:20px;
+        margin:10px 0;
+        position:relative;
+        float:left;
+        color:$white;
+        text-align:center;
+
+        .number {
+            font-size:larger;
+        }
+
+        .word {
+            display:none;
+        }
+    }
+
+    span.subscribers .number:after {
+        content:" DragonRiders";
+        font-size:smaller;
+    }
+
+    p.users-online .number:after {
+        content:" In Orbit";
+        font-size:smaller;
+    }
+
+    p.users-online:before {
+        display:none;
+    }
+
+    .leavemoderator, .tagline, #sr_style_throbber, .leavecontributor-button {
+        display:none;
+    }
+
+    // Reddit show subreddit style and flair toggles
+    .sr_style_toggle, .flairtoggle {
+        background-color:transparent !important;
+        color:$grey !important;
+        display:inline-block;
+        text-align:center;
+        font-size:0;
+        width:50%;
+    }
+
+    .sr_style_toggle:after {
+        content:"Show theme";
+        font-size:10px;
+    }
+
+    .flairtoggle:after {
+        content:"Show my flair";
+        font-size:10px;
+    }
+}
+
+// Sidebar description
+.side .usertext-body {
+    border-bottom:1px dashed $grey;
+
+    .md {
+        font-family:$lucidagrande;
+
+        p {
+            line-height:1.5;
+        }
+
+        h4 {
+            background-color:$webcastblue;
+            position:relative;
+            right:-30px;
+            line-height:$sidebarHeadingHeight;
+            color:$white;
+            font-family:$helvetica;
+            font-weight:300;
+            font-size:16px;
+            height:$sidebarHeadingHeight;
+            margin-top:30px !important;
+            margin-bottom:10px !important;
+            transition:background-color $fast ease;
+
+            &:after {
+                content:"";
+                display:block;
+                border-top:$sidebarHeadingHeight solid $webcastblue;
+                border-left:30px solid transparent;
+                position:absolute;
+                width:0;
+                height:0;
+                top:0;
+                left:-30px;
+                transition:border-top $fast ease;
+            }
+        }
+
+        // Table formatting for sidebar
+        table, thead {
+            border: 2px solid $slate;
+            margin:0 auto;
+        }
+
+        table {
+            margin-bottom:2px;
+        }
+
+        thead {
+            background-color:rgba($grey, 0.3);
+            line-height:2;
+        }
+
+        table tr:nth-child(2n) {
+            background-color:rgba($grey, 0.2);
+        }
+
+        th, td {
+            border:none;
+            padding:8px 5px;
+        }
+
+        // Links
+        a {
+            color:lighten($webcastblue, 20%);
+            transition:color ease $fast;
+
+            &:hover {
+                color:lighten($webcastblue, 30%);
+            }
+        }
+    }
+}
+
+// Stop the multi-selector appearing when someone subscribes
+div.multi-selector {
+    display:none !important;
+}
+
+div.bottom {
+    border:none !important;
+    margin-top:10px;
+    padding:0;
+    color:#DDD;
+    font-size:0 !important;
+    position:relative;
+
+    &:before {
+        content:"r/SpaceX. The premier spaceflight community for over 4 years.";
+        display:block;
+        width:100%;
+        position:relative;
+        top:0;
+        left:0;
+        font-size:10px;
+        font-family:sans-serif;
+        color:#FFF;
+        text-align:center;
+        margin-top:-5px;
+    }
+
+    span.flair {
+        display:none;
+    }
+}
+
+// Moderator tools & moderators
+#moderation_tools, .sidecontentbox .title  {
+    .collapse-button {
+        display:none;
+    }
+
+    h1 {
+        display:block;
+        text-transform:capitalize;
+        background-color:$webcastblue;
+        position:relative;
+        right:-30px;
+        line-height:$sidebarHeadingHeight;
+        color:$white;
+        font-family:"Helvetica Neue-Light", "Helvetica Neue", "Helvetica", "Verdana", sans-serif;
+        font-weight:300;
+        font-size:16px;
+        height:$sidebarHeadingHeight;
+        margin-top:30px !important;
+        margin-bottom:10px !important;
+        transition:background-color $fast ease;
+
+        &:after {
+            content:"";
+            display:block;
+            border-top:$sidebarHeadingHeight solid $webcastblue;
+            border-left:30px solid transparent;
+            position:absolute;
+            width:0;
+            height:0;
+            top:0;
+            left:-30px;
+            transition:border-top $fast ease;
+        }
+    }
+}
+
+// Moderation tools
+#moderation_tools {
+    h1 {
+        font-size:0;
+
+        &:before {
+            content:"Moderation Tools";
+            font-size:16px;
+        }
+    }
+
+    .icon-menu a {
+        background-color:transparent !important;
+        color:lighten($webcastblue, 20%);
+        transition:color ease $fast;
+
+        &:hover {
+            color: lighten($webcastblue, 30%);
+        }
+    }
+
+    ul.content {
+        border:none;
+    }
+}
+
+// Moderator Team
+.sidecontentbox a.helplink {
+    display:block;
+    background-color:rgb(42,110,189);
+    color:#FFF !important;
+    float:none;
+    text-align:center;
+    width:60%;
+    margin:0 auto;
+    text-transform: capitalize;
+    padding:4px 8px;
+    border-radius:4px;
+    font-size:12px;
+    border-bottom:2px solid rgb(36, 72, 112);
+    position:relative;
+    top:60px;
+
+    &:active {
+        background-color:rgb(36, 72, 112) !important;
+    }
+
+    &+div.title {
+        position:relative;
+        top:-50px;
+        h1 {
+            font-size:0;
+
+            &:before {
+                content:"Your Moderator Team";
+                font-size:16px;
+            }
+        }
+
+        &+ul.content {
+            border:none;
+            font-size:12px;
+            position: relative;
+            top: -20px;
+
+            li {
+                display:inline-block;
+                width:50%;
+                text-align:center;
+                margin:10px 0;
+
+                &.more {
+                    display:block;
+                    width:100%;
+
+                    a {
+                        color:#849199;
+                    }
+                }
+
+                a.author {
+                    color:#FFF;
+                    text-align: center;
+                    display:inline-block;
+                    background-color:rgb(39, 174, 96);
+                    padding:3px;
+                    height:15px;
+                    line-height:15px;
+                    border-radius:4px;
+                    width:130px;
+                    border-bottom:2px solid #156135;
+                    margin:0;
+
+                    &:active {
+                        background-color:#156135;
+                    }
+                }
+
+                span.RESUserTag, a.voteWeight, span.flair, span.userattrs {
+                    display:none !important;
+                }
+            }
+        }
+    }
+}

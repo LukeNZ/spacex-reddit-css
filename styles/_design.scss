@@ -1,0 +1,46 @@
+// COLORS
+$slate: #181c1f;
+$lightslate: #21272b;
+$grey: #849199;
+$gold: #CCAC55;
+$blue: #3569A4;
+$rocketblue: #185C89;
+$webcastblue: #2276AB;
+$lightblue: #83b6bd;
+$red: #C3427D;
+$green: #00A651;
+$white: #fafafa;
+$purewhite: #fff;
+
+// FONTS
+$generic: Verdana, Geneva, sans-serif;
+$brandongrotesque: "Brandon Grotesque", "Proxima Nova", Geneva, Verdana, sans-serif;
+$lucidagrande: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$helvetica: "Helvetica Neue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// TRANSITIONS
+$fast: 0.2s;
+
+// BREAKPOINTS
+$break-small: 1366px;
+$break-large: 1920px;
+
+// BUTTONS
+%button {
+    background-color:$webcastblue !important;
+    border-radius:4px;
+    border:none !important;
+    border-bottom:3px solid darken($webcastblue, 15%) !important;
+    transition:background-color ease $fast;
+    color:$white !important;
+    position:relative;
+
+    &:hover {
+        background-color:lighten($webcastblue, 10%) !important;
+    }
+
+    &:active {
+        top:1px;
+        border-bottom:2px solid darken($webcastblue, 15%) !important;
+    }
+}

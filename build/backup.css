@@ -1,0 +1,49 @@
+body.res.res-nightmode h1 {
+    border-bottom:none !important;
+}
+
+/* ------------------------------------ */
+/* --------------  COMMENTING -------- */
+/* ------------------------------------ */
+
+.comment .child, .comment .showreplies {
+    border:none;
+}
+
+div.commentarea > form.usertext {
+    margin-left:30px;
+}
+
+/* ------------------------------------ */
+/* ------------- Wiki ----------------- */
+/* ------------------------------------ */
+
+/* Infobar */
+.infobar {
+    background-color:rgba(204,172,85,0.2) !important;
+    border:1px solid #CCAC55;
+    padding:10px;
+    margin:10px;
+}
+
+/* --- Wiki Header Look & Feel --- */
+.wiki-page .wiki-page-content .md.wiki h1,
+.wiki-page .wiki-page-content .md.wiki h2,
+.wiki-page .wiki-page-content .md.wiki h3,
+.wiki-page .wiki-page-content .md.wiki h4 {
+    padding-top: 10px;
+    margin-top: 15px;
+    font-family: sans-serif;
+    color: #222;
+}
+
+/* ------------------------------------ */
+/* ---------- RES Specific ------------ */
+/* ------------------------------------ */
+.entry.RES-keyNav-activeElement, .res-nightmode .entry.RES-keyNav-activeElement {
+    outline:none !important;
+}
+
+.RESDialogSmall.livePreview {
+    text-align:left;
+}

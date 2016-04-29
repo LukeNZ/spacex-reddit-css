@@ -1,0 +1,64 @@
+.search-page {
+    .searchpane {
+        margin:0;
+        background-color:transparent;
+        border:0;
+    }
+
+    .searchfacets {
+        display:none;
+    }
+
+    .menuarea {
+        border:none;
+    }
+}
+
+.search-page #search input[type="text"] {
+    color:black !important;
+}
+
+.res-nightmode .search-page #search input[type="text"] {
+    color:white !important;
+}
+
+#search {
+    input[type="text"] {
+        padding:5px;
+        border:2px solid rgba(132, 145, 153, 0.75) !important;
+        background-color:transparent !important;
+        font-size:14px;
+        font-family:$lucidagrande;
+        color:$white !important; /* Grr... Reddit overrides this with an HTML based style :X */
+        transition:border ease $fast;
+        width:100%;
+
+        &:focus {
+            border:2px solid $gold !important;
+            outline:none;
+        }
+    }
+
+    div#searchexpando.infobar {
+        background-color:transparent;
+        border-radius:0px;
+        border:2px solid $gold;
+        color:$white;
+    }
+}
+
+body.search-page {
+    .side {
+        .sidebox-submit, div.search-summary {
+            display:none;
+        }
+    }
+
+    input[type="text"] {
+        color:$slate !important;
+    }
+}
+
+.searchpane {
+
+}

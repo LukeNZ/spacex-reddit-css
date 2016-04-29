@@ -1,0 +1,215 @@
+$expandoWidth: 35px;
+$expandHeight: 30px;
+
+// Titles, main content
+body > .content {
+    margin:100px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
+    background-color:$white;
+}
+
+.link.last-clicked {
+    border:none;
+}
+
+.link .title {
+    margin-bottom:5px;
+}
+
+// Individual listings
+#siteTable {
+    padding:0;
+    color:$grey;
+
+    .thing {
+        margin:0;
+        padding:6px 0;
+        border-left:2px solid transparent;
+        transition:border-left 0.2s ease 0s;
+        position:relative;
+
+        &:hover {
+            border-left:2px solid $gold;
+        }
+
+        &:not(:first-child) {
+            border-top:1px dashed rgba($grey, 0.5);
+        }
+    }
+
+    .tagline {
+        color:$grey;
+        margin-left:$expandoWidth;
+    }
+
+    // User options for each listing
+    .entry .flat-list.buttons {
+        margin-left:$expandoWidth;
+
+        li {
+            padding:3px 0px;
+            margin:0 3px;
+            font-size:10px;
+
+            &.first {
+                margin:0 10px 0 0;
+
+                a {
+                    color:lighten($lightslate, 15%);
+                    font-weight:bold;
+                    font-size:11px;
+                }
+            }
+
+            a, span {
+                color:$grey;
+                padding:2px;
+            }
+        }
+    }
+}
+
+// Stickied link coloring
+body, body.res-nightmode {
+    div.stickied {
+        background-color:rgba($green, 0.15) !important;
+    }
+    div.stickied a.title, div.stickied span.stickied-tagline {
+        color:$green !important;
+    }
+}
+
+// Thumbnails
+.thumbnail {
+    margin-right:10px;
+
+    // Selfposts
+    &.self {
+        height: 63px; /*Adjust to your Images height*/
+        background: 0 0 url('swish.png') no-repeat;
+    }
+
+    // Links where a thumbnail is still being, or could not be resolved
+    &.default {
+        height: 70px;
+        background: 0 0 url('awaitingvehicledownlink.png') no-repeat;
+    }
+
+    // Spacenews Twitter posts
+    &[href*="https://twitter.com/pbdes"],
+    &[href*="https://twitter.com/Leone_SN"],
+    &[href*="https://twitter.com/gruss_sn"],
+    &[href*="https://twitter.com/jeff_foust"] {
+        background:0 0 url('spacenewstwitter.png') no-repeat;
+        background-size:70px 70px;
+        height:70px;
+    }
+
+    &[href*="https://twitter.com/pbdes"] img,
+    &[href*="https://twitter.com/gruss_sn"] img,
+    &[href*="https://twitter.com/Leone_SN"] img,
+    &[href*="https://twitter.com/jeff_foust"] img {
+        display:none;
+    }
+}
+
+// Disable the span ranking. It's pointless.
+span.rank {
+    display:none;
+}
+
+// Voting Arrows
+body, body.res-nightmode {
+    .arrow.up, .arrow.upmod, .arrow.down, .arrow.downmod {
+        height: 23px !important;
+        width: 23px !important;
+        background-size:23px 92px !important;
+        background-image: url('arrowsprites.png') !important;
+    }
+
+    .arrow.up {
+        background-position: 0px 0px !important;
+    }
+
+    .arrow.upmod {
+        background-position: 0px -46px !important;
+    }
+
+    .arrow.down {
+        background-position: 0px -23px !important;
+    }
+
+    .arrow.downmod {
+        background-position: 0px -69px !important;
+    }
+}
+
+.link .score {
+    color:$grey;
+}
+
+.thing .title {
+    margin:0 0 5px 0;
+}
+
+// Domain
+.thing .domain {
+    font-size:0;
+    vertical-align: baseline;
+
+    a {
+        font-size:10px;
+        color:$grey;
+        display:inline;
+
+        &:before {
+            font-size:10px;
+            content:"from ";
+        }
+
+        // Customized domain tagging
+        &[href*="imgur"] {
+            font-size:0;
+            &:before { content:"from imgur"; }
+        }
+
+        &[href*="r/spacex"] {
+            font-size:0;
+            &:before { content:"from r/SpaceX"; }
+        }
+
+        &[href*="spacenews"] {
+            font-size:0;
+            &:before { content:"from SpaceNews"; }
+        }
+
+        &[href*="twitter"] {
+            font-size:0;
+            &:before { content:"from Twitter"; }
+        }
+
+        &[href*="nasa.gov"] {
+            font-size:0;
+            &:before { content:"from NASA"; }
+        }
+
+        &[href*="spacex.com"] {
+            font-size:0;
+            &:before { content:"from SpaceX (Official)"; }
+        }
+    }
+}
+
+/* Next/Previous buttons */
+div.nav-buttons {
+    padding:10px;
+    text-align:center;
+}
+
+button, .nextprev a, .next-suggestions a {
+    @extend %button;
+    padding:3px 20px 3px 20px !important;
+    font-size: 12px;
+    font-weight: 300 !important;
+    font-family:$generic;
+    position:relative;
+}

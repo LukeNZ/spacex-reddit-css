@@ -1,0 +1,43 @@
+// nested lists
+.md {
+    font-family:$generic;
+
+    ol, ul {
+        background-color:transparent !important;
+
+        li ol li, li ul li {
+            margin-left:5px;
+        }
+    }
+
+    // Styles to remove   HOLY     CRAP    THE     SPACING
+    font-size:1em;
+    line-height:1.4em;
+    max-width:70em;
+}
+
+// Subscript and superscript support
+.md em, .wiki-page-content em {
+    position: relative;
+}
+
+// *_sub_*
+.md em em, .wiki-page-content em + em {
+    font-style: normal;
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+// *`sup`*
+.md em code .wiki-page-content em + code {
+    font-family: verdana, arial, helvetica, sans-serif;
+    vertical-align: super;
+    font-size: smaller;
+}
+
+// *_sub_`sup`*
+.md em em+code, .wiki-page em + code + em{
+    position: absolute;
+    left: 0;
+    bottom: 1em; /* still trying to find an offset that looks good in all browsers */
+}

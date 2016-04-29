@@ -1,0 +1,269 @@
+.linkflairlabel, .flair { max-width: 100%; }
+
+// ------------- LINK FLAIR ---------------
+.linkflairlabel {
+    vertical-align:middle;
+    height:18px;
+    line-height:19px;
+    font-family:$lucidagrande;
+    font-weight:bold;
+    padding:0 8px 0 24px !important;
+    border-radius:2px;
+    border:none;
+    border-bottom:3px solid darken($webcastblue, 10%) !important;
+    background-color:$webcastblue !important;
+    color:$white !important;
+    background-repeat:no-repeat;
+    background-image:url('flairsprites.png');
+    background-size:24px 85px;
+    text-shadow:0 0 $grey;
+    position:relative;
+    display:none; // Display none by default, then enable for specific flair types
+}
+
+// Linkflair which requires a flair to be present
+.linkflair-liveupdates, .linkflair-official, .linkflair-communitycontent, .linkflair-directlink, .linkflair-warning,
+.linkflair-happeningnow, .linkflair-other, .linkflair-sourcesrequired {
+    .linkflairlabel {
+        display:inline-block;
+    }
+}
+
+// Linkflair which requires an icon
+.linkflair-liveupdates .linkflairlabel, .flairselector .linkflair-liveupdates .linkflairlabel {    background-position:4px 1px; }
+.linkflair-official .linkflairlabel, .flairselector .linkflair-official .linkflairlabel {    background-position:2px -16px; }
+.linkflair-communitycontent .linkflairlabel, .flairselector .linkflair-communitycontent .linkflairlabel {    background-position:4px -33px;  }
+.linkflair-directlink .linkflairlabel, .flairselector .linkflair-directlink .linkflairlabel {    background-position:4px -50px; }
+.linkflair-warning .linkflairlabel, .flairselector .linkflair-warning .linkflairlabel {    background-position:4px -67px; }
+
+// 'Happening now' linkflair with red pulsing dot
+.linkflair-happeningnow, .flairselector .linkflair-happeningnow {
+    .linkflairlabel {
+        background-image: none;
+        overflow: visible;
+
+        &:before {
+            content: "";
+            height: 10px;
+            width: 10px;
+            background-color: $red;
+            border-radius: 50%;
+            animation: 2s ease-out 0s normal none infinite running live;
+            position: absolute;
+            left: 6px;
+            top: 5px;
+        }
+    }
+
+    .title {
+        overflow:visible;
+    }
+}
+
+@keyframes live {
+    0%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+    25%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+    50%{
+        transform:scale(1);
+        opacity:0.9;
+    }
+
+    100%{
+        transform:scale(3);
+        opacity:0.0;
+    }
+}
+
+// Other types of linkflair which don't require icons, or are otherwise different
+.linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel,
+.flairselector .linkflair-other .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel {
+    background-image:none;
+    padding:0 8px;
+}
+
+.linkflair-sourcesrequired .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel {
+    background-color: $gold;
+    border-color: darken($gold, 15%);
+    text-shadow:none;
+}
+
+// Make the title vertically aligned centrally with the flair
+p.title a.title {
+    vertical-align:middle;
+}
+
+// ------------- USER FLAIR ---------------
+.link .flair, .comment .flair {
+    font-size: 10px;
+    margin-top: -1px;
+    font-family:$lucidagrande;
+    font-weight: bold;
+    padding: 0px 5px;
+    border:none;
+    border-bottom:2px solid darken(rgba($grey, 0.6), 15%);
+    border-radius: 2px;
+    color: $white;
+    height: 14px;
+    line-height: 15px;
+    background-color: rgba($grey, 0.6);
+}
+
+// ------------- OP & MOD HIGHLIGHTING ---------------
+body .thing .tagline .author.submitter, body .thing .tagline .author.moderator {
+    color: $white !important;
+    font-weight: bold;
+    padding: 1px 5px;
+    border-radius:0;
+}
+
+body .thing .tagline .author.submitter, body .thing .tagline .author.submitter:hover {
+    background-color: $webcastblue !important;
+}
+
+body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:hover {
+    background-color: $green !important;
+}
+
+// ------------- MISSION FLAIR ---------------
+.linklisting {
+    // Global misison flair styles
+    [class*="linkflair-mission"] {
+        &:after {
+            width:50px;
+            height:50px;
+            top:10px;
+            right:0;
+            position:absolute;
+            background-size:250px 250px;
+            text-indent:-100px;
+            content:"";
+            line-height: 110px;
+            text-align: right;
+            margin-right: 10px;
+        }
+    }
+
+    // Specify the style sheet to be used
+    [class*="sprite-1"]:after { background-image:url('mission-sprites.png'); }
+    [class*="sprite-2"]:after { background-image:url('mission-sprites-2.png'); }
+
+    // Individual missions
+    .linkflair-mission-f1f1 {
+        &:after { content:"Falcon 1 Flight 1"; background-position:0 0; }
+    }
+    .linkflair-mission-f1f2 {
+        &:after { content:"Falcon 1 Flight 2"; background-position:100px 0; }
+    }
+    .linkflair-mission-f1f3 {
+        &:after { content:"Falcon 1 Flight 3"; background-position:200px 0; }
+    }
+    .linkflair-mission-f1f4 {
+        &:after { content:"RatSat"; background-position:300px 0; }
+    }
+    .linkflair-mission-f1f5 {
+        &:after { content:"RazakSat"; background-position:400px 0; }
+    }
+    .linkflair-mission-dsqu {
+        &:after { content:"DSQU"; background-position:0 100px; }
+    }
+    .linkflair-mission-cots-1 {
+        &:after { content:"COTS-1"; background-position:100px 100px; }
+    }
+    .linkflair-mission-cots-2 {
+        &:after { content:"COTS-2+"; background-position:200px 100px; }
+    }
+    .linkflair-mission-crs-1 {
+        &:after { content:"CRS-1"; background-position:300px 100px; }
+    }
+    .linkflair-mission-crs-2 {
+        &:after { content:"CRS-2"; background-position:400px 100px; }
+    }
+    .linkflair-mission-cassiope {
+        &:after { content:"CASSIOPE"; background-position:0 200px; }
+    }
+    .linkflair-mission-ses-8 {
+        &:after { content:"SES-8"; background-position:100px 200px; }
+    }
+    .linkflair-mission-thaicom-6 {
+        &:after { content:"Thaicom 6"; background-position:200px 200px; }
+    }
+    .linkflair-mission-crs-3 {
+        &:after { content:"CRS-3"; background-position:300px 200px; }
+    }
+    .linkflair-mission-og2-1 {
+        &:after { content:"Orbcomm OG2 Launch 1"; background-position:400px 200px; }
+    }
+    .linkflair-mission-asiasat-8 {
+        &:after { content:"AsiaSat 8"; background-position:0 300px; }
+    }
+    .linkflair-mission-asiasat-6 {
+        &:after { content:"AsiaSat 6"; background-position:100px 300px; }
+    }
+    .linkflair-mission-crs-4 {
+        &:after { content:"CRS-4"; background-position:200px 300px; }
+    }
+    .linkflair-mission-crs-5 {
+        &:after { content:"CRS-5"; background-position:300px 300px; }
+    }
+    .linkflair-mission-dscovr {
+        &:after { content:"DSCOVR"; background-position:400px 300px; }
+    }
+    .linkflair-mission-abs-eutelsat-1 {
+        &:after { content:"ABS/EutelSat 1"; background-position:0 400px; }
+    }
+    .linkflair-mission-crs-6 {
+        &:after { content:"CRS-6"; background-position:100px 400px; }
+    }
+    .linkflair-mission-crs-7 {
+        &:after { content:"CRS-7"; background-position:300px 400px; }
+    }
+    .linkflair-mission-turkmenalem {
+        &:after { content:"TurkmenAlem 52E"; background-position:200px 400px; }
+    }
+    .linkflair-mission-og2-2 {
+        &:after { content:"Orbcomm OG2 Launch 2"; background-position:400px 400px; }
+    }
+    .linkflair-mission-jason-3 {
+        &:after { content:"Jason-3"; background-position:0 0; }
+    }
+    .linkflair-mission-ses-9{
+        &:after { content:"SES-9"; background-position:100px 0; }
+    }
+    .linkflair-mission-crs-8 {
+        &:after { content:"CRS-8"; background-position:200px 0; }
+    }
+    .linkflair-mission-jcsat-14 {
+        &:after { content:"JCSAT-14"; background-position:300px 0; }
+    }
+}
+
+@media (max-width: $break-small) {
+    [class*="linkflair-mission"] &:after {
+        display:none;
+    }
+}
+
+// Flair selector
+.flairselector {
+    [class*="linkflair-mission"] {
+        span {
+            display:inline-block !important;
+        }
+
+        &:after {
+            display:none !important;
+        }
+    }
+
+    a.title {
+        display:none;
+    }
+}

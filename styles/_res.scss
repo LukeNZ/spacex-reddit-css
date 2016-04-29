@@ -1,0 +1,98 @@
+.res-nightmode {
+    background-color:$lightslate !important;
+
+    .entry .flat-list li.first a {
+        color:$white !important;
+    }
+
+    > .content {
+        background-color:$lightslate !important;
+    }
+
+    /*.entry.RES-keyNav-activeElement, .entry.RES-keyNav-activeElement .noncollapsed,
+    .usertext-body, .usertext-body .md {
+        background-color: transparent !important;
+    }*/
+}
+
+// Never ending RES
+div[id^="siteTable-"].linklisting.sitetable {
+    border-top:1px dashed rgba($grey, 0.5);
+}
+
+#progressIndicator {
+    left:10px !important;
+    right:330px !important;
+    background-color:transparent !important;
+    border:none !important;
+    border-radius:0 !important;
+    width:100% !important;
+    padding:10px 0 !important;
+    margin:10px auto !important;
+    font-size:10px !important;
+}
+
+div.NERPageMarker, #NERFail {
+    display:none !important;
+}
+
+// RES prefs
+#RESPrefsDropdown {
+    background-color:rgb(132,145,153) !important;
+    border:2px solid #21272B !important;
+    box-shadow:0 10px 20px rgba(24,28,31,0.5) !important;
+}
+
+#RESPrefsDropdown li {
+    border:none !important;
+    transition:background-color 0.2s !important;
+    color:#FFF !important;
+}
+
+#RESPrefsDropdown a {
+    background-color:inherit !important;
+    color:#FFF !important;
+}
+
+#RESPrefsDropdown li:hover {
+    background-color:#CCAC55 !important;
+}
+
+// Style toggle (grr)
+.res-sr-style-toggle {
+    text-align:center !important;
+    background-color:transparent !important;
+    color:$grey !important;
+}
+
+// sr dropdown list
+#srList {
+    top:-130px !important;
+    left:-30px !important;
+}
+
+// transperantize
+body.res.res-nightmode textarea,
+body.res-nightmode .md-container,
+body.res-nightmode .RES-keyNav-activeElement,
+body.res-nightmode .RES-keyNav-activeElement .md-container,
+body.res .RES-keyNav-activeElement,
+body.res .RES-keyNav-activeElement .md-container,
+body.res-nightmode .commentreply .textarea,
+body.res-nightmode .pretty-form.long-text textarea,
+body.res-nightmode #quickMessage textarea,
+body.res-nightmode #newlink.submit textarea,
+body.res-nightmode .usertext-edit textarea,
+body.res-nightmode.res-commentBoxes .comment,
+body.res-nightmode.res-commentBoxes .comment .comment,
+body.res-nightmode.res-commentBoxes .comment .comment .comment,
+body.res-nightmode.res-commentBoxes .comment .comment .comment .comment,
+body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment,
+body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment,
+body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment,
+body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment,
+body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+body.res-nightmode .stylesheet-customize-container textarea,
+body.res-nightmode form#newlink {
+    background-color:transparent !important;
+}

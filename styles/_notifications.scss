@@ -1,0 +1,186 @@
+.side .titlebox .md {
+    // SpaceX Disclaimer
+    h3:nth-of-type(1) {
+        position: absolute;
+        top: -30px;
+        left: 0px;
+        right: 0px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 10px;
+        color: $white;
+        font-family:$lucidagrande;
+        font-weight:normal;
+        opacity:0.5;
+        margin:0;
+        z-index:1000;
+    }
+
+    $notificationHeight: 50px;
+    h3:nth-of-type(2), h3:nth-of-type(3), h3:nth-of-type(4) {
+        box-sizing:border-box;
+        position: absolute;
+        background-color:lighten($lightslate, 30%);
+        color:$white;
+        font-family:$lucidagrande;
+        margin:0;
+        height: $notificationHeight;
+        overflow:hidden;
+    }
+
+    // Latest notification message
+    h3:nth-of-type(2) {
+        top: 0px;
+        left: 0px;
+        right:($sidebarPadding * 2) + $sidebarWidth;
+        border-bottom:1px dashed rgba($white, 0.5);
+        text-align: left;
+        font-size:13px;
+        padding: 5px 10px !important;
+
+        // Small screens
+        @media screen and (max-width: $break-small) {
+            font-size:12px;
+            padding:3px 10px !important;
+        }
+
+        // Links
+        a {
+            color:lighten($webcastblue, 30%);
+            transition:color ease $fast;
+
+            &:hover {
+                color:$gold;
+            }
+        }
+    }
+
+    // Rules, Wiki, FAQ
+    h3:nth-of-type(3) {
+        top:$notificationHeight;
+        left: 0;
+        height: $notificationHeight;
+        width:300px;
+        text-align: left;
+        font-size:0;
+        text-transform:uppercase;
+        transition:background-color ease $fast;
+        font-weight:lighter;
+        border-right:1px dashed rgba($white, 0.5);
+
+        // Small screens
+        @media screen and (max-width: $break-small) {
+            width:180px;
+        }
+
+        &:hover {
+            background-color:$rocketblue;
+        }
+
+        a {
+            padding:0 10px;
+            display:inline-block;
+            font-size:16px;
+            text-align:center;
+            color:$white;
+            line-height: 50px;
+            width: 33%;
+            box-sizing: border-box;
+            font-family:$brandongrotesque;
+            float:left;
+
+            // Small screens
+            @media screen and (max-width: $break-small) {
+                padding:0;
+                font-size:14px;
+            }
+
+            &:hover {
+                color:$gold;
+            }
+        }
+    }
+
+    // Curation
+    h3:nth-of-type(4) {
+        position: absolute;
+        top:$notificationHeight;
+        left:300px;
+        right:($sidebarPadding * 2) + $sidebarWidth;
+        height:$notificationHeight;
+        font-size:0;
+
+        // Small screens
+        @media screen and (max-width: $break-small) {
+            left:180px;
+        }
+
+        &:hover {
+            background-color:$rocketblue;
+        }
+
+        a {
+            box-sizing:border-box;
+            height:50px;
+            font-size:13px;
+            display:inline-block;
+            width:25%;
+            padding:3px 20px 0 50px;
+            line-height:1.2;
+            color:$white;
+            font-weight:normal;
+            float:left;
+            position:relative;
+
+            // Small screens
+            @media screen and (max-width: $break-small) {
+                padding:2px 5px 0 5px;
+
+                &:before {
+                    display:none !important;
+                }
+            }
+
+            // Small screens
+            @media screen and (min-width: $break-large) {
+                font-size:14px;
+                padding:5px 20px 0 50px;
+            }
+
+            &:hover {
+                color:$gold;
+            }
+
+            &:before {
+                content:"";
+                display:block;
+                position:absolute;
+                width:50px;
+                height:50px;
+                background-size:200px 50px;
+                background-image:url('notificationsprites.png');
+                transform: scale(0.8);
+                overflow:hidden;
+                top:0;
+                left:0;
+            }
+
+            &[title="Campaign"]:before {
+                background-position:50px 0;
+            }
+
+            &[title="Ask Anything"]:before {
+                background-position:150px 0;
+            }
+
+            &[title="Launch"]:before {
+                background-position:100px 0;
+            }
+
+            &[title="Media"]:before {
+                background-position:0 0;
+            }
+        }
+    }
+}
