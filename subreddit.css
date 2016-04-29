@@ -5,7 +5,7 @@
 .morelink a:active, body.res-nightmode .morelink a:active, .side .titlebox span.subscribe-button:active, .side .titlebox .subButtons span.RESshortcutside:active, .side .titlebox .subButtons span.RESDashboardToggle:active, button:active, .nextprev a:active, .next-suggestions a:active, #suggest-title button:active, div.spacer > button.btn:active { top: 1px; border-bottom: 2px solid #154a6b !important; }
 
 /* CHANGE THE MISSION PATCH HERE. YOU SHOULD ONLY NEED TO ADJUST THESE PARAMETERS */
-.side, body.res-nightmode .side { background-image: url(%%crs-8%%); /* Place a relevant mission patch here, speckle is the background image, don't change */ padding: 285px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: center -8px; background-size: 333px 296px; /* Scale the background size if needed */ }
+.side, body.res-nightmode .side { background-image: url("crs-8.png"); /* Place a relevant mission patch here, speckle is the background image, don't change */ padding: 285px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: center -8px; background-size: 333px 296px; /* Scale the background size if needed */ }
 
 /* USE THE COMMENTED OUT STYLES BELOW TO PROVIDE A THUMBNAIL FOR A SUBMISSION */
 /* #thing_t3_{{id}} a.thumbnail { height: 70px; background: 0 0 url(%%image%%) no-repeat; background-size:70px 60px; }*/
@@ -23,7 +23,7 @@ div.dropdown.srdrop > span.selected:hover, ul.sr-bar li > span.separator:hover, 
 
 #RESShortcutsEditContainer, a#sr-more-link { display: none; }
 
-#header-img-a { margin: 0; background-image: url(%%dragonNew%%); background-repeat: no-repeat; display: inline-block; text-indent: -9999px; background-size: 130px 100px; background-position: 10px 15px; vertical-align: bottom; width: 130px; height: 130px; }
+#header-img-a { margin: 0; background-image: url("dragon.png"); background-repeat: no-repeat; display: inline-block; text-indent: -9999px; background-size: 130px 100px; background-position: 10px 15px; vertical-align: bottom; width: 130px; height: 130px; }
 
 #header-img-a:hover { -webkit-animation: dragonFloat 3s ease-in-out infinite alternate; animation: dragonFloat 3s ease-in-out infinite alternate; }
 
@@ -37,7 +37,7 @@ div.dropdown.srdrop > span.selected:hover, ul.sr-bar li > span.separator:hover, 
 
 div#header-bottom-left, body.res-nightmode div#header-bottom-left { height: 130px; overflow: hidden; }
 
-div#header-bottom-left .redditname a, body.res-nightmode div#header-bottom-left .redditname a { display: inline-block; margin: 0 10px; vertical-align: top; background-image: url(%%spacex%%); background-size: 210px 130px; width: 210px; height: 130px; font-size: 0; background-repeat: no-repeat; position: relative; top: -3px; overflow: hidden; }
+div#header-bottom-left .redditname a, body.res-nightmode div#header-bottom-left .redditname a { display: inline-block; margin: 0 10px; vertical-align: top; background-image: url("spacex.png"); background-size: 210px 130px; width: 210px; height: 130px; font-size: 0; background-repeat: no-repeat; position: relative; top: -3px; overflow: hidden; }
 
 div#header-bottom-left ul.tabmenu, body.res-nightmode div#header-bottom-left ul.tabmenu { height: 130px; display: inline-block; margin: 0; vertical-align: top; overflow: hidden; }
 
@@ -67,7 +67,7 @@ body div#header-bottom-right #userbarToggle, body div#header-bottom-right span.s
 
 body div#header-bottom-right .user .userkarma, body div#header-bottom-right #mail.nohavemail:hover, body div#header-bottom-right #modmail.nohavemail:hover, body.res-nightmode div#header-bottom-right .user .userkarma, body.res-nightmode div#header-bottom-right #mail.nohavemail:hover, body.res-nightmode div#header-bottom-right #modmail.nohavemail:hover { border-bottom: none; font-weight: normal; }
 
-body div#header-bottom-right .mail, body div#header-bottom-right #mail.nohavemail, body div#header-bottom-right #mail.havemail, body div#header-bottom-right #modmail.nohavemail, body div#header-bottom-right #modmail.havemail, body.res-nightmode div#header-bottom-right #mail.nohavemail, body.res-nightmode div#header-bottom-right #mail.havemail, body.res-nightmode div#header-bottom-right #modmail.nohavemail, body.res-nightmode div#header-bottom-right #modmail.havemail, body div#header-bottom-right #mail.nohavemail:hover, body div#header-bottom-right #mail.havemail:hover, body div#header-bottom-right #modmail.nohavemail:hover, body div#header-bottom-right #modmail.havemail:hover, body.res-nightmode div#header-bottom-right #mail.nohavemail:hover, body.res-nightmode div#header-bottom-right #mail.havemail:hover, body.res-nightmode div#header-bottom-right #modmail.nohavemail:hover, body.res-nightmode div#header-bottom-right #modmail.havemail:hover, body div#header-bottom-right .flat-list a, body div#header-bottom-right #openRESPrefs #RESSettingsButton, body div#header-bottom-right .logout a, body.res-nightmode div#header-bottom-right .flat-list a, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton, body.res-nightmode div#header-bottom-right .logout a, body div#header-bottom-right .flat-list a:hover, body div#header-bottom-right #openRESPrefs #RESSettingsButton:hover, body div#header-bottom-right .logout a:hover, body.res-nightmode div#header-bottom-right .flat-list a:hover, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton:hover, body.res-nightmode div#header-bottom-right .logout a:hover, body.res-nightmode div#header-bottom-right .mail, body.res-nightmode div#header-bottom-right #mail.nohavemail, body.res-nightmode div#header-bottom-right #mail.havemail, body.res-nightmode div#header-bottom-right #modmail.nohavemail, body.res-nightmode div#header-bottom-right #modmail.havemail, body.res-nightmode div#header-bottom-right #mail.nohavemail:hover, body.res-nightmode div#header-bottom-right #mail.havemail:hover, body.res-nightmode div#header-bottom-right #modmail.nohavemail:hover, body.res-nightmode div#header-bottom-right #modmail.havemail:hover, body.res-nightmode div#header-bottom-right .flat-list a, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton, body.res-nightmode div#header-bottom-right .logout a, body.res-nightmode div#header-bottom-right .flat-list a:hover, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton:hover, body.res-nightmode div#header-bottom-right .logout a:hover { width: 30px !important; height: 30px !important; top: 0 !important; margin: 0 0 0 10px; background-image: url(%%sprites%%) !important; background-size: 30px 330px; cursor: pointer; vertical-align: top; border: none !important; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform ease 0.2s; transition: -webkit-transform ease 0.2s; transition: transform ease 0.2s; transition: transform ease 0.2s, -webkit-transform ease 0.2s; }
+body div#header-bottom-right .mail, body div#header-bottom-right #mail.nohavemail, body div#header-bottom-right #mail.havemail, body div#header-bottom-right #modmail.nohavemail, body div#header-bottom-right #modmail.havemail, body.res-nightmode div#header-bottom-right #mail.nohavemail, body.res-nightmode div#header-bottom-right #mail.havemail, body.res-nightmode div#header-bottom-right #modmail.nohavemail, body.res-nightmode div#header-bottom-right #modmail.havemail, body div#header-bottom-right #mail.nohavemail:hover, body div#header-bottom-right #mail.havemail:hover, body div#header-bottom-right #modmail.nohavemail:hover, body div#header-bottom-right #modmail.havemail:hover, body.res-nightmode div#header-bottom-right #mail.nohavemail:hover, body.res-nightmode div#header-bottom-right #mail.havemail:hover, body.res-nightmode div#header-bottom-right #modmail.nohavemail:hover, body.res-nightmode div#header-bottom-right #modmail.havemail:hover, body div#header-bottom-right .flat-list a, body div#header-bottom-right #openRESPrefs #RESSettingsButton, body div#header-bottom-right .logout a, body.res-nightmode div#header-bottom-right .flat-list a, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton, body.res-nightmode div#header-bottom-right .logout a, body div#header-bottom-right .flat-list a:hover, body div#header-bottom-right #openRESPrefs #RESSettingsButton:hover, body div#header-bottom-right .logout a:hover, body.res-nightmode div#header-bottom-right .flat-list a:hover, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton:hover, body.res-nightmode div#header-bottom-right .logout a:hover, body.res-nightmode div#header-bottom-right .mail, body.res-nightmode div#header-bottom-right #mail.nohavemail, body.res-nightmode div#header-bottom-right #mail.havemail, body.res-nightmode div#header-bottom-right #modmail.nohavemail, body.res-nightmode div#header-bottom-right #modmail.havemail, body.res-nightmode div#header-bottom-right #mail.nohavemail:hover, body.res-nightmode div#header-bottom-right #mail.havemail:hover, body.res-nightmode div#header-bottom-right #modmail.nohavemail:hover, body.res-nightmode div#header-bottom-right #modmail.havemail:hover, body.res-nightmode div#header-bottom-right .flat-list a, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton, body.res-nightmode div#header-bottom-right .logout a, body.res-nightmode div#header-bottom-right .flat-list a:hover, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton:hover, body.res-nightmode div#header-bottom-right .logout a:hover { width: 30px !important; height: 30px !important; top: 0 !important; margin: 0 0 0 10px; background-image: url("sprites.png") !important; background-size: 30px 330px; cursor: pointer; vertical-align: top; border: none !important; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform ease 0.2s; transition: -webkit-transform ease 0.2s; transition: transform ease 0.2s; transition: transform ease 0.2s, -webkit-transform ease 0.2s; }
 
 body div#header-bottom-right .message-count, body.res-nightmode div#header-bottom-right .message-count { background-color: #CCAC55; border-radius: 50%; width: 25px; height: 25px; margin: 0; padding: 0; font-size: 12px; display: inline-block; border: none !important; position: relative; top: -5px; left: -15px; vertical-align: top; line-height: 25px; text-align: center; box-shadow: -5px 5px 5px 0 rgba(24, 28, 31, 0.5); }
 
@@ -89,7 +89,7 @@ body div#header-bottom-right .flat-list a:hover, body div#header-bottom-right #o
 
 body div#header-bottom-right .flat-list a, body.res-nightmode div#header-bottom-right .flat-list a { background-position: 0 -120px; }
 
-body div#header-bottom-right #openRESPrefs #RESSettingsButton, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton { background-position: 0 -150px; background-image: url(%%sprites%%) !important; }
+body div#header-bottom-right #openRESPrefs #RESSettingsButton, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton { background-position: 0 -150px; background-image: url("sprites.png") !important; }
 
 body div#header-bottom-right #openRESPrefs #RESSettingsButton:after, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton:after { display: none; }
 
@@ -147,7 +147,7 @@ body.comments-page div.side .spacer:nth-child(4), body.comments-page div.side .s
 
 body.search-page div.side .spacer:nth-child(2), body.search-page div.side .spacer:nth-last-child(4), body.search-page div.side .spacer:nth-last-child(2) { display: none; }
 
-.morelink, body.res-nightmode .morelink { position: relative; border: none; font-size: 12px; font-weight: normal; line-height: 40px; height: 40px; text-align: center; letter-spacing: 0; background: url(%%falcon-new%%) !important; background-position: 0 7px !important; background-size: 320px 27px !important; background-repeat: no-repeat !important; }
+.morelink, body.res-nightmode .morelink { position: relative; border: none; font-size: 12px; font-weight: normal; line-height: 40px; height: 40px; text-align: center; letter-spacing: 0; background: url("falcon.png") !important; background-position: 0 7px !important; background-size: 320px 27px !important; background-repeat: no-repeat !important; }
 
 .morelink a, body.res-nightmode .morelink a { display: inline; position: relative; padding: 5px 10px; font-size: 14px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; background-color: rgba(34, 118, 171, 0.75) !important; }
 
@@ -316,7 +316,7 @@ div.bottom span.flair { display: none; }
 
 .side .titlebox .md h3:nth-of-type(4) a:hover { color: #CCAC55; }
 
-.side .titlebox .md h3:nth-of-type(4) a:before { content: ""; display: block; position: absolute; width: 50px; height: 50px; background-size: 200px 50px; background-image: url(%%notificationsprites%%); -webkit-transform: scale(0.8); transform: scale(0.8); overflow: hidden; top: 0; left: 0; }
+.side .titlebox .md h3:nth-of-type(4) a:before { content: ""; display: block; position: absolute; width: 50px; height: 50px; background-size: 200px 50px; background-image: url("notificationsprites.png"); -webkit-transform: scale(0.8); transform: scale(0.8); overflow: hidden; top: 0; left: 0; }
 
 .side .titlebox .md h3:nth-of-type(4) a[title="Campaign"]:before { background-position: 50px 0; }
 
@@ -378,17 +378,17 @@ body div.stickied a.title, body div.stickied span.stickied-tagline, body.res-nig
 
 .thumbnail { margin-right: 10px; }
 
-.thumbnail.self { height: 63px; /*Adjust to your Images height*/ background: 0 0 url(%%SwishCentered%%) no-repeat; }
+.thumbnail.self { height: 63px; /*Adjust to your Images height*/ background: 0 0 url("swish.png") no-repeat; }
 
-.thumbnail.default { height: 70px; background: 0 0 url(%%AwaitingDownlink%%) no-repeat; }
+.thumbnail.default { height: 70px; background: 0 0 url("awaitingvehicledownlink.png") no-repeat; }
 
-.thumbnail[href*="https://twitter.com/pbdes"], .thumbnail[href*="https://twitter.com/Leone_SN"], .thumbnail[href*="https://twitter.com/gruss_sn"], .thumbnail[href*="https://twitter.com/jeff_foust"] { background: 0 0 url(%%spacenewstwitter%%) no-repeat; background-size: 70px 70px; height: 70px; }
+.thumbnail[href*="https://twitter.com/pbdes"], .thumbnail[href*="https://twitter.com/Leone_SN"], .thumbnail[href*="https://twitter.com/gruss_sn"], .thumbnail[href*="https://twitter.com/jeff_foust"] { background: 0 0 url("spacenewstwitter.png") no-repeat; background-size: 70px 70px; height: 70px; }
 
 .thumbnail[href*="https://twitter.com/pbdes"] img, .thumbnail[href*="https://twitter.com/gruss_sn"] img, .thumbnail[href*="https://twitter.com/Leone_SN"] img, .thumbnail[href*="https://twitter.com/jeff_foust"] img { display: none; }
 
 span.rank { display: none; }
 
-body .arrow.up, body .arrow.upmod, body .arrow.down, body .arrow.downmod, body.res-nightmode .arrow.up, body.res-nightmode .arrow.upmod, body.res-nightmode .arrow.down, body.res-nightmode .arrow.downmod { height: 23px !important; width: 23px !important; background-size: 23px 92px !important; background-image: url(%%arrow-sprites%%) !important; }
+body .arrow.up, body .arrow.upmod, body .arrow.down, body .arrow.downmod, body.res-nightmode .arrow.up, body.res-nightmode .arrow.upmod, body.res-nightmode .arrow.down, body.res-nightmode .arrow.downmod { height: 23px !important; width: 23px !important; background-size: 23px 92px !important; background-image: url("arrowsprites.png") !important; }
 
 body .arrow.up, body.res-nightmode .arrow.up { background-position: 0px 0px !important; }
 
@@ -479,7 +479,7 @@ body > .content .midcol, body .midcol, body.res-nightmode > .content .midcol, bo
 
 .expando-button, .res.res-nightmode .expando-button { margin: 0 5px 0 0 !important; width: 30px !important; height: 30px !important; max-width: 30px !important; max-height: 30px !important; background-color: transparent; cursor: pointer; }
 
-.expando-button.collapsed, .expando-button.expanded, .res.res-nightmode .expando-button.collapsed, .res.res-nightmode .expando-button.expanded { background-image: url(%%sprites%%) !important; background-size: 30px 330px; }
+.expando-button.collapsed, .expando-button.expanded, .res.res-nightmode .expando-button.collapsed, .res.res-nightmode .expando-button.expanded { background-image: url("sprites.png") !important; background-size: 30px 330px; }
 
 .expando-button.collapsed, .res.res-nightmode .expando-button.collapsed { background-position: 0 -210px !important; -webkit-transition: -webkit-transform ease 0.2s; transition: -webkit-transform ease 0.2s; transition: transform ease 0.2s; transition: transform ease 0.2s, -webkit-transform ease 0.2s; }
 
@@ -561,7 +561,7 @@ div.spacer > button.btn { width: 100%; padding: 10px 0 !important; font-size: 16
 
 .linkflairlabel, .flair { max-width: 100%; }
 
-.linkflairlabel { vertical-align: middle; height: 18px; line-height: 19px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: bold; padding: 0 8px 0 24px !important; border-radius: 2px; border: none; border-bottom: 3px solid #1a5980 !important; background-color: #2276AB !important; color: #fafafa !important; background-repeat: no-repeat; background-image: url(%%flair-sprites%%); background-size: 24px 85px; text-shadow: 0 0 #849199; position: relative; display: none; }
+.linkflairlabel { vertical-align: middle; height: 18px; line-height: 19px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: bold; padding: 0 8px 0 24px !important; border-radius: 2px; border: none; border-bottom: 3px solid #1a5980 !important; background-color: #2276AB !important; color: #fafafa !important; background-repeat: no-repeat; background-image: url("flairsprites.png"); background-size: 24px 85px; text-shadow: 0 0 #849199; position: relative; display: none; }
 
 .linkflair-liveupdates .linkflairlabel, .linkflair-official .linkflairlabel, .linkflair-communitycontent .linkflairlabel, .linkflair-directlink .linkflairlabel, .linkflair-warning .linkflairlabel, .linkflair-happeningnow .linkflairlabel, .linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel { display: inline-block; }
 
@@ -615,9 +615,9 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 .linklisting [class*="linkflair-mission"]:after { width: 50px; height: 50px; top: 10px; right: 0; position: absolute; background-size: 250px 250px; text-indent: -100px; content: ""; line-height: 110px; text-align: right; margin-right: 10px; }
 
-.linklisting [class*="sprite-1"]:after { background-image: url(%%mission-sprites%%); }
+.linklisting [class*="sprite-1"]:after { background-image: url("mission-sprites.png"); }
 
-.linklisting [class*="sprite-2"]:after { background-image: url(%%mission-sprites2%%); }
+.linklisting [class*="sprite-2"]:after { background-image: url("mission-sprites-2.png"); }
 
 .linklisting .linkflair-mission-f1f1:after { content: "Falcon 1 Flight 1"; background-position: 0 0; }
 
@@ -711,7 +711,7 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 [id$="faqtable"] + table th, [id$="faqtable"] + table tr:nth-child(even) td { height: 100px; }
 
-[id$="faqtable"] + table th a, [id$="faqtable"] + table tr:nth-child(even) td a { display: block; width: 120px; height: 120px; margin: 0 auto; background-repeat: no-repeat; background-size: 120px 120px; background-image: url(%%wikisprites%%); overflow: hidden; }
+[id$="faqtable"] + table th a, [id$="faqtable"] + table tr:nth-child(even) td a { display: block; width: 120px; height: 120px; margin: 0 auto; background-repeat: no-repeat; background-size: 120px 120px; background-image: url("wikisprites.png"); overflow: hidden; }
 
 [id$="faqtable"] + table tr:nth-child(odd) td { font-size: 18px; text-align: center; padding-bottom: 20px; }
 
@@ -777,7 +777,7 @@ div.NERPageMarker, #NERFail { display: none !important; }
 
 body.res.res-nightmode textarea, body.res-nightmode .md-container, body.res-nightmode .RES-keyNav-activeElement, body.res-nightmode .RES-keyNav-activeElement .md-container, body.res .RES-keyNav-activeElement, body.res .RES-keyNav-activeElement .md-container, body.res-nightmode .commentreply .textarea, body.res-nightmode .pretty-form.long-text textarea, body.res-nightmode #quickMessage textarea, body.res-nightmode #newlink.submit textarea, body.res-nightmode .usertext-edit textarea, body.res-nightmode.res-commentBoxes .comment, body.res-nightmode.res-commentBoxes .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode .stylesheet-customize-container textarea, body.res-nightmode form#newlink { background-color: transparent !important; }
 
-html { height: 100%; background: url(%%banner%%); background-size: 2560px 200px; background-attachment: fixed; }
+html { height: 100%; background: url("banner.png"); background-size: 2560px 200px; background-attachment: fixed; }
 
 body { margin: 0 30px; top: 150px; position: absolute; width: calc(100% - 60px); box-shadow: 0 0 10px 2px #181c1f; background-color: #fafafa; }
 
