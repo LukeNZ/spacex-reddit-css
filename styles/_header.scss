@@ -169,7 +169,7 @@ body, body.res-nightmode {
             height: 0;
             border-top: 30px solid rgba($blue, 0.5);
             border-left: 30px solid transparent;
-            left: -30px;
+            right: 100%;
         }
 
         a {

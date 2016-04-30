@@ -55,7 +55,7 @@ div#header-bottom-left ul.tabmenu li.selected a, body.res-nightmode div#header-b
 
 body div#header-bottom-right, body.res-nightmode div#header-bottom-right { border: none; background-color: rgba(53, 105, 164, 0.5); top: 20px; height: 30px; line-height: 30px; padding: 0 10px; border-radius: 0; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; /* RES Gear Settings */ }
 
-body div#header-bottom-right:before, body.res-nightmode div#header-bottom-right:before { content: ""; display: block; position: absolute; width: 0px; height: 0; border-top: 30px solid rgba(53, 105, 164, 0.5); border-left: 30px solid transparent; left: -30px; }
+body div#header-bottom-right:before, body.res-nightmode div#header-bottom-right:before { content: ""; display: block; position: absolute; width: 0px; height: 0; border-top: 30px solid rgba(53, 105, 164, 0.5); border-left: 30px solid transparent; right: 100%; }
 
 body div#header-bottom-right a, body.res-nightmode div#header-bottom-right a { color: #fafafa; border-bottom: 2px solid transparent; -webkit-transition: color 0.2s ease, border-bottom 0.2s ease; transition: color 0.2s ease, border-bottom 0.2s ease; }
 
@@ -207,9 +207,9 @@ div.sidebox.submit.disabled .morelink .spacer.no-icon:after { font-size: 10px; c
 
 .side .usertext-body .md p { line-height: 1.5; }
 
-.side .usertext-body .md h4 { background-color: #2276AB; position: relative; right: -30px; line-height: 40px; color: #fafafa; font-family: "Helvetica Neue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; font-size: 16px; height: 40px; margin-top: 30px !important; margin-bottom: 10px !important; -webkit-transition: background-color 0.2s ease; transition: background-color 0.2s ease; }
+.side .usertext-body .md h4 { background-color: #2276AB; position: relative; right: -30px; line-height: 40px; color: #fafafa; font-family: "Helvetica Neue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; font-size: 16px; height: 40px; margin-top: 30px !important; margin-bottom: 10px !important; }
 
-.side .usertext-body .md h4:after { content: ""; display: block; border-top: 40px solid #2276AB; border-left: 30px solid transparent; position: absolute; width: 0; height: 0; top: 0; left: -30px; -webkit-transition: border-top 0.2s ease; transition: border-top 0.2s ease; }
+.side .usertext-body .md h4:after { content: ""; display: block; border-top: 40px solid #2276AB; border-left: 30px solid transparent; position: absolute; width: 0; height: 0; top: 0; right: 100%; }
 
 .side .usertext-body .md table, .side .usertext-body .md thead { border: 2px solid #181c1f; margin: 0 auto; }
 
@@ -308,7 +308,7 @@ div.bottom span.flair { display: none; }
 @media screen and (max-width: 1366px) { .side .titlebox .md h3:nth-of-type(4) a { padding: 2px 4px 0 4px; }
   .side .titlebox .md h3:nth-of-type(4) a:before { display: none !important; } }
 
-@media screen and (min-width: 1920px) { .side .titlebox .md h3:nth-of-type(4) a { font-size: 14px; padding: 5px 20px 0 50px; } }
+@media screen and (min-width: 1920px) { .side .titlebox .md h3:nth-of-type(4) a { font-size: 14px; padding: 5px 0 0 50px; } }
 
 .side .titlebox .md h3:nth-of-type(4) a:hover { color: #CCAC55; }
 

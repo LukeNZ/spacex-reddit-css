@@ -311,7 +311,6 @@ div.sidebox.submit {
             height:$sidebarHeadingHeight;
             margin-top:30px !important;
             margin-bottom:10px !important;
-            transition:background-color $fast ease;
 
             &:after {
                 content:"";
@@ -322,8 +321,7 @@ div.sidebox.submit {
                 width:0;
                 height:0;
                 top:0;
-                left:-30px;
-                transition:border-top $fast ease;
+                right:100%;
             }
         }
 
