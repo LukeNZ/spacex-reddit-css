@@ -35,7 +35,7 @@ gulp.task('reddify', function() {
         .pipe(replace('"spacenewstwitter.png"', '%%spacenewstwitter%%'))
         .pipe(replace('"arrowsprites.png"', '%%arrow-sprites%%'))
         .pipe(replace('"wikisprites.png"', '%%wikisprites%%'))
-        .pipe(replace('"banner.png"', '%%banner%%'))
+        .pipe(replace('"banner.jpg"', '%%banner2%%'))
         .pipe(replace('"flairsprites.png"', '%%flair-sprites%%'))
         .pipe(replace('"mission-sprites.png"', '%%mission-sprites%%'))
         .pipe(replace('"mission-sprites-2.png"', '%%mission-sprites-2%%'))

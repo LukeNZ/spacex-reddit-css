@@ -126,7 +126,7 @@ div#header-bottom-left, body.res-nightmode div#header-bottom-left {
                 padding:0;
 
                 &:hover {
-                    border-bottom:2px solid $gold;
+                    border-bottom:2px solid $gold !important;
                 }
             }
 

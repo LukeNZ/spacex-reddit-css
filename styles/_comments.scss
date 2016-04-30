@@ -127,7 +127,7 @@ body, body.res-nightmode {
 // The little dashed line thing
 .panestack-title {
     margin:10px;
-    border-bottom:1px dashed $grey;
+    border-bottom:1px dashed rgba($grey, 0.5);
 }
 
 #REScommentNavToggle {

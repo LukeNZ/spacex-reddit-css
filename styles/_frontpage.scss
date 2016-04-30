@@ -27,6 +27,10 @@ body > .content {
         transition:border-left 0.2s ease 0s;
         position:relative;
 
+        &[class*="linkflair-mission"] {
+            padding-right:50px;
+        }
+
         &:hover {
             border-left:2px solid $gold;
         }
@@ -38,13 +42,10 @@ body > .content {
 
     .tagline {
         color:$grey;
-        margin-left:$expandoWidth;
     }
 
     // User options for each listing
     .entry .flat-list.buttons {
-        margin-left:$expandoWidth;
-
         li {
             padding:3px 0px;
             margin:0 3px;

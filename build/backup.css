@@ -18,14 +18,6 @@ div.commentarea > form.usertext {
 /* ------------- Wiki ----------------- */
 /* ------------------------------------ */
 
-/* Infobar */
-.infobar {
-    background-color:rgba(204,172,85,0.2) !important;
-    border:1px solid #CCAC55;
-    padding:10px;
-    margin:10px;
-}
-
 /* --- Wiki Header Look & Feel --- */
 .wiki-page .wiki-page-content .md.wiki h1,
 .wiki-page .wiki-page-content .md.wiki h2,
