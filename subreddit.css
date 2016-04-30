@@ -69,7 +69,7 @@ body div#header-bottom-right .user .userkarma, body div#header-bottom-right #mai
 
 body div#header-bottom-right .mail, body div#header-bottom-right #mail.nohavemail, body div#header-bottom-right #mail.havemail, body div#header-bottom-right #modmail.nohavemail, body div#header-bottom-right #modmail.havemail, body.res-nightmode div#header-bottom-right #mail.nohavemail, body.res-nightmode div#header-bottom-right #mail.havemail, body.res-nightmode div#header-bottom-right #modmail.nohavemail, body.res-nightmode div#header-bottom-right #modmail.havemail, body div#header-bottom-right #mail.nohavemail:hover, body div#header-bottom-right #mail.havemail:hover, body div#header-bottom-right #modmail.nohavemail:hover, body div#header-bottom-right #modmail.havemail:hover, body.res-nightmode div#header-bottom-right #mail.nohavemail:hover, body.res-nightmode div#header-bottom-right #mail.havemail:hover, body.res-nightmode div#header-bottom-right #modmail.nohavemail:hover, body.res-nightmode div#header-bottom-right #modmail.havemail:hover, body div#header-bottom-right .flat-list a, body div#header-bottom-right #openRESPrefs #RESSettingsButton, body div#header-bottom-right .logout a, body.res-nightmode div#header-bottom-right .flat-list a, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton, body.res-nightmode div#header-bottom-right .logout a, body div#header-bottom-right .flat-list a:hover, body div#header-bottom-right #openRESPrefs #RESSettingsButton:hover, body div#header-bottom-right .logout a:hover, body.res-nightmode div#header-bottom-right .flat-list a:hover, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton:hover, body.res-nightmode div#header-bottom-right .logout a:hover, body.res-nightmode div#header-bottom-right .mail, body.res-nightmode div#header-bottom-right #mail.nohavemail, body.res-nightmode div#header-bottom-right #mail.havemail, body.res-nightmode div#header-bottom-right #modmail.nohavemail, body.res-nightmode div#header-bottom-right #modmail.havemail, body.res-nightmode div#header-bottom-right #mail.nohavemail:hover, body.res-nightmode div#header-bottom-right #mail.havemail:hover, body.res-nightmode div#header-bottom-right #modmail.nohavemail:hover, body.res-nightmode div#header-bottom-right #modmail.havemail:hover, body.res-nightmode div#header-bottom-right .flat-list a, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton, body.res-nightmode div#header-bottom-right .logout a, body.res-nightmode div#header-bottom-right .flat-list a:hover, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton:hover, body.res-nightmode div#header-bottom-right .logout a:hover { width: 30px !important; height: 30px !important; top: 0 !important; margin: 0 0 0 10px; background-image: url("sprites.png") !important; background-size: 30px 330px; cursor: pointer; vertical-align: top; border: none !important; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform ease 0.2s; transition: -webkit-transform ease 0.2s; transition: transform ease 0.2s; transition: transform ease 0.2s, -webkit-transform ease 0.2s; }
 
-body div#header-bottom-right .message-count, body.res-nightmode div#header-bottom-right .message-count { background-color: #CCAC55; border-radius: 50%; width: 25px; height: 25px; margin: 0; padding: 0; font-size: 12px; display: inline-block; border: none !important; position: relative; top: -5px; left: -15px; vertical-align: top; line-height: 25px; text-align: center; box-shadow: -5px 5px 5px 0 rgba(24, 28, 31, 0.5); }
+body div#header-bottom-right .message-count, body.res-nightmode div#header-bottom-right .message-count { background-color: #CCAC55; border-radius: 50%; width: 20px; height: 20px; margin: 0; padding: 0; font-size: 11px; display: inline-block; border: none !important; position: relative; top: -3px; left: -15px; vertical-align: top; line-height: 20px; text-align: center; box-shadow: -5px 5px 5px 0 rgba(24, 28, 31, 0.5); }
 
 body div#header-bottom-right .message-count:hover, body.res-nightmode div#header-bottom-right .message-count:hover { color: #fafafa; }
 
@@ -135,19 +135,11 @@ div.linkinfo input#shortlink-text:focus { border: 2px solid #CCAC55 !important; 
 
 body.res-nightmode div.linkinfo { background-color: transparent !important; }
 
-body.listing-page.loggedin div.side .spacer:first-child { margin: 5px 0; }
+div.side .spacer { margin: 0 !important; padding: 0 !important; }
 
-body.listing-page.loggedin div.side .spacer:nth-child(2), body.listing-page.loggedin div.side .spacer:nth-child(4), body.listing-page.loggedin div.side .spacer:nth-child(5), body.listing-page.loggedin div.side .spacer:nth-last-child(3) { margin: 0; padding: 0; }
+div.side .spacer .sidebox.submit-link { margin: 5px 0; }
 
-body.listing-page.loggedin div.side .spacer:nth-child(3), body.listing-page.loggedin div.side .spacer:nth-child(6), body.listing-page.loggedin div.side .spacer:nth-last-child(2), body.listing-page.loggedin div.side .spacer:last-child { display: none; }
-
-body.comments-page div.side .spacer:nth-child(3) { margin: 5px 0; }
-
-body.comments-page div.side .spacer:nth-child(2), body.comments-page div.side .spacer:nth-child(4), body.comments-page div.side .spacer:nth-child(5), body.comments-page div.side .spacer:nth-last-child(3) { margin: 0; padding: 0; }
-
-body.comments-page div.side .spacer:nth-child(4), body.comments-page div.side .spacer:nth-last-child(2), body.comments-page div.side .spacer:last-child { display: none; }
-
-body.search-page div.side .spacer:nth-child(2), body.search-page div.side .spacer:nth-last-child(4), body.search-page div.side .spacer:nth-last-child(2) { display: none; }
+div.side .spacer .sidebox.submit-text, div.side .spacer .sidebox.create, div.side .spacer .sidecontentbox, div.side .spacer .accountactivitybox, div.side .spacer .account-activity-box { display: none; }
 
 .morelink, body.res-nightmode .morelink { position: relative; border: none; font-size: 12px; font-weight: normal; line-height: 40px; height: 40px; text-align: center; letter-spacing: 0; background: url("falcon.png") !important; background-position: 0 7px !important; background-size: 320px 27px !important; background-repeat: no-repeat !important; }
 
@@ -197,9 +189,7 @@ div.sidebox.submit.disabled .morelink .spacer.no-icon:after { font-size: 10px; c
 
 .side .titlebox p.users-online .number:after { content: " In Orbit"; font-size: smaller; }
 
-.side .titlebox p.users-online:before { display: none; }
-
-.side .titlebox .leavemoderator, .side .titlebox .tagline, .side .titlebox #sr_style_throbber, .side .titlebox .leavecontributor-button { display: none; }
+.side .titlebox p.users-online:before, .side .titlebox .leavemoderator, .side .titlebox .tagline, .side .titlebox #sr_style_throbber, .side .titlebox .leavecontributor-button { display: none; }
 
 .side .titlebox .sr_style_toggle, .side .titlebox .flairtoggle { background-color: transparent !important; color: #849199 !important; display: inline-block; text-align: center; font-size: 0; width: 50%; }
 

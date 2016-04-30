@@ -67,49 +67,16 @@ body.res-nightmode div.linkinfo {
     background-color:transparent !important;
 }
 
-body.listing-page.loggedin {
-    div.side {
-        // Make a post
-        .spacer:first-child {
-            margin:5px 0;
-        }
+div.side .spacer {
+    margin:0 !important;
+    padding:0 !important;
 
-        .spacer:nth-child(2), .spacer:nth-child(4), .spacer:nth-child(5), .spacer:nth-last-child(3) {
-            margin:0;
-            padding:0;
-        }
-
-        // Selfpost, Create your own subreddit, Recently Viewed Links, Account Activity
-        .spacer:nth-child(3), .spacer:nth-child(6), .spacer:nth-last-child(2), .spacer:last-child {
-            display:none;
-        }
+    .sidebox.submit-link {
+        margin:5px 0;
     }
-}
 
-body.comments-page {
-    div.side {
-        // Make a post
-        .spacer:nth-child(3) {
-            margin:5px 0;
-        }
-
-        .spacer:nth-child(2), .spacer:nth-child(4), .spacer:nth-child(5), .spacer:nth-last-child(3) {
-            margin:0;
-            padding:0;
-        }
-
-        // Selfpost, Create your own subreddit, Recently Viewed Links, Account Activity
-        .spacer:nth-child(4), .spacer:nth-last-child(2), .spacer:last-child {
-            display:none;
-        }
-    }
-}
-
-body.search-page {
-    div.side {
-        .spacer:nth-child(2), .spacer:nth-last-child(4), .spacer:nth-last-child(2) {
-            display:none;
-        }
+    .sidebox.submit-text, .sidebox.create, .sidecontentbox, .accountactivitybox, .account-activity-box {
+        display:none;
     }
 }
 
@@ -291,11 +258,7 @@ div.sidebox.submit {
         font-size:smaller;
     }
 
-    p.users-online:before {
-        display:none;
-    }
-
-    .leavemoderator, .tagline, #sr_style_throbber, .leavecontributor-button {
+    p.users-online:before, .leavemoderator, .tagline, #sr_style_throbber, .leavecontributor-button {
         display:none;
     }
 

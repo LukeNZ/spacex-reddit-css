@@ -135,19 +135,11 @@ div.linkinfo input#shortlink-text:focus { border: 2px solid #CCAC55 !important; 
 
 body.res-nightmode div.linkinfo { background-color: transparent !important; }
 
-body.listing-page.loggedin div.side .spacer:first-child { margin: 5px 0; }
+div.side .spacer { margin: 0 !important; padding: 0 !important; }
 
-body.listing-page.loggedin div.side .spacer:nth-child(2), body.listing-page.loggedin div.side .spacer:nth-child(4), body.listing-page.loggedin div.side .spacer:nth-child(5), body.listing-page.loggedin div.side .spacer:nth-last-child(3) { margin: 0; padding: 0; }
+div.side .spacer .sidebox.submit-link { margin: 5px 0; }
 
-body.listing-page.loggedin div.side .spacer:nth-child(3), body.listing-page.loggedin div.side .spacer:nth-child(6), body.listing-page.loggedin div.side .spacer:nth-last-child(2), body.listing-page.loggedin div.side .spacer:last-child { display: none; }
-
-body.comments-page div.side .spacer:nth-child(3) { margin: 5px 0; }
-
-body.comments-page div.side .spacer:nth-child(2), body.comments-page div.side .spacer:nth-child(4), body.comments-page div.side .spacer:nth-child(5), body.comments-page div.side .spacer:nth-last-child(3) { margin: 0; padding: 0; }
-
-body.comments-page div.side .spacer:nth-child(4), body.comments-page div.side .spacer:nth-last-child(2), body.comments-page div.side .spacer:last-child { display: none; }
-
-body.search-page div.side .spacer:nth-child(2), body.search-page div.side .spacer:nth-last-child(4), body.search-page div.side .spacer:nth-last-child(2) { display: none; }
+div.side .spacer .sidebox.submit-text, div.side .spacer .sidebox.create, div.side .spacer .sidecontentbox, div.side .spacer .accountactivitybox, div.side .spacer .account-activity-box { display: none; }
 
 .morelink, body.res-nightmode .morelink { position: relative; border: none; font-size: 12px; font-weight: normal; line-height: 40px; height: 40px; text-align: center; letter-spacing: 0; background: url(%%falcon-new%%) !important; background-position: 0 7px !important; background-size: 320px 27px !important; background-repeat: no-repeat !important; }
 
@@ -197,9 +189,7 @@ div.sidebox.submit.disabled .morelink .spacer.no-icon:after { font-size: 10px; c
 
 .side .titlebox p.users-online .number:after { content: " In Orbit"; font-size: smaller; }
 
-.side .titlebox p.users-online:before { display: none; }
-
-.side .titlebox .leavemoderator, .side .titlebox .tagline, .side .titlebox #sr_style_throbber, .side .titlebox .leavecontributor-button { display: none; }
+.side .titlebox p.users-online:before, .side .titlebox .leavemoderator, .side .titlebox .tagline, .side .titlebox #sr_style_throbber, .side .titlebox .leavecontributor-button { display: none; }
 
 .side .titlebox .sr_style_toggle, .side .titlebox .flairtoggle { background-color: transparent !important; color: #849199 !important; display: inline-block; text-align: center; font-size: 0; width: 50%; }
 
