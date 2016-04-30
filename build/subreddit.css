@@ -358,6 +358,8 @@ body > .content { margin: 100px 340px 20px 0; background-color: #fafafa; }
 
 #siteTable .thing { margin: 0; padding: 6px 0; border-left: 2px solid transparent; -webkit-transition: border-left 0.2s ease 0s; transition: border-left 0.2s ease 0s; position: relative; }
 
+#siteTable .thing[class*="linkflair-mission"] { padding-right: 50px; }
+
 #siteTable .thing:hover { border-left: 2px solid #CCAC55; }
 
 #siteTable .thing:not(:first-child) { border-top: 1px dashed rgba(132, 145, 153, 0.5); }
@@ -783,7 +785,7 @@ div.NERPageMarker, #NERFail { display: none !important; }
 
 .RESDropdownList { top: 50px !important; }
 
-body.res.res-nightmode textarea, body.res-nightmode .md-container, body.res-nightmode .RES-keyNav-activeElement, body.res-nightmode .RES-keyNav-activeElement .md-container, body.res .RES-keyNav-activeElement, body.res .RES-keyNav-activeElement .md-container, body.res-nightmode .commentreply .textarea, body.res-nightmode .pretty-form.long-text textarea, body.res-nightmode #quickMessage textarea, body.res-nightmode #newlink.submit textarea, body.res-nightmode .usertext-edit textarea, body.res-nightmode.res-commentBoxes .comment, body.res-nightmode.res-commentBoxes .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode .stylesheet-customize-container textarea, body.res-nightmode form#newlink { background-color: transparent !important; }
+body.res.res-nightmode textarea, body.res-nightmode .md-container, body.res-nightmode .RES-keyNav-activeElement, body.res-nightmode .RES-keyNav-activeElement .md-container, body.res .RES-keyNav-activeElement, body.res .RES-keyNav-activeElement .md-container, body.res-nightmode .commentreply .textarea, body.res-nightmode .pretty-form.long-text textarea, body.res-nightmode #quickMessage textarea, body.res-nightmode #newlink.submit textarea, body.res-nightmode .usertext-edit textarea, body.res-nightmode.res-commentBoxes .comment, body.res-nightmode.res-commentBoxes .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode .stylesheet-customize-container textarea, body.res-nightmode form#newlink, .res-nightmode body .content { background-color: transparent !important; }
 
 html { height: 100%; background: url(%%banner2%%); background-size: 2560px 200px; background-attachment: fixed; }
 
