@@ -75,8 +75,13 @@ div.side .spacer {
         margin:5px 0;
     }
 
-    .sidebox.submit-text, .sidebox.create, .sidecontentbox, .accountactivitybox, .account-activity-box {
+    .sidebox.submit-text, .sidebox.create, .account-activity-box {
         display:none;
+    }
+
+    .sidecontentbox:not(.collapsible) > * { display: none; }
+    .sidecontentbox:not(.collapsible) .helplink, .sidecontentbox:not(.collapsible) .helplink ~ * {
+        display: block;
     }
 }
 

@@ -139,7 +139,11 @@ div.side .spacer { margin: 0 !important; padding: 0 !important; }
 
 div.side .spacer .sidebox.submit-link { margin: 5px 0; }
 
-div.side .spacer .sidebox.submit-text, div.side .spacer .sidebox.create, div.side .spacer .sidecontentbox, div.side .spacer .accountactivitybox, div.side .spacer .account-activity-box { display: none; }
+div.side .spacer .sidebox.submit-text, div.side .spacer .sidebox.create, div.side .spacer .account-activity-box { display: none; }
+
+div.side .spacer .sidecontentbox:not(.collapsible) > * { display: none; }
+
+div.side .spacer .sidecontentbox:not(.collapsible) .helplink, div.side .spacer .sidecontentbox:not(.collapsible) .helplink ~ * { display: block; }
 
 .morelink, body.res-nightmode .morelink { position: relative; border: none; font-size: 12px; font-weight: normal; line-height: 40px; height: 40px; text-align: center; letter-spacing: 0; background: url("falcon.png") !important; background-position: 0 7px !important; background-size: 320px 27px !important; background-repeat: no-repeat !important; }
 
@@ -304,7 +308,7 @@ div.bottom span.flair { display: none; }
 @media screen and (max-width: 1366px) { .side .titlebox .md h3:nth-of-type(4) a { padding: 2px 4px 0 4px; }
   .side .titlebox .md h3:nth-of-type(4) a:before { display: none !important; } }
 
-@media screen and (min-width: 1920px) { .side .titlebox .md h3:nth-of-type(4) a { font-size: 14px; padding: 5px 20px 0 50px; } }
+@media screen and (min-width: 1920px) { .side .titlebox .md h3:nth-of-type(4) a { font-size: 14px; padding: 5px 0 0 50px; } }
 
 .side .titlebox .md h3:nth-of-type(4) a:hover { color: #CCAC55; }
 
@@ -348,7 +352,7 @@ body > .content { margin: 100px 340px 20px 0; background-color: #fafafa; }
 
 #siteTable .thing { margin: 0; padding: 6px 0; border-left: 2px solid transparent; -webkit-transition: border-left 0.2s ease 0s; transition: border-left 0.2s ease 0s; position: relative; }
 
-#siteTable .thing[class*="linkflair-mission"] { padding-right: 50px; }
+#siteTable .thing[class*="linkflair-mission"] { padding-right: 70px; }
 
 #siteTable .thing:hover { border-left: 2px solid #CCAC55; }
 

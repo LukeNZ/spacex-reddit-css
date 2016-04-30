@@ -69,7 +69,7 @@ body div#header-bottom-right .user .userkarma, body div#header-bottom-right #mai
 
 body div#header-bottom-right .mail, body div#header-bottom-right #mail.nohavemail, body div#header-bottom-right #mail.havemail, body div#header-bottom-right #modmail.nohavemail, body div#header-bottom-right #modmail.havemail, body.res-nightmode div#header-bottom-right #mail.nohavemail, body.res-nightmode div#header-bottom-right #mail.havemail, body.res-nightmode div#header-bottom-right #modmail.nohavemail, body.res-nightmode div#header-bottom-right #modmail.havemail, body div#header-bottom-right #mail.nohavemail:hover, body div#header-bottom-right #mail.havemail:hover, body div#header-bottom-right #modmail.nohavemail:hover, body div#header-bottom-right #modmail.havemail:hover, body.res-nightmode div#header-bottom-right #mail.nohavemail:hover, body.res-nightmode div#header-bottom-right #mail.havemail:hover, body.res-nightmode div#header-bottom-right #modmail.nohavemail:hover, body.res-nightmode div#header-bottom-right #modmail.havemail:hover, body div#header-bottom-right .flat-list a, body div#header-bottom-right #openRESPrefs #RESSettingsButton, body div#header-bottom-right .logout a, body.res-nightmode div#header-bottom-right .flat-list a, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton, body.res-nightmode div#header-bottom-right .logout a, body div#header-bottom-right .flat-list a:hover, body div#header-bottom-right #openRESPrefs #RESSettingsButton:hover, body div#header-bottom-right .logout a:hover, body.res-nightmode div#header-bottom-right .flat-list a:hover, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton:hover, body.res-nightmode div#header-bottom-right .logout a:hover, body.res-nightmode div#header-bottom-right .mail, body.res-nightmode div#header-bottom-right #mail.nohavemail, body.res-nightmode div#header-bottom-right #mail.havemail, body.res-nightmode div#header-bottom-right #modmail.nohavemail, body.res-nightmode div#header-bottom-right #modmail.havemail, body.res-nightmode div#header-bottom-right #mail.nohavemail:hover, body.res-nightmode div#header-bottom-right #mail.havemail:hover, body.res-nightmode div#header-bottom-right #modmail.nohavemail:hover, body.res-nightmode div#header-bottom-right #modmail.havemail:hover, body.res-nightmode div#header-bottom-right .flat-list a, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton, body.res-nightmode div#header-bottom-right .logout a, body.res-nightmode div#header-bottom-right .flat-list a:hover, body.res-nightmode div#header-bottom-right #openRESPrefs #RESSettingsButton:hover, body.res-nightmode div#header-bottom-right .logout a:hover { width: 30px !important; height: 30px !important; top: 0 !important; margin: 0 0 0 10px; background-image: url(%%sprites%%) !important; background-size: 30px 330px; cursor: pointer; vertical-align: top; border: none !important; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform ease 0.2s; transition: -webkit-transform ease 0.2s; transition: transform ease 0.2s; transition: transform ease 0.2s, -webkit-transform ease 0.2s; }
 
-body div#header-bottom-right .message-count, body.res-nightmode div#header-bottom-right .message-count { background-color: #CCAC55; border-radius: 50%; width: 25px; height: 25px; margin: 0; padding: 0; font-size: 12px; display: inline-block; border: none !important; position: relative; top: -5px; left: -15px; vertical-align: top; line-height: 25px; text-align: center; box-shadow: -5px 5px 5px 0 rgba(24, 28, 31, 0.5); }
+body div#header-bottom-right .message-count, body.res-nightmode div#header-bottom-right .message-count { background-color: #CCAC55; border-radius: 50%; width: 20px; height: 20px; margin: 0; padding: 0; font-size: 11px; display: inline-block; border: none !important; position: relative; top: -3px; left: -15px; vertical-align: top; line-height: 20px; text-align: center; box-shadow: -5px 5px 5px 0 rgba(24, 28, 31, 0.5); }
 
 body div#header-bottom-right .message-count:hover, body.res-nightmode div#header-bottom-right .message-count:hover { color: #fafafa; }
 
@@ -139,7 +139,11 @@ div.side .spacer { margin: 0 !important; padding: 0 !important; }
 
 div.side .spacer .sidebox.submit-link { margin: 5px 0; }
 
-div.side .spacer .sidebox.submit-text, div.side .spacer .sidebox.create, div.side .spacer .sidecontentbox, div.side .spacer .accountactivitybox, div.side .spacer .account-activity-box { display: none; }
+div.side .spacer .sidebox.submit-text, div.side .spacer .sidebox.create, div.side .spacer .account-activity-box { display: none; }
+
+div.side .spacer .sidecontentbox:not(.collapsible) > * { display: none; }
+
+div.side .spacer .sidecontentbox:not(.collapsible) .helplink, div.side .spacer .sidecontentbox:not(.collapsible) .helplink ~ * { display: block; }
 
 .morelink, body.res-nightmode .morelink { position: relative; border: none; font-size: 12px; font-weight: normal; line-height: 40px; height: 40px; text-align: center; letter-spacing: 0; background: url(%%falcon-new%%) !important; background-position: 0 7px !important; background-size: 320px 27px !important; background-repeat: no-repeat !important; }
 
@@ -348,7 +352,7 @@ body > .content { margin: 100px 340px 20px 0; background-color: #fafafa; }
 
 #siteTable .thing { margin: 0; padding: 6px 0; border-left: 2px solid transparent; -webkit-transition: border-left 0.2s ease 0s; transition: border-left 0.2s ease 0s; position: relative; }
 
-#siteTable .thing[class*="linkflair-mission"] { padding-right: 50px; }
+#siteTable .thing[class*="linkflair-mission"] { padding-right: 70px; }
 
 #siteTable .thing:hover { border-left: 2px solid #CCAC55; }
 
