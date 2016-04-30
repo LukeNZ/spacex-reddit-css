@@ -74,10 +74,6 @@
             width:180px;
         }
 
-        &:hover {
-            background-color:$rocketblue;
-        }
-
         a {
             padding:0 10px;
             display:inline-block;
@@ -114,10 +110,6 @@
         // Small screens
         @media screen and (max-width: $break-small) {
             left:180px;
-        }
-
-        &:hover {
-            background-color:$rocketblue;
         }
 
         a {
