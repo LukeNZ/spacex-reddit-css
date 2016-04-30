@@ -26,11 +26,11 @@
 
             a {
                 display:block;
-                width:120px;
-                height:120px;
+                width:100px;
+                height:100px;
                 margin:0 auto;
                 background-repeat:no-repeat;
-                background-size:120px 120px;
+                background-size:400px 300px;
                 background-image:url("wikisprites.png");
                 overflow:hidden;
             }
@@ -55,17 +55,17 @@
         }
 
         [href$="Watching"] { background-position:0 0; }
-        [href$="launchprep"] { background-position:200px 0; }
-        [href$="Falcon"] { background-position:400px 0; }
-        [href$="Dragon"] { background-position:600px 0; }
-        [href$="reusability"] { }
-        [href$="ElonMusk"] { }
-        [href$="company"] { }
-        [href$="workingat"] { }
-        [href$="orbits"] { }
-        [href$="Mars"] { }
-        [href$="researchanddev"] { }
-        [href$="nasa"] { }
+        [href$="launchprep"] { background-position:-100px 0; }
+        [href$="Falcon"] { background-position:-200px 0; }
+        [href$="Dragon"] { background-position:-300px 0; }
+        [href$="reusability"] { background-position:0 -100px; }
+        [href$="ElonMusk"] { background-position:-100px -100px; }
+        [href$="company"] { background-position:-200px -100px }
+        [href$="workingat"] { background-position:-300px -100px; }
+        [href$="orbits"] { background-position:0 -200px; }
+        [href$="Mars"] { background-position:-100px -200px; }
+        [href$="researchanddev"] { background-position:-200px -200px; }
+        [href$="nasa"] { background-position:-300px -200px; }
     }
 }
 

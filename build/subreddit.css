@@ -713,7 +713,7 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 [id$="faqtable"] + table th, [id$="faqtable"] + table tr:nth-child(even) td { height: 100px; }
 
-[id$="faqtable"] + table th a, [id$="faqtable"] + table tr:nth-child(even) td a { display: block; width: 120px; height: 120px; margin: 0 auto; background-repeat: no-repeat; background-size: 120px 120px; background-image: url(%%wikisprites%%); overflow: hidden; }
+[id$="faqtable"] + table th a, [id$="faqtable"] + table tr:nth-child(even) td a { display: block; width: 100px; height: 100px; margin: 0 auto; background-repeat: no-repeat; background-size: 400px 300px; background-image: url(%%wikisprites%%); overflow: hidden; }
 
 [id$="faqtable"] + table tr:nth-child(odd) td { font-size: 18px; text-align: center; padding-bottom: 20px; }
 
@@ -723,11 +723,27 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 [id$="faqtable"] + table [href$="Watching"] { background-position: 0 0; }
 
-[id$="faqtable"] + table [href$="launchprep"] { background-position: 200px 0; }
+[id$="faqtable"] + table [href$="launchprep"] { background-position: -100px 0; }
 
-[id$="faqtable"] + table [href$="Falcon"] { background-position: 400px 0; }
+[id$="faqtable"] + table [href$="Falcon"] { background-position: -200px 0; }
 
-[id$="faqtable"] + table [href$="Dragon"] { background-position: 600px 0; }
+[id$="faqtable"] + table [href$="Dragon"] { background-position: -300px 0; }
+
+[id$="faqtable"] + table [href$="reusability"] { background-position: 0 -100px; }
+
+[id$="faqtable"] + table [href$="ElonMusk"] { background-position: -100px -100px; }
+
+[id$="faqtable"] + table [href$="company"] { background-position: -200px -100px; }
+
+[id$="faqtable"] + table [href$="workingat"] { background-position: -300px -100px; }
+
+[id$="faqtable"] + table [href$="orbits"] { background-position: 0 -200px; }
+
+[id$="faqtable"] + table [href$="Mars"] { background-position: -100px -200px; }
+
+[id$="faqtable"] + table [href$="researchanddev"] { background-position: -200px -200px; }
+
+[id$="faqtable"] + table [href$="nasa"] { background-position: -300px -200px; }
 
 .wiki-page-content .md a[href$="#green"] { color: #090; cursor: default; }
 
