@@ -41,7 +41,7 @@ div#header-bottom-left, body.res-nightmode div#header-bottom-left { height: 130p
 
 div#header-bottom-left .redditname a, body.res-nightmode div#header-bottom-left .redditname a { display: inline-block; margin: 0 10px; vertical-align: top; background-image: url("spacex.png"); background-size: 210px 130px; width: 210px; height: 130px; font-size: 0; background-repeat: no-repeat; position: relative; top: -3px; overflow: hidden; }
 
-div#header-bottom-left ul.tabmenu, body.res-nightmode div#header-bottom-left ul.tabmenu { height: 130px; display: inline-block; margin: 0; vertical-align: top; overflow: hidden; }
+div#header-bottom-left ul.tabmenu, body.res-nightmode div#header-bottom-left ul.tabmenu { height: 130px; display: inline-block; margin: 0; vertical-align: top; overflow: hidden; position: absolute; }
 
 div#header-bottom-left ul.tabmenu li, body.res-nightmode div#header-bottom-left ul.tabmenu li { background-color: transparent; display: inline-block; width: auto; line-height: 130px; margin: 0 10px; }
 
