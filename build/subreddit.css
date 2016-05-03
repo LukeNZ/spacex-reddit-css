@@ -11,11 +11,13 @@
 /* #thing_t3_{{id}} a.thumbnail { height: 70px; background: 0 0 url(%%image%%) no-repeat; background-size:70px 60px; }*/
 /* USE THE COMMENTED OUT STYLES BELOW TO PROVIDE A NEW TITLE FOR A SUBMISSION */
 /* div#thing_{{id}} a.title { font-size:0; } div#thing_{{id}} a.title:after { content:"{{title}}"; vertical-align:middle; font-size:16px; } */
-#header { background: transparent !important; border-bottom: none; font-family: Verdana, Geneva, sans-serif; height: 150px; position: absolute; margin-left: -30px; width: calc(100% - -60px); top: -150px; /* Reddit's CSS compressor can't handle calc with addition. See: https://github.com/reddit/reddit/issues/1042 */ }
+#header { background: transparent !important; border-bottom: none; font-family: Verdana, Geneva, sans-serif; height: 150px; position: absolute; margin-left: -25px; width: calc(100% - -25px * 2); top: -150px; }
 
 div#sr-header-area, .res-nightmode div#sr-header-area { background-color: rgba(53, 105, 164, 0.5); border: none; text-transform: lowercase; line-height: 20px; height: 20px; }
 
-div#sr-header-area .drop-choices.srdrop, .res-nightmode div#sr-header-area .drop-choices.srdrop { border: none; margin-left: 0px; background-color: rgba(53, 105, 164, 0.8); color: #fafafa !important; }
+div#sr-header-area .drop-choices.srdrop, .res-nightmode div#sr-header-area .drop-choices.srdrop { border: none; margin-left: 0px; background-color: rgba(53, 105, 164, 0.8); }
+
+div#sr-header-area .drop-choices.srdrop .choice, .res-nightmode div#sr-header-area .drop-choices.srdrop .choice { color: #fff; }
 
 div.dropdown.srdrop > span.selected, ul.sr-bar li > span.separator, ul.sr-bar li > a, div#RESShortcuts > span.separator, div#RESShortcuts > a, div#srDropdownContainer a, div#RESStaticShortcuts > span.separator, div#RESStaticShortcuts > a { color: #849199; -webkit-transition: color ease 0.2s; transition: color ease 0.2s; }
 
@@ -795,6 +797,6 @@ body.res.res-nightmode textarea, body.res-nightmode .md-container, body.res-nigh
 
 html { height: 100%; background: url("banner.jpg"); background-color: #21272b; background-size: 2560px 200px; background-attachment: fixed; }
 
-body { margin: 0 30px; top: 150px; position: absolute; width: calc(100% - 60px); box-shadow: 0 0 10px 2px #181c1f; background-color: #fafafa; }
+body { margin: 0 25px; top: 150px; position: absolute; width: calc(100% - (25px * 2)); box-shadow: 0 0 10px 2px #181c1f; background-color: #fafafa; }
 
 :focus { outline: none !important; }

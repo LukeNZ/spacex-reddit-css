@@ -10,11 +10,9 @@ $headerHeight: $subredditNavigatorHeight + $bannerHeight;
     font-family:$generic;
     height:$headerHeight;
     position:absolute;
-    margin-left:-30px;
-    width:calc(100% - -60px);
+    margin-left:-$margin;
+    width:calc(100% - -#{$margin} * 2); // Reddit's CSS compressor can't handle calc with addition. See: https://github.com/reddit/reddit/issues/1042
     top: -150px;
-    /* Reddit's CSS compressor can't handle calc with addition. See:
-    https://github.com/reddit/reddit/issues/1042 */
 }
 
 // Subreddit Navigator
@@ -29,7 +27,10 @@ div#sr-header-area, .res-nightmode div#sr-header-area {
         border:none;
         margin-left:0px;
         background-color:rgba($blue, 0.8);
-        color:$white !important;
+
+        .choice {
+            color:$purewhite;
+        }
     }
 }
 

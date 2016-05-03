@@ -53,10 +53,10 @@ html {
 }
 
 body {
-    margin:0 30px;
+    margin:0 $margin;
     top: 150px;
     position: absolute;
-    width: calc(100% - 60px);
+    width: calc(100% - (#{$margin} * 2));
     box-shadow:0 0 10px 2px $slate;
     background-color:$white;
 }
@@ -64,6 +64,3 @@ body {
 :focus {
     outline:none !important;
 }
-
-// TODO
-// Mission flair design
