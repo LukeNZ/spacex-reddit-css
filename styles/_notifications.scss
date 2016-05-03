@@ -106,6 +106,7 @@
         right:($sidebarPadding * 2) + $sidebarWidth;
         height:$notificationHeight;
         font-size:0;
+        display:flex;
 
         // Small screens
         @media screen and (max-width: $break-small) {
@@ -116,7 +117,7 @@
             box-sizing:border-box;
             height:50px;
             font-size:13px;
-            display:inline-block;
+            flex-grow:1;
             width:25%;
             padding:3px 20px 0 50px;
             line-height:1.2;
