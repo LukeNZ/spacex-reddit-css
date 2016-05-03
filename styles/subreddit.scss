@@ -10,16 +10,17 @@
 // Styles related to Reddit-created infobars (such as archived, locked, etc)
 @import "infobars";
 
-// Styles and design of the notifications panel beneath the header (editable through the sidebar).
+
+// Styles and design of the right hand sidebar and containing elements of the subreddit.
 @import 'sidebar';
 
-// Styles and design of the posts on the front page of the subreddit.
+// Styles and design of the notifications panel beneath the header (editable through the sidebar).
 @import "notifications";
 
 // Styles relating to the search tool and the search page.
 @import "search";
 
-// Styles and design of the right hand sidebar and containing elements of the subreddit.
+// Styles and design of the posts on the front page of the subreddit.
 @import 'frontpage';
 
 // Styles and design relating to the comment sections of posts on the subreddit.
@@ -46,6 +47,7 @@
 html {
     height:100%;
     background:url('banner.jpg');
+    background-color:$lightslate;
     background-size:2560px 200px;
     background-attachment: fixed;
 }

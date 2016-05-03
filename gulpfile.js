@@ -18,13 +18,13 @@ gulp.task('styles', function() {
             indentWidth: 2
         })).on('error', handleError)
         .pipe(autoprefixer())
-        .pipe(gulp.dest(''));
+        .pipe(gulp.dest('build/'));
 });
 
 gulp.task('reddify', function() {
     var replace = require('gulp-replace');
 
-    return gulp.src(['subreddit.css'])
+    return gulp.src(['build/subreddit.css'])
         .pipe(replace('"jcsat14.png"', '%%jcsat14%%'))
         .pipe(replace('"dragon.png"', '%%dragonNew%%'))
         .pipe(replace('"spacex.png"', '%%spacex%%'))
