@@ -137,6 +137,7 @@ div.sidebox.submit {
 
     .spacer.no-icon {
         font-size:0;
+        background-color:transparent;
 
         &:after {
             content:"Immediately before, during, and after a launch, submissions are restricted. Please try again soon.";
@@ -145,7 +146,6 @@ div.sidebox.submit {
             display:inline-block;
             text-align:center;
             position:relative;
-            top:-5px;
         }
     }
 }

@@ -161,9 +161,9 @@ div.sidebox.submit.disabled .morelink { background-image: none !important; backg
 
 div.sidebox.submit.disabled .morelink a { -webkit-transition: none 0s ease 0s; transition: none 0s ease 0s; background-color: #C3427D !important; border-bottom: none !important; }
 
-div.sidebox.submit .spacer.no-icon { font-size: 0; }
+div.sidebox.submit .spacer.no-icon { font-size: 0; background-color: transparent; }
 
-div.sidebox.submit .spacer.no-icon:after { content: "Immediately before, during, and after a launch, submissions are restricted. Please try again soon."; font-size: 10px; color: #849199; display: inline-block; text-align: center; position: relative; top: -5px; }
+div.sidebox.submit .spacer.no-icon:after { content: "Immediately before, during, and after a launch, submissions are restricted. Please try again soon."; font-size: 10px; color: #849199; display: inline-block; text-align: center; position: relative; }
 
 .side .titlebox { background-color: transparent !important; }
 
