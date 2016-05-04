@@ -77,7 +77,7 @@ body > .content {
 // Stickied link coloring
 body, body.res-nightmode {
     div.stickied {
-        background-color:rgba($green, 0.15) !important;
+        background-color:rgba($green, 0.10) !important;
     }
     div.stickied a.title, div.stickied span.stickied-tagline {
         color:$green !important;

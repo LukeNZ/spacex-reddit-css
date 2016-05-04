@@ -159,11 +159,11 @@ div.sidebox.submit { background-color: transparent !important; border: none !imp
 
 div.sidebox.submit.disabled .morelink { background-image: none !important; background-color: transparent !important; }
 
-div.sidebox.submit.disabled .morelink a { -webkit-transition: none 0s ease 0s; transition: none 0s ease 0s; background-color: #C3427D; border-bottom: none; }
+div.sidebox.submit.disabled .morelink a { -webkit-transition: none 0s ease 0s; transition: none 0s ease 0s; background-color: #C3427D !important; border-bottom: none !important; }
 
-div.sidebox.submit.disabled .morelink .spacer.no-icon { font-size: 0; }
+div.sidebox.submit .spacer.no-icon { font-size: 0; }
 
-div.sidebox.submit.disabled .morelink .spacer.no-icon:after { font-size: 10px; color: #849199; display: inline-block; text-align: center; position: relative; content: "Immediately before, during, and after a launch, submissions are restricted to moderators only, to prevent low quality posts. Please try again soon."; top: -5px; }
+div.sidebox.submit .spacer.no-icon:after { content: "Immediately before, during, and after a launch, submissions are restricted. Please try again soon."; font-size: 10px; color: #849199; display: inline-block; text-align: center; position: relative; top: -5px; }
 
 .side .titlebox { background-color: transparent !important; }
 
@@ -191,9 +191,9 @@ div.sidebox.submit.disabled .morelink .spacer.no-icon:after { font-size: 10px; c
 
 .side .titlebox span.subscribers .word, .side .titlebox p.users-online .word { display: none; }
 
-.side .titlebox span.subscribers .number:after { content: " DragonRiders"; font-size: smaller; }
+.side .titlebox span.subscribers .number:after { content: " DragonRiders"; display: inline; font-size: smaller; }
 
-.side .titlebox p.users-online .number:after { content: " In Orbit"; font-size: smaller; }
+.side .titlebox p.users-online .number:after { content: " In Orbit"; display: inline; font-size: smaller; }
 
 .side .titlebox p.users-online:before, .side .titlebox .leavemoderator, .side .titlebox .tagline, .side .titlebox #sr_style_throbber, .side .titlebox .leavecontributor-button { display: none; }
 
@@ -368,7 +368,7 @@ body > .content { margin: 100px 340px 20px 0; background-color: #fafafa; }
 
 #siteTable .entry .flat-list.buttons li a, #siteTable .entry .flat-list.buttons li span { color: #849199; padding: 2px; }
 
-body div.stickied, body.res-nightmode div.stickied { background-color: rgba(0, 166, 81, 0.15) !important; }
+body div.stickied, body.res-nightmode div.stickied { background-color: rgba(0, 166, 81, 0.1) !important; }
 
 body div.stickied a.title, body div.stickied span.stickied-tagline, body.res-nightmode div.stickied a.title, body.res-nightmode div.stickied span.stickied-tagline { color: #00A651 !important; }
 
@@ -561,7 +561,7 @@ div.spacer > button.btn { width: 100%; padding: 10px 0 !important; font-size: 16
 
 .linkflairlabel, .flair { max-width: 100%; }
 
-.linkflairlabel { vertical-align: middle; height: 18px; line-height: 19px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: bold; padding: 0 8px 0 24px !important; border-radius: 2px; border: none; border-bottom: 3px solid #1a5980 !important; background-color: #2276AB !important; color: #fafafa !important; background-repeat: no-repeat; background-image: url(%%flair-sprites%%); background-size: 24px 85px; text-shadow: 0 0 #849199; position: relative; display: none; }
+.linkflairlabel { vertical-align: middle; height: 18px; line-height: 19px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: bold; padding: 0 8px 0 24px; border-radius: 2px; border: none; border-bottom: 3px solid #1a5980 !important; background-color: #2276AB !important; color: #fafafa !important; background-repeat: no-repeat; background-image: url(%%flair-sprites%%); background-size: 24px 85px; text-shadow: 0 0 #849199; position: relative; display: none; }
 
 .linkflair-liveupdates .linkflairlabel, .linkflair-official .linkflairlabel, .linkflair-community .linkflairlabel, .linkflair-directlink .linkflairlabel, .linkflair-warning .linkflairlabel, .linkflair-happeningnow .linkflairlabel, .linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel { display: inline-block; }
 

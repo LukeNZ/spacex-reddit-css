@@ -130,22 +130,22 @@ div.sidebox.submit {
 
         a {
             transition:none 0s ease 0s;
-            background-color: $red;
-            border-bottom: none;
+            background-color: $red !important;
+            border-bottom: none !important;
         }
+    }
 
-        .spacer.no-icon {
-            font-size:0;
+    .spacer.no-icon {
+        font-size:0;
 
-            &:after {
-                font-size:10px;
-                color:$grey;
-                display:inline-block;
-                text-align:center;
-                position:relative;
-                content:"Immediately before, during, and after a launch, submissions are restricted to moderators only, to prevent low quality posts. Please try again soon.";
-                top:-5px;
-            }
+        &:after {
+            content:"Immediately before, during, and after a launch, submissions are restricted. Please try again soon.";
+            font-size:10px;
+            color:$grey;
+            display:inline-block;
+            text-align:center;
+            position:relative;
+            top:-5px;
         }
     }
 }
@@ -255,11 +255,13 @@ div.sidebox.submit {
 
     span.subscribers .number:after {
         content:" DragonRiders";
+        display:inline;
         font-size:smaller;
     }
 
     p.users-online .number:after {
         content:" In Orbit";
+        display:inline;
         font-size:smaller;
     }
 
