@@ -22,6 +22,7 @@ div#sr-header-area, .res-nightmode div#sr-header-area {
     text-transform:lowercase;
     line-height:$subredditNavigatorHeight;
     height:$subredditNavigatorHeight;
+    top: 0;
 
     .drop-choices.srdrop {
         border:none;
