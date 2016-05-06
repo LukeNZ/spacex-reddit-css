@@ -1,0 +1,30 @@
+// Fixed positioning for Decronym table
+div.comment[data-author="Decronym"] .md {
+    h3 + h6 + h4 + p + table {
+        position: fixed;
+        top: 48px;
+        right: 25px;
+        width: 340px;
+        height: 99px;
+        font-size: 8px;
+        display: block;
+        background: #374148;
+        padding: 5px;
+        z-index: 1001;
+
+        thead {
+            display: none;
+        }
+        tbody {
+            display: block;
+            height: 89px;
+            overflow: auto;
+
+            td {
+                color: #ddd;
+                border-color: #ddd;
+                padding: 4px 7px;
+            }
+        }
+    }
+}
