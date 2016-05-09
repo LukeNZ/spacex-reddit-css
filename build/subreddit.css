@@ -241,15 +241,17 @@ div.bottom span.flair { display: none; }
 
 #moderation_tools h1:after, .sidecontentbox .title h1:after { content: ""; display: block; border-top: 40px solid #2276AB; border-left: 30px solid transparent; position: absolute; width: 0; height: 0; top: 0; left: -30px; -webkit-transition: border-top 0.2s ease; transition: border-top 0.2s ease; }
 
-#moderation_tools h1 { font-size: 0; }
+#moderation_tools h1, #wikiactions h1 { font-size: 0; }
+
+#moderation_tools .icon-menu a, #wikiactions .icon-menu a { background-color: transparent !important; color: #56a9dd; -webkit-transition: color ease 0.2s; transition: color ease 0.2s; }
+
+#moderation_tools .icon-menu a:hover, #wikiactions .icon-menu a:hover { color: #80bee6; }
+
+#moderation_tools ul.content, #wikiactions ul.content { border: none; }
 
 #moderation_tools h1:before { content: "Moderation Tools"; font-size: 16px; }
 
-#moderation_tools .icon-menu a { background-color: transparent !important; color: #56a9dd; -webkit-transition: color ease 0.2s; transition: color ease 0.2s; }
-
-#moderation_tools .icon-menu a:hover { color: #80bee6; }
-
-#moderation_tools ul.content { border: none; }
+#wikiactions h1:before { content: "Wiki Tools"; font-size: 16px; }
 
 .sidecontentbox a.helplink { display: block; background-color: #2a6ebd; color: #FFF !important; float: none; text-align: center; width: 60%; margin: 0 auto; text-transform: capitalize; padding: 4px 8px; border-radius: 4px; font-size: 12px; border-bottom: 2px solid #244870; position: relative; top: 60px; }
 

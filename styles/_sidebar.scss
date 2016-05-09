@@ -432,15 +432,10 @@ div.bottom {
     }
 }
 
-// Moderation tools
-#moderation_tools {
+// Moderation tools & wiki pages
+#moderation_tools, #wikiactions {
     h1 {
         font-size:0;
-
-        &:before {
-            content:"Moderation Tools";
-            font-size:16px;
-        }
     }
 
     .icon-menu a {
@@ -456,6 +451,16 @@ div.bottom {
     ul.content {
         border:none;
     }
+}
+
+#moderation_tools h1:before {
+    content:"Moderation Tools";
+    font-size:16px;
+}
+
+#wikiactions h1:before {
+    content:"Wiki Tools";
+    font-size:16px;
 }
 
 // Moderator Team
