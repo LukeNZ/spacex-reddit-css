@@ -26,7 +26,7 @@ gulp.task('reddify', function() {
 
     return gulp.src(['build/subreddit.css'])
         // Replace image names
-        .pipe(replace('"jcsat14.png"', '%%jcsat14%%'))
+        .pipe(replace('"Thaicom8.png"', '%%Thaicom8%%'))
         .pipe(replace('"dragon.png"', '%%dragonNew%%'))
         .pipe(replace('"spacex.png"', '%%spacex%%'))
         .pipe(replace('"sprites.png"', '%%sprites%%'))

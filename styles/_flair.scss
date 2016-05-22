@@ -243,6 +243,9 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
     .linkflair-mission-jcsat-14 {
         &:after { content:"JCSAT-14"; background-position:-150px 0; }
     }
+    .linkflair-mission-thaicom-8 {
+        &:after { content:"Thaicom 8"; background-position:-200px 0; }
+    }
 }
 
 @media (max-width: $break-small) {

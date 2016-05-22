@@ -5,7 +5,7 @@
 .morelink a:active, body.res-nightmode .morelink a:active, .side .titlebox span.subscribe-button:active, .side .titlebox .subButtons span.RESshortcutside:active, .side .titlebox .subButtons span.RESDashboardToggle:active, button:active, .nextprev a:active, .next-suggestions a:active, #suggest-title button:active, div.spacer > button.btn:active { top: 1px; border-bottom: 2px solid #154a6b !important; }
 
 /* CHANGE THE MISSION PATCH HERE. YOU SHOULD ONLY NEED TO ADJUST THESE PARAMETERS */
-.side, body.res-nightmode .side { background-image: url(%%jcsat14%%); /* Place a relevant mission patch here */ padding: 315px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: 0 5px; background-size: 300px 316px; }
+.side, body.res-nightmode .side { background-image: url(%%Thaicom8%%); /* Place a relevant mission patch here */ padding: 350px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: center 5px; background-size: 325px 340px; }
 
 /* USE THE COMMENTED OUT STYLES BELOW TO PROVIDE A THUMBNAIL FOR A SUBMISSION */
 /* #thing_t3_{{id}} a.thumbnail { height: 70px; background: 0 0 url(%%image%%) no-repeat; background-size:70px 60px; }*/
@@ -13,7 +13,7 @@
 /* div#thing_{{id}} a.title { font-size:0; } div#thing_{{id}} a.title:after { content:"{{title}}"; vertical-align:middle; font-size:16px; } */
 #header { background: transparent !important; border-bottom: none; font-family: Verdana, Geneva, sans-serif; height: 150px; position: absolute; margin-left: -25px; width: calc(100% - -25px * 2); top: -150px; }
 
-div#sr-header-area, .res-nightmode div#sr-header-area { background-color: rgba(53, 105, 164, 0.5); border: none; text-transform: lowercase; line-height: 20px; height: 20px; }
+div#sr-header-area, .res-nightmode div#sr-header-area { background-color: rgba(53, 105, 164, 0.5); border: none; text-transform: lowercase; line-height: 20px; height: 20px; top: 0; }
 
 div#sr-header-area .drop-choices.srdrop, .res-nightmode div#sr-header-area .drop-choices.srdrop { border: none; margin-left: 0px; background-color: rgba(53, 105, 164, 0.8); }
 
@@ -678,6 +678,8 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 .linklisting .linkflair-mission-crs-8:after { content: "CRS-8"; background-position: -100px 0; }
 
 .linklisting .linkflair-mission-jcsat-14:after { content: "JCSAT-14"; background-position: -150px 0; }
+
+.linklisting .linkflair-mission-thaicom-8:after { content: "Thaicom 8"; background-position: -200px 0; }
 
 @media (max-width: 1366px) { [class*="linkflair-mission"] :after { display: none; } }
 
