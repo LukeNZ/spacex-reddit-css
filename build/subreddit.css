@@ -679,7 +679,7 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 .linklisting .linkflair-mission-jcsat-14:after { content: "JCSAT-14"; background-position: -150px 0; }
 
-.linklisting .linkflair-mission-thaicom-8:after { content: "Thaicom 8"; background-position: -200px 0; }
+.linklisting .linkflair-mission-thaicom-8:after { content: "Thaicom-8"; background-position: -200px 0; }
 
 @media (max-width: 1366px) { [class*="linkflair-mission"] :after { display: none; } }
 
