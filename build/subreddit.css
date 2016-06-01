@@ -368,7 +368,7 @@ body > .content { margin: 100px 340px 20px 0; background-color: #fafafa; }
 
 #siteTable .entry .flat-list.buttons li.first a .newComments { padding: 0; color: orangered; }
 
-#siteTable .entry .flat-list.buttons li a, #siteTable .entry .flat-list.buttons li span { color: #849199; padding: 2px; }
+#siteTable .entry .flat-list.buttons li a, #siteTable .entry .flat-list.buttons li > span { color: #849199; padding: 2px; }
 
 body div.stickied, body.res-nightmode div.stickied { background-color: rgba(0, 166, 81, 0.1) !important; }
 
@@ -661,7 +661,7 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 .linklisting .linkflair-mission-dscovr:after { content: "DSCOVR"; background-position: 400px 300px; }
 
-.linklisting .linkflair-mission-abs-eutelsat-1:after { content: "ABS/EutelSat 1"; background-position: 0 400px; }
+.linklisting .linkflair-mission-eutelsat-abs-1:after { content: "ABS/EutelSat 1"; background-position: 0 400px; }
 
 .linklisting .linkflair-mission-crs-6:after { content: "CRS-6"; background-position: 100px 400px; }
 
@@ -680,6 +680,10 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 .linklisting .linkflair-mission-jcsat-14:after { content: "JCSAT-14"; background-position: -150px 0; }
 
 .linklisting .linkflair-mission-thaicom-8:after { content: "Thaicom-8"; background-position: -200px 0; }
+
+.linklisting .linkflair-mission-abs-eutelsat-2:after { content: "ABS/EutelSat 2"; background-position: 0 -50px; }
+
+.linklisting .linkflair-mission-crs-9:after { content: "CRS-9"; background-position: -50px -50px; }
 
 @media (max-width: 1366px) { [class*="linkflair-mission"] :after { display: none; } }
 
