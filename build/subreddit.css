@@ -685,6 +685,10 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 .linklisting .linkflair-mission-crs-9:after { content: "CRS-9"; background-position: -50px -50px; }
 
+.linklisting .linkflair-mission-crs-10:after { content: "CRS-10"; }
+
+.linklisting .linkflair-mission-crs-11:after { content: "CRS-11"; }
+
 @media (max-width: 1366px) { [class*="linkflair-mission"] :after { display: none; } }
 
 .flairselector [class*="linkflair-mission"] span { display: inline-block !important; }
