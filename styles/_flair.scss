@@ -23,7 +23,7 @@
 
 // Linkflair which requires a flair to be present
 .linkflair-liveupdates, .linkflair-official, .linkflair-community, .linkflair-directlink, .linkflair-warning,
-.linkflair-happeningnow, .linkflair-other, .linkflair-sourcesrequired {
+.linkflair-happeningnow, .linkflair-other, .linkflair-sourcesrequired, .link-flair-modpost {
     .linkflairlabel {
         display:inline-block;
     }
@@ -83,8 +83,8 @@
 }
 
 // Other types of linkflair which don't require icons, or are otherwise different
-.linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel,
-.flairselector .linkflair-other .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel {
+.linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel, .linkflair-modpost .linkflairlabel
+.flairselector .linkflair-other .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel, .flairselector .linkflair-modpost.linkflairlabel  {
     background-image:none;
     padding:0 8px;
 }
@@ -92,6 +92,12 @@
 .linkflair-sourcesrequired .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel {
     background-color: $gold !important;
     border-color: darken($gold, 15%) !important;
+    text-shadow:none;
+}
+
+.linkflair-modpost .linkflairlabel, .flairselector .linkflair-modpost .linkflairlabel {
+    background-color: $green !important;
+    border-color: darken($green, 15%) !important;
     text-shadow:none;
 }
 
@@ -251,6 +257,12 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
     }
     .linkflair-mission-crs-9 {
         &:after { content:"CRS-9"; background-position:-50px -50px; }
+    }
+    .linkflair-mission-jcsat-16 {
+        &:after { content:"JCSAT-16"; }
+    }
+    .linkflair-mission-iridium-next-flight-1 {
+        &:after { content:"Iridum NEXT Flight 1"; }
     }
     .linkflair-mission-crs-10 {
         &:after { content:"CRS-10"; }

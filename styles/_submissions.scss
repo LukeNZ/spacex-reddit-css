@@ -6,13 +6,6 @@ div.content > h1 {
     display:none;
 }
 
-form#newlink {
-    margin-left:auto;
-    margin-right:auto;
-    width:620px;
-    padding:10px;
-}
-
 form .spacer + .spacer {
     margin:0;
 }
@@ -56,8 +49,12 @@ ul.tabmenu.formtab {
 // Submission body
 form#newlink {
     border:none !important;
+    margin-left:auto;
+    margin-right:auto;
+    width:620px;
+    padding:10px;
 
-    .spacer:first-child, #reddit-field, .roundfield.info-notice {
+    #reddit-field, .roundfield.info-notice {
         display:none;
     }
 
@@ -66,8 +63,46 @@ form#newlink {
     }
 
     // Allow for custom message to be displayed
-    .spacer:nth-child(2) {
+    > div:nth-child(3) {
         padding-top:240px;
+    }
+}
+
+// link with reddit upload support
+#newlink-with-image-upload {
+    #new-link-url-input {
+        width:80%;
+        display:inline-block;
+
+        input {
+            width:100%;
+            box-sizing:border-box !important;
+        }
+
+        .clear-input-button {
+            color:$grey;
+            top:7px;
+        }
+    }
+
+    #new-link-image-input {
+        width:20%;
+        display:inline-block;
+
+        div:first-child {
+            display:none;
+        }
+
+        label {
+            color:$purewhite;
+            text-transform: lowercase;
+            font-weight:100;
+            margin-left:5px;
+        }
+
+        .file-upload-icon {
+            display:none;
+        }
     }
 }
 
@@ -75,7 +110,12 @@ form#newlink {
 div.formtabs-content {
     border:none;
 
-    .spacer:nth-child(6) {
+    > div:first-child {
+        display:none;
+    }
+
+    // Make the submission text appear above the inputs
+    > div:nth-child(4) {
         position:absolute;
         top:150px;
         height:0;
@@ -83,12 +123,6 @@ div.formtabs-content {
 }
 .res div.formtabs-content {
     border:none;
-
-    .spacer:nth-child(7) {
-        position:absolute;
-        top:150px;
-        height:0;
-    }
 }
 
 .roundfield span {
@@ -107,6 +141,7 @@ div.formtabs-content {
         transition:border ease $fast;
         box-sizing:content-box !important;
         width:592px;
+        box-shadow:none !important;
 
         &:focus {
             border:2px solid $gold;

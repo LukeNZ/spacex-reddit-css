@@ -4,12 +4,14 @@
 // Parts of the design which are frequently needed to be edited by moderators.
 @import 'modeditable';
 
+// Import styles for "new age" reddit buttons
+@import "buttons";
+
 // Styles and design of the header and containing elements of the subreddit.
 @import 'header';
 
 // Styles related to Reddit-created infobars (such as archived, locked, etc)
 @import "infobars";
-
 
 // Styles and design of the right hand sidebar and containing elements of the subreddit.
 @import 'sidebar';

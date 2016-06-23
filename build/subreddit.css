@@ -1,11 +1,11 @@
-.morelink a, body.res-nightmode .morelink a, .side .titlebox span.subscribe-button, .side .titlebox .subButtons span.RESshortcutside, .side .titlebox .subButtons span.RESDashboardToggle, button, .nextprev a, .next-suggestions a, #suggest-title button, div.spacer > button.btn { background-color: #2276AB !important; border-radius: 4px; border: none !important; border-bottom: 3px solid #154a6b !important; -webkit-transition: background-color ease 0.2s; transition: background-color ease 0.2s; color: #fafafa !important; position: relative; }
+.c-btn-primary, .morelink a, body.res-nightmode .morelink a, .side .titlebox span.subscribe-button, .side .titlebox .subButtons span.RESshortcutside, .side .titlebox .subButtons span.RESDashboardToggle, button, .nextprev a, .next-suggestions a, #suggest-title button, div.spacer > button.btn { background-color: #2276AB !important; border-radius: 4px; border: none !important; border-bottom: 3px solid #154a6b !important; -webkit-transition: background-color ease 0.2s; transition: background-color ease 0.2s; color: #fafafa !important; position: relative; }
 
-.morelink a:hover, body.res-nightmode .morelink a:hover, .side .titlebox span.subscribe-button:hover, .side .titlebox .subButtons span.RESshortcutside:hover, .side .titlebox .subButtons span.RESDashboardToggle:hover, button:hover, .nextprev a:hover, .next-suggestions a:hover, #suggest-title button:hover, div.spacer > button.btn:hover { background-color: #2b93d5 !important; }
+.c-btn-primary:hover, .morelink a:hover, body.res-nightmode .morelink a:hover, .side .titlebox span.subscribe-button:hover, .side .titlebox .subButtons span.RESshortcutside:hover, .side .titlebox .subButtons span.RESDashboardToggle:hover, button:hover, .nextprev a:hover, .next-suggestions a:hover, #suggest-title button:hover, div.spacer > button.btn:hover { background-color: #2b93d5 !important; }
 
-.morelink a:active, body.res-nightmode .morelink a:active, .side .titlebox span.subscribe-button:active, .side .titlebox .subButtons span.RESshortcutside:active, .side .titlebox .subButtons span.RESDashboardToggle:active, button:active, .nextprev a:active, .next-suggestions a:active, #suggest-title button:active, div.spacer > button.btn:active { top: 1px; border-bottom: 2px solid #154a6b !important; }
+.c-btn-primary:active, .morelink a:active, body.res-nightmode .morelink a:active, .side .titlebox span.subscribe-button:active, .side .titlebox .subButtons span.RESshortcutside:active, .side .titlebox .subButtons span.RESDashboardToggle:active, button:active, .nextprev a:active, .next-suggestions a:active, #suggest-title button:active, div.spacer > button.btn:active { top: 1px; border-bottom: 2px solid #154a6b !important; }
 
 /* CHANGE THE MISSION PATCH HERE. YOU SHOULD ONLY NEED TO ADJUST THESE PARAMETERS */
-.side, body.res-nightmode .side { background-image: url(%%Thaicom8%%); /* Place a relevant mission patch here */ padding: 350px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: center 5px; background-size: 325px 340px; }
+.side, body.res-nightmode .side { background-image: url(%%missionpatch%%); /* Place a relevant mission patch here */ padding: 350px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: center 5px; background-size: 325px 340px; }
 
 /* USE THE COMMENTED OUT STYLES BELOW TO PROVIDE A THUMBNAIL FOR A SUBMISSION */
 /* #thing_t3_{{id}} a.thumbnail { height: 70px; background: 0 0 url(%%image%%) no-repeat; background-size:70px 60px; }*/
@@ -505,8 +505,6 @@ body.submit-page, body.submit-page > .content { background-color: #374148 !impor
 
 div.content > h1 { display: none; }
 
-form#newlink { margin-left: auto; margin-right: auto; width: 620px; padding: 10px; }
-
 form .spacer + .spacer { margin: 0; }
 
 ul.tabmenu.formtab { position: relative; width: 640px; padding: 0; left: -10px; border: 1px dashed #849199; }
@@ -517,21 +515,35 @@ ul.tabmenu.formtab li.selected { background-color: #CCAC55; }
 
 ul.tabmenu.formtab li a { width: 100%; text-align: center; font-size: 16px !important; text-transform: uppercase; background-color: transparent !important; border: none !important; padding: 0; margin: 0; line-height: 30px; display: inline-block; color: #fafafa; font-family: "Helvetica Neue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; letter-spacing: 1px; }
 
-form#newlink { border: none !important; }
+form#newlink { border: none !important; margin-left: auto; margin-right: auto; width: 620px; padding: 10px; }
 
-form#newlink .spacer:first-child, form#newlink #reddit-field, form#newlink .roundfield.info-notice { display: none; }
+form#newlink #reddit-field, form#newlink .roundfield.info-notice { display: none; }
 
 form#newlink .spacer .roundfield { background-color: transparent !important; }
 
-form#newlink .spacer:nth-child(2) { padding-top: 240px; }
+form#newlink > div:nth-child(3) { padding-top: 240px; }
+
+#newlink-with-image-upload #new-link-url-input { width: 80%; display: inline-block; }
+
+#newlink-with-image-upload #new-link-url-input input { width: 100%; box-sizing: border-box !important; }
+
+#newlink-with-image-upload #new-link-url-input .clear-input-button { color: #849199; top: 7px; }
+
+#newlink-with-image-upload #new-link-image-input { width: 20%; display: inline-block; }
+
+#newlink-with-image-upload #new-link-image-input div:first-child { display: none; }
+
+#newlink-with-image-upload #new-link-image-input label { color: #fff; text-transform: lowercase; font-weight: 100; margin-left: 5px; }
+
+#newlink-with-image-upload #new-link-image-input .file-upload-icon { display: none; }
 
 div.formtabs-content { border: none; }
 
-div.formtabs-content .spacer:nth-child(6) { position: absolute; top: 150px; height: 0; }
+div.formtabs-content > div:first-child { display: none; }
+
+div.formtabs-content > div:nth-child(4) { position: absolute; top: 150px; height: 0; }
 
 .res div.formtabs-content { border: none; }
-
-.res div.formtabs-content .spacer:nth-child(7) { position: absolute; top: 150px; height: 0; }
 
 .roundfield span { color: #fafafa; }
 
@@ -539,7 +551,7 @@ div.formtabs-content .spacer:nth-child(6) { position: absolute; top: 150px; heig
 
 .roundfield { width: 600px; }
 
-.roundfield textarea, .roundfield input[type="text"], .roundfield input[type="url"], .roundfield input[type="password"], .roundfield input[type="number"] { border: 2px solid #181c1f; -webkit-transition: border ease 0.2s; transition: border ease 0.2s; box-sizing: content-box !important; width: 592px; }
+.roundfield textarea, .roundfield input[type="text"], .roundfield input[type="url"], .roundfield input[type="password"], .roundfield input[type="number"] { border: 2px solid #181c1f; -webkit-transition: border ease 0.2s; transition: border ease 0.2s; box-sizing: content-box !important; width: 592px; box-shadow: none !important; }
 
 .roundfield textarea:focus, .roundfield input[type="text"]:focus, .roundfield input[type="url"]:focus, .roundfield input[type="password"]:focus, .roundfield input[type="number"]:focus { border: 2px solid #CCAC55; }
 
@@ -565,7 +577,7 @@ div.spacer > button.btn { width: 100%; padding: 10px 0 !important; font-size: 16
 
 .linkflairlabel { vertical-align: middle; height: 18px; line-height: 19px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: bold; padding: 0 8px 0 24px; border-radius: 2px; border: none; border-bottom: 3px solid #1a5980 !important; background-color: #2276AB !important; color: #fafafa !important; background-repeat: no-repeat; background-image: url(%%flair-sprites%%); background-size: 24px 85px; text-shadow: 0 0 #849199; position: relative; display: none; }
 
-.linkflair-liveupdates .linkflairlabel, .linkflair-official .linkflairlabel, .linkflair-community .linkflairlabel, .linkflair-directlink .linkflairlabel, .linkflair-warning .linkflairlabel, .linkflair-happeningnow .linkflairlabel, .linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel { display: inline-block; }
+.linkflair-liveupdates .linkflairlabel, .linkflair-official .linkflairlabel, .linkflair-community .linkflairlabel, .linkflair-directlink .linkflairlabel, .linkflair-warning .linkflairlabel, .linkflair-happeningnow .linkflairlabel, .linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel, .link-flair-modpost .linkflairlabel { display: inline-block; }
 
 .linkflair-liveupdates .linkflairlabel, .flairselector .linkflair-liveupdates .linkflairlabel { background-position: 4px 1px; }
 
@@ -601,9 +613,11 @@ div.spacer > button.btn { width: 100%; padding: 10px 0 !important; font-size: 16
   100% { -webkit-transform: scale(3); transform: scale(3);
     opacity: 0.0; } }
 
-.linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel, .flairselector .linkflair-other .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel { background-image: none; padding: 0 8px; }
+.linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel, .linkflair-modpost .linkflairlabel .flairselector .linkflair-other .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel, .flairselector .linkflair-modpost.linkflairlabel { background-image: none; padding: 0 8px; }
 
 .linkflair-sourcesrequired .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel { background-color: #CCAC55 !important; border-color: #a38531 !important; text-shadow: none; }
+
+.linkflair-modpost .linkflairlabel, .flairselector .linkflair-modpost .linkflairlabel { background-color: #00A651 !important; border-color: #005a2c !important; text-shadow: none; }
 
 p.title a.title { vertical-align: middle; }
 
@@ -684,6 +698,10 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 .linklisting .linkflair-mission-eutelsat-abs-2:after { content: "Eutelsat/ABS 2"; background-position: 0 -50px; }
 
 .linklisting .linkflair-mission-crs-9:after { content: "CRS-9"; background-position: -50px -50px; }
+
+.linklisting .linkflair-mission-jcsat-16:after { content: "JCSAT-16"; }
+
+.linklisting .linkflair-mission-iridium-next-flight-1:after { content: "Iridum NEXT Flight 1"; }
 
 .linklisting .linkflair-mission-crs-10:after { content: "CRS-10"; }
 
