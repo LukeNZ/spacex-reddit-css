@@ -5,7 +5,7 @@
 .c-btn-primary:active, .morelink a:active, body.res-nightmode .morelink a:active, .side .titlebox span.subscribe-button:active, .side .titlebox .subButtons span.RESshortcutside:active, .side .titlebox .subButtons span.RESDashboardToggle:active, button:active, .nextprev a:active, .next-suggestions a:active, #suggest-title button:active, div.spacer > button.btn:active { top: 1px; border-bottom: 2px solid #154a6b !important; }
 
 /* CHANGE THE MISSION PATCH HERE. YOU SHOULD ONLY NEED TO ADJUST THESE PARAMETERS */
-.side, body.res-nightmode .side { background-image: url(%%missionpatch%%); /* Place a relevant mission patch here */ padding: 350px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: center 5px; background-size: 325px 340px; }
+.side, body.res-nightmode .side { background-image: url(%%missionpatch%%); /* Place a relevant mission patch here */ padding: 350px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: center 5px; background-size: 325px 325px; }
 
 /* USE THE COMMENTED OUT STYLES BELOW TO PROVIDE A THUMBNAIL FOR A SUBMISSION */
 /* #thing_t3_{{id}} a.thumbnail { height: 70px; background: 0 0 url(%%image%%) no-repeat; background-size:70px 60px; }*/
