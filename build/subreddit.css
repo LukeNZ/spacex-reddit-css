@@ -299,11 +299,11 @@ div.bottom span.flair { display: none; }
 
 .side .titlebox .md h3:nth-of-type(3) a:hover { color: #CCAC55; }
 
-.side .titlebox .md h3:nth-of-type(4) { position: absolute; top: 50px; left: 300px; right: 340px; height: 50px; font-size: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+.side .titlebox .md h3:nth-of-type(4) { position: absolute; top: 50px; left: 300px; right: 340px; height: 50px; font-size: 0; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 @media screen and (max-width: 1366px) { .side .titlebox .md h3:nth-of-type(4) { left: 180px; } }
 
-.side .titlebox .md h3:nth-of-type(4) a { box-sizing: border-box; height: 50px; font-size: 13px;  -webkit-flex-grow: 1;  flex-grow: 1; width: 25%; padding: 3px 20px 0 50px; line-height: 1.2; color: #fafafa; font-weight: normal; float: left; position: relative; }
+.side .titlebox .md h3:nth-of-type(4) a { box-sizing: border-box; height: 50px; font-size: 13px;   flex-grow: 1; width: 25%; padding: 3px 20px 0 50px; line-height: 1.2; color: #fafafa; font-weight: normal; float: left; position: relative; }
 
 @media screen and (max-width: 1366px) { .side .titlebox .md h3:nth-of-type(4) a { padding: 2px 4px 0 4px; }
   .side .titlebox .md h3:nth-of-type(4) a:before { display: none !important; } }
