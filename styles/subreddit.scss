@@ -16,6 +16,9 @@
 // Styles and design of the right hand sidebar and containing elements of the subreddit.
 @import 'sidebar';
 
+// Styles related to the events table in the sidebar
+@import 'events';
+
 // Styles and design of the notifications panel beneath the header (editable through the sidebar).
 @import "notifications";
 

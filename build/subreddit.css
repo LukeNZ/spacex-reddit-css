@@ -213,20 +213,6 @@ div.sidebox.submit .spacer.no-icon:after { content: "Immediately before, during,
 
 .side .usertext-body .md h4:after { content: ""; display: block; border-top: 40px solid #2276AB; border-left: 30px solid transparent; position: absolute; width: 0; height: 0; top: 0; right: 100%; }
 
-.side .usertext-body .md table, .side .usertext-body .md thead { border: 2px solid #181c1f; margin: 0 auto; }
-
-.side .usertext-body .md table { margin-bottom: 2px; }
-
-.side .usertext-body .md thead { background-color: rgba(132, 145, 153, 0.3); line-height: 2; }
-
-.side .usertext-body .md table tr:nth-child(2n) { background-color: rgba(132, 145, 153, 0.2); }
-
-.side .usertext-body .md th, .side .usertext-body .md td { border: none; padding: 8px 5px; }
-
-.side .usertext-body .md a { color: #56a9dd; -webkit-transition: color ease 0.2s; transition: color ease 0.2s; }
-
-.side .usertext-body .md a:hover { color: #80bee6; }
-
 div.multi-selector { display: none !important; }
 
 div.bottom { border: none !important; margin-top: 10px; padding: 0; color: #DDD; font-size: 0 !important; position: relative; }
@@ -276,6 +262,24 @@ div.bottom span.flair { display: none; }
 .sidecontentbox a.helplink + div.title + ul.content li a.author:active { background-color: #156135; }
 
 .sidecontentbox a.helplink + div.title + ul.content li span.RESUserTag, .sidecontentbox a.helplink + div.title + ul.content li a.voteWeight, .sidecontentbox a.helplink + div.title + ul.content li span.flair, .sidecontentbox a.helplink + div.title + ul.content li span.userattrs { display: none !important; }
+
+.side .usertext-body table, .side .usertext-body thead { border: 2px solid #181c1f; margin: 0 auto; }
+
+.side .usertext-body table { margin-bottom: 2px; }
+
+.side .usertext-body table em { display: block; font-size: smaller; color: #CCAC55; padding-top: 3px; }
+
+.side .usertext-body thead { background-color: rgba(132, 145, 153, 0.3); line-height: 2; }
+
+.side .usertext-body table tr:nth-child(2n) { background-color: rgba(132, 145, 153, 0.2); }
+
+.side .usertext-body th, .side .usertext-body td { border: none; padding: 8px 5px; }
+
+.side .usertext-body th:first-child, .side .usertext-body td:first-child { width: 68px; }
+
+.side .usertext-body a { color: #56a9dd; -webkit-transition: color ease 0.2s; transition: color ease 0.2s; }
+
+.side .usertext-body a:hover { color: #80bee6; }
 
 .side .titlebox .md h3:nth-of-type(1) { position: absolute; top: -30px; left: 0px; right: 0px; height: 30px; line-height: 30px; text-align: center; font-size: 10px; color: #fafafa; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: normal; opacity: 0.5; margin: 0; z-index: 1000; }
 

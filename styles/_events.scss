@@ -1,0 +1,46 @@
+.side .usertext-body {
+    // Table formatting for sidebar
+    table, thead {
+        border: 2px solid $slate;
+        margin:0 auto;
+    }
+
+    table {
+        margin-bottom:2px;
+
+        em {
+            display: block;
+            font-size: smaller;
+            color:$gold;
+            padding-top:3px;
+        }
+    }
+
+    thead {
+        background-color:rgba($grey, 0.3);
+        line-height:2;
+    }
+
+    table tr:nth-child(2n) {
+        background-color:rgba($grey, 0.2);
+    }
+
+    th, td {
+        border:none;
+        padding:8px 5px;
+
+        &:first-child {
+            width:68px;
+        }
+    }
+
+    // Links
+    a {
+        color:lighten($webcastblue, 20%);
+        transition:color ease $fast;
+
+        &:hover {
+            color:lighten($webcastblue, 30%);
+        }
+    }
+}
