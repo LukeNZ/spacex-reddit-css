@@ -286,6 +286,7 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
     @include mission-flair('crs-9', 'CRS-9', 1, 1);
     @include mission-flair('jcsat-16', 'JCSAT-16', 2, 1);
     @include mission-flair('amos-6', 'Amos-6');
+
     @include mission-flair('iridium-next-flight-1', 'Iridium NEXT Flight 1');
     
     @include mission-flair('crs-10', 'CRS-10', 4, 5);
