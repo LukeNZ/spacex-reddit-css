@@ -289,6 +289,7 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
     
     @include mission-flair('crs-10', 'CRS-10', 4, 5);
     @include mission-flair('crs-11', 'CRS-11', 4, 5);
+
 }
 
 @media (max-width: $break-small) {
