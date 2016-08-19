@@ -1,5 +1,22 @@
 .linkflairlabel, .flair { max-width: 100%; }
 
+$iconsize: 50px;
+
+@mixin mission-flair($name, $label, $offsetx: -1, $offsety: -1) {
+  #{unquote(".linkflair-mission-#{$name}")} {
+    &:after {
+      content: $label;
+      
+      @if $offsetx == -1 and $offsety == -1 {
+        background-position: (-4 * $iconsize) (-4 * $iconsize);
+      } @else {
+        background-position: (-$offsetx * $iconsize) (-$offsety * $iconsize);
+      }
+      
+    }
+  }
+}
+
 // ------------- LINK FLAIR ---------------
 .linkflairlabel {
     vertical-align:middle;
@@ -143,8 +160,8 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
     // Global misison flair styles
     [class*="linkflair-mission"] {
         &:after {
-            width:50px;
-            height:50px;
+            width:$iconsize;
+            height:$iconsize;
             top:10px;
             right:0;
             position:absolute;
@@ -255,21 +272,23 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
     .linkflair-mission-eutelsat-abs-2 {
         &:after { content:"Eutelsat/ABS 2"; background-position:0 -50px; }
     }
-    .linkflair-mission-crs-9 {
-        &:after { content:"CRS-9"; background-position:-50px -50px; }
-    }
-    .linkflair-mission-jcsat-16 {
-        &:after { content:"JCSAT-16"; background-position:-100px -50px; }
-    }
-    .linkflair-mission-iridium-next-flight-1 {
-        &:after { content:"Iridum NEXT Flight 1"; }
-    }
-    .linkflair-mission-crs-10 {
-        &:after { content:"CRS-10"; }
-    }
-    .linkflair-mission-crs-11 {
-        &:after { content:"CRS-11"; }
-    }
+
+    // NEW SYNTAX FOR LINK FLAIR PATCHES
+    // 
+    // arguments:
+    // 1. flair css class, minus "mission-"
+    // 2. The name of the mission. This will be displayed on the right.
+    // 3. The X position of the patch.
+    // 4. The Y position of the patch.
+
+    // (if X and Y are both missing, a default flair will be used instead.)
+    
+    @include mission-flair('crs-9', 'CRS-9', 1, 1);
+    @include mission-flair('jcsat-16', 'JCSAT-16', 2, 1);
+    @include mission-flair('iridium-next-flight-1', 'Iridium NEXT Flight 1');
+    
+    @include mission-flair('crs-10', 'CRS-10', 4, 5);
+    @include mission-flair('crs-11', 'CRS-11', 4, 5);
 }
 
 @media (max-width: $break-small) {
