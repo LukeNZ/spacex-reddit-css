@@ -354,11 +354,11 @@ body > .content { margin: 100px 340px 20px 0; background-color: #fafafa; }
 
 #siteTable { padding: 0; color: #849199; }
 
-#siteTable .thing { margin: 0; padding: 6px 0; border-left: 2px solid transparent; -webkit-transition: border-left 0.2s ease 0s; transition: border-left 0.2s ease 0s; position: relative; }
+#siteTable .thing { margin: 0; padding: 6px 0; border-left: 5px solid transparent; -webkit-transition: border-left 0.2s ease 0s; transition: border-left 0.2s ease 0s; position: relative; }
 
 #siteTable .thing[class*="linkflair-mission"] { padding-right: 70px; }
 
-#siteTable .thing:hover { border-left: 2px solid #CCAC55; }
+#siteTable .thing:hover { border-left: 5px solid #CCAC55; }
 
 #siteTable .thing:not(:first-child) { border-top: 1px dashed rgba(132, 145, 153, 0.5); }
 
