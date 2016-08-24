@@ -303,11 +303,11 @@ div.bottom span.flair { display: none; }
 
 .side .titlebox .md h3:nth-of-type(3) a:hover { color: #CCAC55; }
 
-.side .titlebox .md h3:nth-of-type(4) { position: absolute; top: 50px; left: 300px; right: 340px; height: 50px; font-size: 0; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.side .titlebox .md h3:nth-of-type(4) { position: absolute; top: 50px; left: 300px; right: 340px; height: 50px; font-size: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 
 @media screen and (max-width: 1366px) { .side .titlebox .md h3:nth-of-type(4) { left: 180px; } }
 
-.side .titlebox .md h3:nth-of-type(4) a { box-sizing: border-box; height: 50px; font-size: 13px;   flex-grow: 1; width: 25%; padding: 3px 20px 0 50px; line-height: 1.2; color: #fafafa; font-weight: normal; float: left; position: relative; }
+.side .titlebox .md h3:nth-of-type(4) a { box-sizing: border-box; height: 50px; font-size: 13px;  -webkit-flex-grow: 1;  flex-grow: 1; width: 25%; padding: 3px 20px 0 50px; line-height: 1.2; color: #fafafa; font-weight: normal; float: left; position: relative; }
 
 @media screen and (max-width: 1366px) { .side .titlebox .md h3:nth-of-type(4) a { padding: 2px 4px 0 4px; }
   .side .titlebox .md h3:nth-of-type(4) a:before { display: none !important; } }
@@ -525,21 +525,21 @@ form#newlink #reddit-field, form#newlink .roundfield.info-notice { display: none
 
 form#newlink .spacer .roundfield { background-color: transparent !important; }
 
-form#newlink > div:nth-child(3) { padding-top: 240px; }
+form#newlink > div:nth-child(3) { padding-top: 300px; }
 
-#newlink-with-image-upload #new-link-url-input { width: 80%; display: inline-block; }
+#newlink-with-image-upload input { width: 100%; box-sizing: border-box !important; }
 
-#newlink-with-image-upload #new-link-url-input input { width: 100%; box-sizing: border-box !important; }
+#newlink-with-image-upload .clear-input-button { color: #849199; top: 7px; line-height: 15px; }
 
-#newlink-with-image-upload #new-link-url-input .clear-input-button { color: #849199; top: 7px; }
+#newlink-with-image-upload #new-link-image-input { background-color: transparent; padding: 5px; border: 1px dashed #849199; -webkit-transition: border ease 0.2s; transition: border ease 0.2s; }
 
-#newlink-with-image-upload #new-link-image-input { width: 20%; display: inline-block; }
+#newlink-with-image-upload #new-link-image-input:hover { border-color: #CCAC55; }
 
-#newlink-with-image-upload #new-link-image-input div:first-child { display: none; }
+#newlink-with-image-upload .file-upload-button { text-transform: lowercase; font-weight: normal; }
 
-#newlink-with-image-upload #new-link-image-input label { color: #fff; text-transform: lowercase; font-weight: 100; margin-left: 5px; }
+#newlink-with-image-upload .file-drop-label-icon, #newlink-with-image-upload .file-upload-icon { display: none !important; }
 
-#newlink-with-image-upload #new-link-image-input .file-upload-icon { display: none; }
+#newlink-with-image-upload .file-drop-label { font-size: 12px; }
 
 div.formtabs-content { border: none; }
 
@@ -561,19 +561,23 @@ div.formtabs-content > div:nth-child(4) { position: absolute; top: 150px; height
 
 .roundfield .roundfield-content label { color: #849199; }
 
-.submit_text.roundfield.enabled { height: 250px; max-height: 250px; margin: 0; padding: 0 10px; overflow-y: scroll; }
+.submit_text.roundfield.enabled { height: 300px; max-height: 300px; margin: 0; padding: 0 10px; overflow-y: scroll; }
 
-.submit_text.roundfield.enabled .md, .submit_text.roundfield.enabled .md ul, .submit_text.roundfield.enabled .md li, .submit_text.roundfield.enabled .md p { font-size: 12px; color: white; }
+.submit_text.roundfield.enabled p { font-size: 12px; color: white; }
 
-.submit_text.roundfield.enabled .md ul { padding-top: 5px; padding-bottom: 5px; }
+.submit_text.roundfield.enabled p em:first-child { font-size: 50px; font-style: normal; line-height: 1.2; vertical-align: baseline; }
 
-.submit_text.roundfield.enabled .md:before { content: "Please read the community rules before posting! Also, please remember:"; font-weight: bold; }
+.submit_text.roundfield.enabled p:nth-child(4) { background: url(%%flowchart%%) no-repeat; background-size: 600px auto; padding-top: 800px; }
 
-.submit_text.roundfield.enabled .md:after { content: "Failure to adhere to these rules may result in your submission being removed. If you still have questions, feel free to ask the moderators. Thank you for ensuring /r/SpaceX continues to set the bar for quality in the spaceflight community!"; }
+.submit_text.roundfield.enabled p:nth-child(4) a[title="sourcesrequired"] { background-color: #CCAC55; color: #fff; vertical-align: middle; height: 18px; line-height: 19px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: bold; font-size: 10px; border-radius: 2px; padding: 0 8px; border-bottom: 3px solid #a38531; position: relative; display: inline-block; }
+
+.submit_text.roundfield.enabled p:last-child { padding-top: 20px; padding-bottom: 50px; }
 
 .submit_text.roundfield.enabled h1:before { content: "You are "; display: inline; }
 
 .submit_text.roundfield.enabled h1, .submit_text.roundfield.enabled .sr { color: #849199; font-family: "Helvetica Neue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 100; text-align: center; margin: 5px 0; }
+
+.submit_text.roundfield.enabled:after { content: ""; width: 100%; height: 50px; display: block; position: absolute; overflow: hidden; bottom: -300px; background: -webkit-linear-gradient(top, rgba(55, 65, 72, 0) 0%, #374148 100%); background: linear-gradient(to bottom, rgba(55, 65, 72, 0) 0%, #374148 100%); }
 
 div.spacer > button.btn { width: 100%; padding: 10px 0 !important; font-size: 16px; font-family: "Helvetica Neue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif; position: relative; border: none; }
 
