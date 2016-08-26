@@ -2,19 +2,13 @@
 
 $iconsize: 50px;
 
-@mixin mission-flair($name, $label, $offsetx: -1, $offsety: -1) {
-  #{unquote(".linkflair-mission-#{$name}")} {
-    &:after {
-      content: $label;
-      
-      @if $offsetx == -1 and $offsety == -1 {
-        background-position: (-4 * $iconsize) (-4 * $iconsize);
-      } @else {
-        background-position: (-$offsetx * $iconsize) (-$offsety * $iconsize);
-      }
-      
+@mixin mission-flair($name, $label, $offsetx: -4, $offsety: -4) {
+    #{unquote(".linkflair-mission-#{$name}")} {
+        &:after {
+            content: $label;
+            background-position: (-$offsetx * $iconsize) (-$offsety * $iconsize);
+        }
     }
-  }
 }
 
 // ------------- LINK FLAIR ---------------
@@ -171,6 +165,7 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
             line-height: 110px;
             text-align: right;
             margin-right: 10px;
+            background-position:-200px -200px;
         }
     }
 
@@ -254,24 +249,6 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
     .linkflair-mission-og2-2 {
         &:after { content:"Orbcomm OG2 Launch 2"; background-position:-400px 400px; }
     }
-    .linkflair-mission-jason-3 {
-        &:after { content:"Jason-3"; background-position:0 0; }
-    }
-    .linkflair-mission-ses-9{
-        &:after { content:"SES-9"; background-position:-50px 0; }
-    }
-    .linkflair-mission-crs-8 {
-        &:after { content:"CRS-8"; background-position:-100px 0; }
-    }
-    .linkflair-mission-jcsat-14 {
-        &:after { content:"JCSAT-14"; background-position:-150px 0; }
-    }
-    .linkflair-mission-thaicom-8 {
-        &:after { content:"Thaicom-8"; background-position:-200px 0; }
-    }
-    .linkflair-mission-eutelsat-abs-2 {
-        &:after { content:"Eutelsat/ABS 2"; background-position:0 -50px; }
-    }
 
     // NEW SYNTAX FOR LINK FLAIR PATCHES
     // 
@@ -282,12 +259,19 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
     // 4. The Y position of the patch.
 
     // (if X and Y are both missing, a default flair will be used instead.)
-    
+    @include mission-flair('jason-3', 'Jason-3', 0, 0);
+    @include mission-flair('ses-9', 'SES-9', 1, 0);
+    @include mission-flair('crs-8', 'CRS-8', 2, 0);
+    @include mission-flair('jcsat-14', 'JCSAT-14', 3, 0);
+    @include mission-flair('thaicom-8', 'Thaicom-8', 4, 0);
+    @include mission-flair('eutelsat-abs-2', 'Eutelsat/ABS 2', 0, 1);
     @include mission-flair('crs-9', 'CRS-9', 1, 1);
     @include mission-flair('jcsat-16', 'JCSAT-16', 2, 1);
-    @include mission-flair('amos-6', 'Amos-6');
 
+    // Upcoming
+    @include mission-flair('amos-6', 'Amos-6');
     @include mission-flair('iridium-next-flight-1', 'Iridium NEXT Flight 1');
+    @include mission-flair('formosat-5-sherpa', 'Formosat-5/SHERPA');
     
     @include mission-flair('crs-10', 'CRS-10', 4, 5);
     @include mission-flair('crs-11', 'CRS-11', 4, 5);
