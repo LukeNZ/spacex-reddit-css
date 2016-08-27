@@ -1,17 +1,21 @@
-.linkflairlabel, .flair { max-width: 100%; }
-
 $iconsize: 50px;
 
+// arguments:
+// 1. flair css class, minus "mission-"
+// 2. The name of the mission. This will be displayed on the right.
+// 3. The X position of the patch.
+// 4. The Y position of the patch.
+
+// (if X and Y are both missing, a default flair will be used instead.)
 @mixin mission-flair($name, $label, $offsetx: -4, $offsety: -4) {
     #{unquote(".linkflair-mission-#{$name}")} {
-        &:after {
-            content: $label;
-            background-position: (-$offsetx * $iconsize) (-$offsety * $iconsize);
-        }
+        &:after { content: $label; background-position: (-$offsetx * $iconsize) (-$offsety * $iconsize); }
     }
 }
 
 // ------------- LINK FLAIR ---------------
+.linkflairlabel, .flair { max-width: 100%; }
+
 .linkflairlabel {
     vertical-align:middle;
     height:18px;
@@ -173,108 +177,49 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
     [class*="sprite-1"]:after { background-image:url('mission-sprites.png'); }
     [class*="sprite-2"]:after { background-image:url('mission-sprites-2.png'); }
 
-    // Individual missions
-    .linkflair-mission-f1f1 {
-        &:after { content:"Falcon 1 Flight 1"; background-position:0 0; }
-    }
-    .linkflair-mission-f1f2 {
-        &:after { content:"Falcon 1 Flight 2"; background-position:50px 0; }
-    }
-    .linkflair-mission-f1f3 {
-        &:after { content:"Falcon 1 Flight 3"; background-position:100px 0; }
-    }
-    .linkflair-mission-f1f4 {
-        &:after { content:"RatSat"; background-position:300px 0; }
-    }
-    .linkflair-mission-f1f5 {
-        &:after { content:"RazakSat"; background-position:400px 0; }
-    }
-    .linkflair-mission-dsqu {
-        &:after { content:"DSQU"; background-position:0 100px; }
-    }
-    .linkflair-mission-cots-1 {
-        &:after { content:"COTS-1"; background-position:100px 100px; }
-    }
-    .linkflair-mission-cots-2 {
-        &:after { content:"COTS-2+"; background-position:200px 100px; }
-    }
-    .linkflair-mission-crs-1 {
-        &:after { content:"CRS-1"; background-position:300px 100px; }
-    }
-    .linkflair-mission-crs-2 {
-        &:after { content:"CRS-2"; background-position:400px 100px; }
-    }
-    .linkflair-mission-cassiope {
-        &:after { content:"CASSIOPE"; background-position:0 200px; }
-    }
-    .linkflair-mission-ses-8 {
-        &:after { content:"SES-8"; background-position:100px 200px; }
-    }
-    .linkflair-mission-thaicom-6 {
-        &:after { content:"Thaicom 6"; background-position:200px 200px; }
-    }
-    .linkflair-mission-crs-3 {
-        &:after { content:"CRS-3"; background-position:300px 200px; }
-    }
-    .linkflair-mission-og2-1 {
-        &:after { content:"Orbcomm OG2 Launch 1"; background-position:400px 200px; }
-    }
-    .linkflair-mission-asiasat-8 {
-        &:after { content:"AsiaSat 8"; background-position:0 300px; }
-    }
-    .linkflair-mission-asiasat-6 {
-        &:after { content:"AsiaSat 6"; background-position:100px 300px; }
-    }
-    .linkflair-mission-crs-4 {
-        &:after { content:"CRS-4"; background-position:200px 300px; }
-    }
-    .linkflair-mission-crs-5 {
-        &:after { content:"CRS-5"; background-position:300px 300px; }
-    }
-    .linkflair-mission-dscovr {
-        &:after { content:"DSCOVR"; background-position:400px 300px; }
-    }
-    .linkflair-mission-eutelsat-abs-1 {
-        &:after { content:"Eutelsat/ABS 1"; background-position:0 400px; }
-    }
-    .linkflair-mission-crs-6 {
-        &:after { content:"CRS-6"; background-position:100px 400px; }
-    }
-    .linkflair-mission-crs-7 {
-        &:after { content:"CRS-7"; background-position:-300px 400px; }
-    }
-    .linkflair-mission-turkmenalem {
-        &:after { content:"TurkmenAlem 52E"; background-position:-200px 400px; }
-    }
-    .linkflair-mission-og2-2 {
-        &:after { content:"Orbcomm OG2 Launch 2"; background-position:-400px 400px; }
-    }
-
-    // NEW SYNTAX FOR LINK FLAIR PATCHES
-    // 
-    // arguments:
-    // 1. flair css class, minus "mission-"
-    // 2. The name of the mission. This will be displayed on the right.
-    // 3. The X position of the patch.
-    // 4. The Y position of the patch.
-
-    // (if X and Y are both missing, a default flair will be used instead.)
-    @include mission-flair('jason-3', 'Jason-3', 0, 0);
-    @include mission-flair('ses-9', 'SES-9', 1, 0);
-    @include mission-flair('crs-8', 'CRS-8', 2, 0);
-    @include mission-flair('jcsat-14', 'JCSAT-14', 3, 0);
-    @include mission-flair('thaicom-8', 'Thaicom-8', 4, 0);
-    @include mission-flair('eutelsat-abs-2', 'Eutelsat/ABS 2', 0, 1);
-    @include mission-flair('crs-9', 'CRS-9', 1, 1);
-    @include mission-flair('jcsat-16', 'JCSAT-16', 2, 1);
-
+    // Spritesheet 1
+    @include mission-flair("f1f1", "Falcon 1 Flight 1", 0, 0);
+    @include mission-flair("f1f2", "Falcon 1 Flight 2", 1, 0);
+    @include mission-flair("f1f3", "Falcon 1 Flight 3", 2, 0);
+    @include mission-flair("f1f4", "RatSat", 3, 0);
+    @include mission-flair("f1f5", "RazakSAT", 4, 0);
+    @include mission-flair("dsqu", "DSQU", 0, 1);
+    @include mission-flair("cots-1", "COTS-1", 1, 1);
+    @include mission-flair("cots-2", "COTS-2+", 2, 1);
+    @include mission-flair("crs-1", "CRS-1", 3, 1);
+    @include mission-flair("crs-2", "CRS-2", 4, 1);
+    @include mission-flair("cassiope", "CASSIOPE", 0, 2);
+    @include mission-flair("ses-8", "SES-8", 1, 2);
+    @include mission-flair("thaicom-6", "Thaicom 6", 2, 2);
+    @include mission-flair("crs-3", "CRS-3", 3, 2);
+    @include mission-flair("og2-1", "Orbcomm OG2 Launch 1", 4, 2);
+    @include mission-flair("asiasat-8", "AsiaSat 8", 0, 3);
+    @include mission-flair("asiasat-6", "AsiaSat 6", 1, 3);
+    @include mission-flair("crs-4", "CRS-4", 2, 3);
+    @include mission-flair("crs-5", "CRS-5", 3, 3);
+    @include mission-flair("dscovr", "DSCOVR", 4, 3);
+    @include mission-flair("eutelsat-abs-1", "Eutelsat/ABS 1", 0, 4);
+    @include mission-flair("crs-6", "CRS-6", 1, 4);
+    @include mission-flair("crs-7", "CRS-7", 2, 4);
+    @include mission-flair("turkmenalem", "TurkmenAlem 52E", 3, 4);
+    @include mission-flair("og2-2", "Orbcomm OG2 Launch 2", 4, 4);
+    // Spritesheet 2
+    @include mission-flair("jason-3", "Jason-3", 0, 0);
+    @include mission-flair("ses-9", "SES-9", 1, 0);
+    @include mission-flair("crs-8", "CRS-8", 2, 0);
+    @include mission-flair("jcsat-14", "JCSAT-14", 3, 0);
+    @include mission-flair("thaicom-8", "Thaicom 8", 4, 0);
+    @include mission-flair("eutelsat-abs-2", "Eutelsat/ABS 2", 0, 1);
+    @include mission-flair("crs-9", "CRS-9", 1, 1);
+    @include mission-flair("jcsat-16", "JCSAT-16", 2, 1);
     // Upcoming
-    @include mission-flair('amos-6', 'Amos-6');
-    @include mission-flair('iridium-next-flight-1', 'Iridium NEXT Flight 1');
-    @include mission-flair('formosat-5-sherpa', 'Formosat-5/SHERPA');
-    
-    @include mission-flair('crs-10', 'CRS-10', 4, 5);
-    @include mission-flair('crs-11', 'CRS-11', 4, 5);
+    @include mission-flair("amos-6", "Amos-6");
+    @include mission-flair("iridium-next-flight-1", "Iridium NEXT Flight 1");
+    @include mission-flair("iridium-next-flight-2", "Iridium NEXT Flight 2");
+    @include mission-flair("formosat-5-sherpa", "Formosat-5/SHERPA");
+    // Upcoming Dragon
+    @include mission-flair("crs-10", "CRS-10", 4, 5);
+    @include mission-flair("crs-11", "CRS-11", 4, 5);
 }
 
 @media (max-width: $break-small) {
