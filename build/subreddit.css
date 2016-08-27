@@ -469,8 +469,6 @@ button, .nextprev a, .next-suggestions a { padding: 3px 20px 3px 20px !important
 
 body.res-nightmode .commentarea { background-color: transparent !important; }
 
-body.res-nightmode .commentarea .arrow.down:hover:before, body.res-nightmode .commentarea .arrow.downmod:hover:before { background-color: rgba(132, 145, 153, 0.9) !important; }
-
 body > .content .midcol, body .midcol, body.res-nightmode > .content .midcol, body.res-nightmode .midcol { min-width: 25px !important; }
 
 .infobar.welcome { margin-right: 10px; }
@@ -643,55 +641,55 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 .linklisting [class*="sprite-2"]:after { background-image: url(%%mission-sprites-2%%); }
 
-.linklisting .linkflair-mission-f1f1:after { content: "Falcon 1 Flight 1"; background-position: 0 0; }
+.linklisting .linkflair-mission-f1f1:after { content: "Falcon 1 Flight 1"; background-position: 0px 0px; }
 
-.linklisting .linkflair-mission-f1f2:after { content: "Falcon 1 Flight 2"; background-position: 50px 0; }
+.linklisting .linkflair-mission-f1f2:after { content: "Falcon 1 Flight 2"; background-position: -50px 0px; }
 
-.linklisting .linkflair-mission-f1f3:after { content: "Falcon 1 Flight 3"; background-position: 100px 0; }
+.linklisting .linkflair-mission-f1f3:after { content: "Falcon 1 Flight 3"; background-position: -100px 0px; }
 
-.linklisting .linkflair-mission-f1f4:after { content: "RatSat"; background-position: 300px 0; }
+.linklisting .linkflair-mission-f1f4:after { content: "RatSat"; background-position: -150px 0px; }
 
-.linklisting .linkflair-mission-f1f5:after { content: "RazakSat"; background-position: 400px 0; }
+.linklisting .linkflair-mission-f1f5:after { content: "RazakSAT"; background-position: -200px 0px; }
 
-.linklisting .linkflair-mission-dsqu:after { content: "DSQU"; background-position: 0 100px; }
+.linklisting .linkflair-mission-dsqu:after { content: "DSQU"; background-position: 0px -50px; }
 
-.linklisting .linkflair-mission-cots-1:after { content: "COTS-1"; background-position: 100px 100px; }
+.linklisting .linkflair-mission-cots-1:after { content: "COTS-1"; background-position: -50px -50px; }
 
-.linklisting .linkflair-mission-cots-2:after { content: "COTS-2+"; background-position: 200px 100px; }
+.linklisting .linkflair-mission-cots-2:after { content: "COTS-2+"; background-position: -100px -50px; }
 
-.linklisting .linkflair-mission-crs-1:after { content: "CRS-1"; background-position: 300px 100px; }
+.linklisting .linkflair-mission-crs-1:after { content: "CRS-1"; background-position: -150px -50px; }
 
-.linklisting .linkflair-mission-crs-2:after { content: "CRS-2"; background-position: 400px 100px; }
+.linklisting .linkflair-mission-crs-2:after { content: "CRS-2"; background-position: -200px -50px; }
 
-.linklisting .linkflair-mission-cassiope:after { content: "CASSIOPE"; background-position: 0 200px; }
+.linklisting .linkflair-mission-cassiope:after { content: "CASSIOPE"; background-position: 0px -100px; }
 
-.linklisting .linkflair-mission-ses-8:after { content: "SES-8"; background-position: 100px 200px; }
+.linklisting .linkflair-mission-ses-8:after { content: "SES-8"; background-position: -50px -100px; }
 
-.linklisting .linkflair-mission-thaicom-6:after { content: "Thaicom 6"; background-position: 200px 200px; }
+.linklisting .linkflair-mission-thaicom-6:after { content: "Thaicom 6"; background-position: -100px -100px; }
 
-.linklisting .linkflair-mission-crs-3:after { content: "CRS-3"; background-position: 300px 200px; }
+.linklisting .linkflair-mission-crs-3:after { content: "CRS-3"; background-position: -150px -100px; }
 
-.linklisting .linkflair-mission-og2-1:after { content: "Orbcomm OG2 Launch 1"; background-position: 400px 200px; }
+.linklisting .linkflair-mission-og2-1:after { content: "Orbcomm OG2 Launch 1"; background-position: -200px -100px; }
 
-.linklisting .linkflair-mission-asiasat-8:after { content: "AsiaSat 8"; background-position: 0 300px; }
+.linklisting .linkflair-mission-asiasat-8:after { content: "AsiaSat 8"; background-position: 0px -150px; }
 
-.linklisting .linkflair-mission-asiasat-6:after { content: "AsiaSat 6"; background-position: 100px 300px; }
+.linklisting .linkflair-mission-asiasat-6:after { content: "AsiaSat 6"; background-position: -50px -150px; }
 
-.linklisting .linkflair-mission-crs-4:after { content: "CRS-4"; background-position: 200px 300px; }
+.linklisting .linkflair-mission-crs-4:after { content: "CRS-4"; background-position: -100px -150px; }
 
-.linklisting .linkflair-mission-crs-5:after { content: "CRS-5"; background-position: 300px 300px; }
+.linklisting .linkflair-mission-crs-5:after { content: "CRS-5"; background-position: -150px -150px; }
 
-.linklisting .linkflair-mission-dscovr:after { content: "DSCOVR"; background-position: 400px 300px; }
+.linklisting .linkflair-mission-dscovr:after { content: "DSCOVR"; background-position: -200px -150px; }
 
-.linklisting .linkflair-mission-eutelsat-abs-1:after { content: "Eutelsat/ABS 1"; background-position: 0 400px; }
+.linklisting .linkflair-mission-eutelsat-abs-1:after { content: "Eutelsat/ABS 1"; background-position: 0px -200px; }
 
-.linklisting .linkflair-mission-crs-6:after { content: "CRS-6"; background-position: 100px 400px; }
+.linklisting .linkflair-mission-crs-6:after { content: "CRS-6"; background-position: -50px -200px; }
 
-.linklisting .linkflair-mission-crs-7:after { content: "CRS-7"; background-position: -300px 400px; }
+.linklisting .linkflair-mission-crs-7:after { content: "CRS-7"; background-position: -100px -200px; }
 
-.linklisting .linkflair-mission-turkmenalem:after { content: "TurkmenAlem 52E"; background-position: -200px 400px; }
+.linklisting .linkflair-mission-turkmenalem:after { content: "TurkmenAlem 52E"; background-position: -150px -200px; }
 
-.linklisting .linkflair-mission-og2-2:after { content: "Orbcomm OG2 Launch 2"; background-position: -400px 400px; }
+.linklisting .linkflair-mission-og2-2:after { content: "Orbcomm OG2 Launch 2"; background-position: -200px -200px; }
 
 .linklisting .linkflair-mission-jason-3:after { content: "Jason-3"; background-position: 0px 0px; }
 
@@ -701,7 +699,7 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 .linklisting .linkflair-mission-jcsat-14:after { content: "JCSAT-14"; background-position: -150px 0px; }
 
-.linklisting .linkflair-mission-thaicom-8:after { content: "Thaicom-8"; background-position: -200px 0px; }
+.linklisting .linkflair-mission-thaicom-8:after { content: "Thaicom 8"; background-position: -200px 0px; }
 
 .linklisting .linkflair-mission-eutelsat-abs-2:after { content: "Eutelsat/ABS 2"; background-position: 0px -50px; }
 
@@ -712,6 +710,8 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 .linklisting .linkflair-mission-amos-6:after { content: "Amos-6"; background-position: 200px 200px; }
 
 .linklisting .linkflair-mission-iridium-next-flight-1:after { content: "Iridium NEXT Flight 1"; background-position: 200px 200px; }
+
+.linklisting .linkflair-mission-iridium-next-flight-2:after { content: "Iridium NEXT Flight 2"; background-position: 200px 200px; }
 
 .linklisting .linkflair-mission-formosat-5-sherpa:after { content: "Formosat-5/SHERPA"; background-position: 200px 200px; }
 
