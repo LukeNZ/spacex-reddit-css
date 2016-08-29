@@ -7,7 +7,7 @@ $iconsize: 50px;
 // 4. The Y position of the patch.
 
 // (if X and Y are both missing, a default flair will be used instead.)
-@mixin mission-flair($name, $label, $offsetx: -4, $offsety: -4) {
+@mixin mission-flair($name, $label, $offsetx: 4, $offsety: 4) {
     #{unquote(".linkflair-mission-#{$name}")} {
         &:after { content: $label; background-position: (-$offsetx * $iconsize) (-$offsety * $iconsize); }
     }
