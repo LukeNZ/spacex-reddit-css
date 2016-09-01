@@ -57,7 +57,7 @@ html {
     background-attachment: fixed;
 }
 
-body {
+body:not(.embed) {
     margin:0 $margin;
     top: 150px;
     position: absolute;

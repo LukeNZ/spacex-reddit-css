@@ -2,7 +2,7 @@ $expandoWidth: 35px;
 $expandHeight: 30px;
 
 // Titles, main content
-body > .content {
+body:not(.embed) > .content {
     margin:100px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
     background-color:$white;
 }

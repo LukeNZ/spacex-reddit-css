@@ -346,7 +346,7 @@ body.search-page .side .sidebox-submit, body.search-page .side div.search-summar
 
 body.search-page input[type="text"] { color: #181c1f !important; }
 
-body > .content { margin: 100px 340px 20px 0; background-color: #fafafa; }
+body:not(.embed) > .content { margin: 100px 340px 20px 0; background-color: #fafafa; }
 
 .link.last-clicked { border: none; }
 
@@ -839,6 +839,6 @@ body.res.res-nightmode textarea, body.res-nightmode .md-container, body.res-nigh
 
 html { height: 100%; background: url(%%banner2%%); background-color: #21272b; background-size: 2560px 200px; background-attachment: fixed; }
 
-body { margin: 0 25px; top: 150px; position: absolute; width: calc(100% - (25px * 2)); box-shadow: 0 0 10px 2px #181c1f; background-color: #fafafa; }
+body:not(.embed) { margin: 0 25px; top: 150px; position: absolute; width: calc(100% - (25px * 2)); box-shadow: 0 0 10px 2px #181c1f; background-color: #fafafa; }
 
 :focus { outline: none !important; }
