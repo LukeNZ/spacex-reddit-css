@@ -202,11 +202,22 @@ textarea {
 }
 
 // Make comment reply button highlighted
-
 .flat-list.buttons {
-    color:$grey;
+    a {
+        color:$grey;
+    }
 
-    .reply-button {
+    .reply-button a {
         color:lighten($lightslate, 15%);
+    }
+}
+
+// Mark removed comments
+.entry.tb-comment-spam {
+    background-color:transparent !important;
+    opacity:0.5;
+
+    &:hover {
+        opacity:1;
     }
 }

@@ -1,0 +1,39 @@
+[data-event-action="ignorereports"], [data-event-action="spam"] {
+    display:none;
+}
+
+.entry .buttons li.reported-stamp, .pretty-button {
+    @extend %button;
+    background-image:none !important;
+    font-family:$lucidagrande;
+    font-size:12px;
+    margin: 0 10px;
+    padding:3px 0;
+    width: 75px;
+    text-align: center;
+    height: 15px;
+    line-height: 15px;
+}
+
+.entry .buttons li.reported-stamp {
+    width:100px;
+    font-weight:bold;
+}
+
+.pretty-button {
+    opacity:0.3;
+    transition:opacity ease $fast;
+
+    &:hover {
+        opacity:1;
+    }
+}
+
+.pretty-button.pressed {
+    background-color:darken($webcastblue, 20%) !important;
+}
+
+ul.report-reasons {
+    border:none;
+    background-color:transparent;
+}

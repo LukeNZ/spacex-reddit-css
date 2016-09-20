@@ -1,8 +1,10 @@
-.c-btn-primary, .morelink a, body.res-nightmode .morelink a, .side .titlebox span.subscribe-button, .side .titlebox .subButtons span.RESshortcutside, .side .titlebox .subButtons span.RESDashboardToggle, button, .nextprev a, .next-suggestions a, #suggest-title button, div.spacer > button.btn { background-color: #2276AB !important; border-radius: 4px; border: none !important; border-bottom: 3px solid #154a6b !important; -webkit-transition: background-color ease 0.2s; transition: background-color ease 0.2s; color: #fafafa !important; position: relative; }
+.c-btn-primary, .morelink a, body.res-nightmode .morelink a, .side .titlebox span.subscribe-button, .side .titlebox .subButtons span.RESshortcutside, .side .titlebox .subButtons span.RESDashboardToggle, button, .nextprev a, .next-suggestions a, .entry .buttons li.reported-stamp, .pretty-button, #suggest-title button, div.spacer > button.btn { background-color: #2276AB !important; border-radius: 4px; border: none !important; border-bottom: 3px solid #154a6b !important; -webkit-transition: background-color ease 0.2s; transition: background-color ease 0.2s; color: #fafafa !important; position: relative; }
 
-.c-btn-primary:hover, .morelink a:hover, body.res-nightmode .morelink a:hover, .side .titlebox span.subscribe-button:hover, .side .titlebox .subButtons span.RESshortcutside:hover, .side .titlebox .subButtons span.RESDashboardToggle:hover, button:hover, .nextprev a:hover, .next-suggestions a:hover, #suggest-title button:hover, div.spacer > button.btn:hover { background-color: #2b93d5 !important; }
+.c-btn-primary:hover, .morelink a:hover, body.res-nightmode .morelink a:hover, .side .titlebox span.subscribe-button:hover, .side .titlebox .subButtons span.RESshortcutside:hover, .side .titlebox .subButtons span.RESDashboardToggle:hover, button:hover, .nextprev a:hover, .next-suggestions a:hover, .entry .buttons li.reported-stamp:hover, .pretty-button:hover, #suggest-title button:hover, div.spacer > button.btn:hover { background-color: #2b93d5 !important; }
 
-.c-btn-primary:active, .morelink a:active, body.res-nightmode .morelink a:active, .side .titlebox span.subscribe-button:active, .side .titlebox .subButtons span.RESshortcutside:active, .side .titlebox .subButtons span.RESDashboardToggle:active, button:active, .nextprev a:active, .next-suggestions a:active, #suggest-title button:active, div.spacer > button.btn:active { top: 1px; border-bottom: 2px solid #154a6b !important; }
+.c-btn-primary:active, .morelink a:active, body.res-nightmode .morelink a:active, .side .titlebox span.subscribe-button:active, .side .titlebox .subButtons span.RESshortcutside:active, .side .titlebox .subButtons span.RESDashboardToggle:active, button:active, .nextprev a:active, .next-suggestions a:active, .entry .buttons li.reported-stamp:active, .pretty-button:active, #suggest-title button:active, div.spacer > button.btn:active { top: 1px; border-bottom: 2px solid #154a6b !important; }
+
+.thing.spam { background-color: transparent; }
 
 /* CHANGE THE MISSION PATCH HERE. YOU SHOULD ONLY NEED TO ADJUST THESE PARAMETERS */
 .side, body.res-nightmode .side { background-image: url(%%missionpatch%%); /* Place a relevant mission patch here */ padding: 425px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: center 5px; background-size: 325px 411px; }
@@ -281,6 +283,8 @@ div.bottom span.flair { display: none; }
 
 .side .usertext-body a:hover { color: #80bee6; }
 
+.side .usertext-body del { color: #C3427D; }
+
 .side .titlebox .md h3:nth-of-type(1) { position: absolute; top: -30px; left: 0px; right: 0px; height: 30px; line-height: 30px; text-align: center; font-size: 10px; color: #fafafa; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: normal; opacity: 0.5; margin: 0; z-index: 1000; }
 
 .side .titlebox .md h3:nth-of-type(2), .side .titlebox .md h3:nth-of-type(3), .side .titlebox .md h3:nth-of-type(4) { box-sizing: border-box; position: absolute; background-color: #637682; color: #fafafa; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; margin: 0; height: 50px; overflow: hidden; }
@@ -499,9 +503,27 @@ textarea { border: 1px solid #849199; -webkit-transition: border 0.2s ease 0s; t
 
 textarea:focus { border: 1px solid #CCAC55; }
 
-.flat-list.buttons { color: #849199; }
+.flat-list.buttons a { color: #849199; }
 
-.flat-list.buttons .reply-button { color: #424e56; }
+.flat-list.buttons .reply-button a { color: #424e56; }
+
+.entry.tb-comment-spam { background-color: transparent !important; opacity: 0.5; }
+
+.entry.tb-comment-spam:hover { opacity: 1; }
+
+[data-event-action="ignorereports"], [data-event-action="spam"] { display: none; }
+
+.entry .buttons li.reported-stamp, .pretty-button { background-image: none !important; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 12px; margin: 0 10px; padding: 3px 0; width: 75px; text-align: center; height: 15px; line-height: 15px; }
+
+.entry .buttons li.reported-stamp { width: 100px; font-weight: bold; }
+
+.pretty-button { opacity: 0.3; -webkit-transition: opacity ease 0.2s; transition: opacity ease 0.2s; }
+
+.pretty-button:hover { opacity: 1; }
+
+.pretty-button.pressed { background-color: #113b56 !important; }
+
+ul.report-reasons { border: none; background-color: transparent; }
 
 body.submit-page, body.submit-page > .content { background-color: #374148 !important; }
 
