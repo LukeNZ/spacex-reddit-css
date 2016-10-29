@@ -12,16 +12,17 @@
             position: absolute;
             display: block;
             z-index:100;
-            padding:5px;
+            padding:8px 15px;
             content: "Don't downvote because you disagree!";
             text-align: center;
-            font-size: 11px;
-            font-weight: normal;
+            font-size: 12px;
+            font-weight: bold;
             font-family: $lucidagrande;
             width: 250px;
             color: $green;
-            background-color: rgba($purewhite, 0.9);
-            margin-left: 30px;
+            background-color: $purewhite;
+            margin-left: 25px;
+            box-shadow:0 0 10px rgba($slate, 0.5);
         }
 
         &:hover:before {
@@ -59,18 +60,23 @@
     &> div.sitetable > div.thing {
         padding:5px;
         margin-bottom:5px;
-        border-left:2px solid $grey;
+        border-left:2px solid $grey !important;
 
         &:hover {
-            border-left:2px solid $gold;
+            border-left:2px solid $gold !important;
         }
     }
 
-    div.thing > .child {
-        border-left:1px solid $grey;
+    div.thing > div.child {
+
+        > form {
+            padding-left:15px;
+        }
+
+        border-left:1px solid $grey !important;
 
         &:hover {
-            border-left:1px solid $gold;
+            border-left:1px solid $gold !important;
         }
     }
 }
@@ -201,23 +207,46 @@ textarea {
     }
 }
 
-// Make comment reply button highlighted
-.flat-list.buttons {
-    a {
+.comment {
+
+    .entry .tagline {
+        font-family:$helvetica;
+        font-size:11px;
         color:$grey;
     }
 
-    .reply-button a {
+    .score {
         color:lighten($lightslate, 15%);
+
+        &:before {
+            content: "• ";
+            margin: 0 2px;
+            vertical-align: middle;
+            line-height: 14px;
+        }
+    }
+
+    // Make comment reply button highlighted
+    .flat-list.buttons {
+        a:not(.pretty-button) {
+            font-size:11px;
+            font-family:$helvetica;
+            color:$grey !important;
+        }
+
+        .reply-button a {
+            color:lighten($lightslate, 15%) !important;
+        }
+    }
+
+    // Mark removed comments
+    .entry.tb-comment-spam {
+        background-color:transparent !important;
+        opacity:0.5;
+
+        &:hover {
+            opacity:1;
+        }
     }
 }
 
-// Mark removed comments
-.entry.tb-comment-spam {
-    background-color:transparent !important;
-    opacity:0.5;
-
-    &:hover {
-        opacity:1;
-    }
-}

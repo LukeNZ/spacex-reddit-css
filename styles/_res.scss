@@ -76,6 +76,17 @@ div.NERPageMarker, #NERFail {
     top:50px !important;
 }
 
+// Commenting area
+.res .res-commentBoxes {
+    .comment {
+        border:none !important;
+        border-radius:0 !important;
+    }
+}
+.res .res-commentBoxes.res-commentBoxes-rounded .comment {
+    border-radius:0 !important;
+}
+
 // transperantize
 body.res.res-nightmode textarea,
 body.res-nightmode .md-container,
@@ -88,17 +99,17 @@ body.res-nightmode .pretty-form.long-text textarea,
 body.res-nightmode #quickMessage textarea,
 body.res-nightmode #newlink.submit textarea,
 body.res-nightmode .usertext-edit textarea,
-body.res-nightmode.res-commentBoxes .comment,
-body.res-nightmode.res-commentBoxes .comment .comment,
-body.res-nightmode.res-commentBoxes .comment .comment .comment,
-body.res-nightmode.res-commentBoxes .comment .comment .comment .comment,
-body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment,
-body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment,
-body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment,
-body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment,
-body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res .res-commentBoxes .comment,
+.res .res-commentBoxes .comment .comment,
+.res .res-commentBoxes .comment .comment .comment,
+.res .res-commentBoxes .comment .comment .comment .comment,
+.res .res-commentBoxes .comment .comment .comment .comment .comment,
+.res .res-commentBoxes .comment .comment .comment .comment .comment .comment,
+.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment,
+.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment,
+.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment,
 body.res-nightmode .stylesheet-customize-container textarea,
 body.res-nightmode form#newlink,
 .res-nightmode body .content {
-    background-color:transparent !important;
+    background-color: transparent !important;
 }

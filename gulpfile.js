@@ -25,8 +25,10 @@ gulp.task('reddify', function() {
     var replace = require('gulp-replace');
 
     return gulp.src(['build/subreddit.css'])
+        // Replce charset
+        .pipe(replace('@charset "UTF-8";', ''))
         // Replace image names
-        .pipe(replace('"missionpatch.png"', '%%missionpatch%%'))
+        .pipe(replace('"sidebar.png"', '%%sidebar%%'))
         .pipe(replace('"dragon.png"', '%%dragonNew%%'))
         .pipe(replace('"spacex.png"', '%%spacex%%'))
         .pipe(replace('"sprites.png"', '%%sprites%%'))

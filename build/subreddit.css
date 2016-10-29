@@ -1,13 +1,14 @@
-.c-btn-primary, .morelink a, body.res-nightmode .morelink a, .side .titlebox span.subscribe-button, .side .titlebox .subButtons span.RESshortcutside, .side .titlebox .subButtons span.RESDashboardToggle, button, .nextprev a, .next-suggestions a, .entry .buttons li.reported-stamp, .pretty-button, #suggest-title button, div.spacer > button.btn { background-color: #2276AB !important; border-radius: 4px; border: none !important; border-bottom: 3px solid #154a6b !important; -webkit-transition: background-color ease 0.2s; transition: background-color ease 0.2s; color: #fafafa !important; position: relative; }
 
-.c-btn-primary:hover, .morelink a:hover, body.res-nightmode .morelink a:hover, .side .titlebox span.subscribe-button:hover, .side .titlebox .subButtons span.RESshortcutside:hover, .side .titlebox .subButtons span.RESDashboardToggle:hover, button:hover, .nextprev a:hover, .next-suggestions a:hover, .entry .buttons li.reported-stamp:hover, .pretty-button:hover, #suggest-title button:hover, div.spacer > button.btn:hover { background-color: #2b93d5 !important; }
+.c-btn-primary, .morelink a, body.res-nightmode .morelink a, .side .titlebox span.subscribe-button, .side .titlebox .subButtons span.RESshortcutside, .side .titlebox .subButtons span.RESDashboardToggle, button, .nextprev a, .next-suggestions a, .entry .buttons li.reported-stamp, .pretty-button, #suggest-title button, div.spacer > button.btn { background-color: #2276AB !important; border-radius: 2px; border: none !important; border-bottom: 2px solid #1a5980 !important; -webkit-transition: background-color ease 0.2s; transition: background-color ease 0.2s; color: #fcfcfc !important; position: relative; }
 
-.c-btn-primary:active, .morelink a:active, body.res-nightmode .morelink a:active, .side .titlebox span.subscribe-button:active, .side .titlebox .subButtons span.RESshortcutside:active, .side .titlebox .subButtons span.RESDashboardToggle:active, button:active, .nextprev a:active, .next-suggestions a:active, .entry .buttons li.reported-stamp:active, .pretty-button:active, #suggest-title button:active, div.spacer > button.btn:active { top: 1px; border-bottom: 2px solid #154a6b !important; }
+.c-btn-primary:hover, .morelink a:hover, body.res-nightmode .morelink a:hover, .side .titlebox span.subscribe-button:hover, .side .titlebox .subButtons span.RESshortcutside:hover, .side .titlebox .subButtons span.RESDashboardToggle:hover, button:hover, .nextprev a:hover, .next-suggestions a:hover, .entry .buttons li.reported-stamp:hover, .pretty-button:hover, #suggest-title button:hover, div.spacer > button.btn:hover { background-color: #2685c0 !important; }
+
+.c-btn-primary:active, .morelink a:active, body.res-nightmode .morelink a:active, .side .titlebox span.subscribe-button:active, .side .titlebox .subButtons span.RESshortcutside:active, .side .titlebox .subButtons span.RESDashboardToggle:active, button:active, .nextprev a:active, .next-suggestions a:active, .entry .buttons li.reported-stamp:active, .pretty-button:active, #suggest-title button:active, div.spacer > button.btn:active { top: 1px; border-bottom: 1px solid #1a5980 !important; }
 
 .thing.spam { background-color: transparent; }
 
 /* CHANGE THE MISSION PATCH HERE. YOU SHOULD ONLY NEED TO ADJUST THESE PARAMETERS */
-.side, body.res-nightmode .side { background-image: url(%%missionpatch%%); /* Place a relevant mission patch here */ padding: 425px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: center 5px; background-size: 325px 411px; }
+.side, body.res-nightmode .side { background-image: url(%%sidebar%%); /* Place a relevant mission patch here */ padding: 425px 10px 10px 10px; /* Set padding to match image height + a bit for spacing */ background-position: 0 0; background-size: contain; }
 
 /* USE THE COMMENTED OUT STYLES BELOW TO PROVIDE A THUMBNAIL FOR A SUBMISSION */
 /* #thing_t3_{{id}} a.thumbnail { height: 70px; background: 0 0 url(%%image%%) no-repeat; background-size:70px 60px; }*/
@@ -47,7 +48,7 @@ div#header-bottom-left ul.tabmenu, body.res-nightmode div#header-bottom-left ul.
 
 div#header-bottom-left ul.tabmenu li, body.res-nightmode div#header-bottom-left ul.tabmenu li { background-color: transparent; display: inline-block; width: auto; line-height: 130px; margin: 0 10px; }
 
-div#header-bottom-left ul.tabmenu li a, body.res-nightmode div#header-bottom-left ul.tabmenu li a { color: #fafafa; font-family: "Brandon Grotesque", "Proxima Nova", Geneva, Verdana, sans-serif; font-size: 15px; font-weight: lighter; letter-spacing: 0.5px; text-transform: uppercase; padding: 0; }
+div#header-bottom-left ul.tabmenu li a, body.res-nightmode div#header-bottom-left ul.tabmenu li a { color: #fcfcfc; font-family: "Brandon Grotesque", "Proxima Nova", Geneva, Verdana, sans-serif; font-size: 15px; font-weight: lighter; letter-spacing: 0.5px; text-transform: uppercase; padding: 0; }
 
 div#header-bottom-left ul.tabmenu li a:hover, body.res-nightmode div#header-bottom-left ul.tabmenu li a:hover { border-bottom: 2px solid #CCAC55 !important; }
 
@@ -61,7 +62,7 @@ body div#header-bottom-right, body.res-nightmode div#header-bottom-right { borde
 
 body div#header-bottom-right:before, body.res-nightmode div#header-bottom-right:before { content: ""; display: block; position: absolute; width: 0px; height: 0; border-top: 30px solid rgba(53, 105, 164, 0.5); border-left: 30px solid transparent; right: 100%; }
 
-body div#header-bottom-right a, body.res-nightmode div#header-bottom-right a { color: #fafafa; border-bottom: 2px solid transparent; -webkit-transition: color 0.2s ease, border-bottom 0.2s ease; transition: color 0.2s ease, border-bottom 0.2s ease; }
+body div#header-bottom-right a, body.res-nightmode div#header-bottom-right a { color: #fcfcfc; border-bottom: 2px solid transparent; -webkit-transition: color 0.2s ease, border-bottom 0.2s ease; transition: color 0.2s ease, border-bottom 0.2s ease; }
 
 body div#header-bottom-right a:hover, body.res-nightmode div#header-bottom-right a:hover { color: #CCAC55; border-bottom: 2px solid #CCAC55; text-decoration: none !important; }
 
@@ -75,7 +76,7 @@ body div#header-bottom-right .mail, body div#header-bottom-right #mail.nohavemai
 
 body div#header-bottom-right .message-count, body.res-nightmode div#header-bottom-right .message-count { background-color: #CCAC55; border-radius: 50%; width: 20px; height: 20px; margin: 0; padding: 0; font-size: 11px; display: inline-block; border: none !important; position: relative; top: -3px; left: -15px; vertical-align: top; line-height: 20px; text-align: center; box-shadow: -5px 5px 5px 0 rgba(24, 28, 31, 0.5); }
 
-body div#header-bottom-right .message-count:hover, body.res-nightmode div#header-bottom-right .message-count:hover { color: #fafafa; }
+body div#header-bottom-right .message-count:hover, body.res-nightmode div#header-bottom-right .message-count:hover { color: #fcfcfc; }
 
 body div#header-bottom-right #mail.nohavemail:hover, body div#header-bottom-right #mail.havemail:hover, body div#header-bottom-right #modmail.nohavemail:hover, body div#header-bottom-right #modmail.havemail:hover, body.res-nightmode div#header-bottom-right #mail.nohavemail:hover, body.res-nightmode div#header-bottom-right #mail.havemail:hover, body.res-nightmode div#header-bottom-right #modmail.nohavemail:hover, body.res-nightmode div#header-bottom-right #modmail.havemail:hover { -webkit-transform: scale(1.2); transform: scale(1.2); }
 
@@ -113,11 +114,11 @@ body div#header-bottom-right #RESMainGearOverlay .gearIcon, body.res-nightmode d
 
 .infobar { background-color: rgba(204, 172, 85, 0.2) !important; border: 1px solid #CCAC55; padding: 10px; margin: 10px; }
 
-.side { width: 320px; margin: 0; color: #fafafa; overflow: hidden; }
+.side { width: 320px; margin: 0; color: #fcfcfc; overflow: hidden; }
 
-.side, body.res-nightmode .side { background-color: #374148; background-repeat: no-repeat; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; }
+.side, body.res-nightmode .side { background-color: #424e56; background-repeat: no-repeat; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; }
 
-.side .md, body.res-nightmode .side .md { color: #fafafa; }
+.side .md, body.res-nightmode .side .md { color: #fcfcfc; }
 
 .side .md h4, body.res-nightmode .side .md h4 { margin-top: 0; margin-bottom: 0; }
 
@@ -127,13 +128,13 @@ div.linkinfo .date, div.linkinfo .score, div.linkinfo .totalvotes, div.linkinfo 
 
 div.linkinfo .totalvotes { display: block; }
 
-div.linkinfo time, div.linkinfo .score { color: #fafafa; }
+div.linkinfo time, div.linkinfo .score { color: #fcfcfc; }
 
 div.linkinfo input#shortlink-text { background-color: transparent !important; color: #849199; border: 2px solid #181c1f !important; -webkit-transition: border 0.2s ease 0s; transition: border 0.2s ease 0s; }
 
-div.linkinfo input#shortlink-text::-moz-selection { background: #fafafa; }
+div.linkinfo input#shortlink-text::-moz-selection { background: #fcfcfc; }
 
-div.linkinfo input#shortlink-text::selection { background: #fafafa; }
+div.linkinfo input#shortlink-text::selection { background: #fcfcfc; }
 
 div.linkinfo input#shortlink-text:focus { border: 2px solid #CCAC55 !important; }
 
@@ -185,9 +186,9 @@ div.sidebox.submit .spacer.no-icon:after { content: "Immediately before, during,
 
 .side .titlebox .subButtons span.subscribe-button { display: inline-block; }
 
-.side .titlebox .subButtons span.RESshortcutside, .side .titlebox .subButtons span.RESDashboardToggle { width: 90px; height: 21px; line-height: 21px; margin: 0 0 0 6px; padding: 0; border: none; font-weight: 100; font-size: 12px; border-radius: 4px; display: inline-block; vertical-align: top; position: relative; text-align: center; cursor: pointer; background-image: none; }
+.side .titlebox .subButtons span.RESshortcutside, .side .titlebox .subButtons span.RESDashboardToggle { width: 90px; height: 21px; line-height: 21px; margin: 0 0 0 6px; padding: 0; border: none; font-weight: 100; font-size: 12px; border-radius: 2px; display: inline-block; vertical-align: top; position: relative; text-align: center; cursor: pointer; background-image: none; }
 
-.side .titlebox span.subscribers, .side .titlebox p.users-online { display: block; width: 160px; height: 20px; margin: 10px 0; position: relative; float: left; color: #fafafa; text-align: center; }
+.side .titlebox span.subscribers, .side .titlebox p.users-online { display: block; width: 160px; height: 20px; margin: 10px 0; position: relative; float: left; color: #fcfcfc; text-align: center; }
 
 .side .titlebox span.subscribers .number, .side .titlebox p.users-online .number { font-size: larger; }
 
@@ -211,7 +212,7 @@ div.sidebox.submit .spacer.no-icon:after { content: "Immediately before, during,
 
 .side .usertext-body .md p { line-height: 1.5; }
 
-.side .usertext-body .md h4 { background-color: #2276AB; position: relative; right: -30px; line-height: 40px; color: #fafafa; font-family: "Helvetica Neue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; font-size: 16px; height: 40px; margin-top: 30px !important; margin-bottom: 10px !important; }
+.side .usertext-body .md h4 { background-color: #2276AB; position: relative; right: -30px; line-height: 40px; color: #fcfcfc; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; font-size: 16px; height: 40px; margin-top: 30px !important; margin-bottom: 10px !important; }
 
 .side .usertext-body .md h4:after { content: ""; display: block; border-top: 40px solid #2276AB; border-left: 30px solid transparent; position: absolute; width: 0; height: 0; top: 0; right: 100%; }
 
@@ -225,7 +226,7 @@ div.bottom span.flair { display: none; }
 
 #moderation_tools .collapse-button, .sidecontentbox .title .collapse-button { display: none; }
 
-#moderation_tools h1, .sidecontentbox .title h1 { display: block; text-transform: capitalize; background-color: #2276AB; position: relative; right: -30px; line-height: 40px; color: #fafafa; font-family: "Helvetica Neue-Light", "Helvetica Neue", "Helvetica", "Verdana", sans-serif; font-weight: 300; font-size: 16px; height: 40px; margin-top: 30px !important; margin-bottom: 10px !important; -webkit-transition: background-color 0.2s ease; transition: background-color 0.2s ease; }
+#moderation_tools h1, .sidecontentbox .title h1 { display: block; text-transform: capitalize; background-color: #2276AB; position: relative; right: -30px; line-height: 40px; color: #fcfcfc; font-family: "Helvetica Neue-Light", "Helvetica Neue", "Helvetica", "Verdana", sans-serif; font-weight: 300; font-size: 16px; height: 40px; margin-top: 30px !important; margin-bottom: 10px !important; -webkit-transition: background-color 0.2s ease; transition: background-color 0.2s ease; }
 
 #moderation_tools h1:after, .sidecontentbox .title h1:after { content: ""; display: block; border-top: 40px solid #2276AB; border-left: 30px solid transparent; position: absolute; width: 0; height: 0; top: 0; left: -30px; -webkit-transition: border-top 0.2s ease; transition: border-top 0.2s ease; }
 
@@ -241,7 +242,7 @@ div.bottom span.flair { display: none; }
 
 #wikiactions h1:before { content: "Wiki Tools"; font-size: 16px; }
 
-.sidecontentbox a.helplink { display: block; background-color: #2a6ebd; color: #FFF !important; float: none; text-align: center; width: 60%; margin: 0 auto; text-transform: capitalize; padding: 4px 8px; border-radius: 4px; font-size: 12px; border-bottom: 2px solid #244870; position: relative; top: 60px; }
+.sidecontentbox a.helplink { display: block; background-color: #2a6ebd; color: #FFF !important; float: none; text-align: center; width: 60%; margin: 0 auto; text-transform: capitalize; padding: 4px 8px; border-radius: 2px; font-size: 12px; border-bottom: 2px solid #244870; position: relative; top: 60px; }
 
 .sidecontentbox a.helplink:active { background-color: #244870 !important; }
 
@@ -259,7 +260,7 @@ div.bottom span.flair { display: none; }
 
 .sidecontentbox a.helplink + div.title + ul.content li.more a { color: #849199; }
 
-.sidecontentbox a.helplink + div.title + ul.content li a.author { color: #FFF; text-align: center; display: inline-block; background-color: #27ae60; padding: 3px; height: 15px; line-height: 15px; border-radius: 4px; width: 130px; border-bottom: 2px solid #156135; margin: 0; }
+.sidecontentbox a.helplink + div.title + ul.content li a.author { color: #FFF; text-align: center; display: inline-block; background-color: #27ae60; padding: 3px; height: 15px; line-height: 15px; border-radius: 2px; width: 130px; border-bottom: 2px solid #156135; margin: 0; }
 
 .sidecontentbox a.helplink + div.title + ul.content li a.author:active { background-color: #156135; }
 
@@ -285,11 +286,11 @@ div.bottom span.flair { display: none; }
 
 .side .usertext-body del { color: #C3427D; }
 
-.side .titlebox .md h3:nth-of-type(1) { position: absolute; top: -30px; left: 0px; right: 0px; height: 30px; line-height: 30px; text-align: center; font-size: 10px; color: #fafafa; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: normal; opacity: 0.5; margin: 0; z-index: 1000; }
+.side .titlebox .md h3:nth-of-type(1) { position: absolute; top: -30px; left: 0px; right: 0px; height: 30px; line-height: 30px; text-align: center; font-size: 10px; color: #fcfcfc; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: normal; opacity: 0.5; margin: 0; z-index: 1000; }
 
-.side .titlebox .md h3:nth-of-type(2), .side .titlebox .md h3:nth-of-type(3), .side .titlebox .md h3:nth-of-type(4) { box-sizing: border-box; position: absolute; background-color: #637682; color: #fafafa; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; margin: 0; height: 50px; overflow: hidden; }
+.side .titlebox .md h3:nth-of-type(2), .side .titlebox .md h3:nth-of-type(3), .side .titlebox .md h3:nth-of-type(4) { box-sizing: border-box; position: absolute; background-color: #424e56; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; margin: 0; height: 50px; overflow: hidden; }
 
-.side .titlebox .md h3:nth-of-type(2) { top: 0px; left: 0px; right: 340px; border-bottom: 1px dashed rgba(250, 250, 250, 0.5); text-align: left; font-size: 13px; padding: 5px 10px !important; }
+.side .titlebox .md h3:nth-of-type(2) { top: 0px; left: 0px; right: 340px; border-bottom: 1px dashed rgba(252, 252, 252, 0.5); text-align: left; font-size: 13px; padding: 5px 10px !important; }
 
 @media screen and (max-width: 1366px) { .side .titlebox .md h3:nth-of-type(2) { font-size: 12px; padding: 3px 10px !important; } }
 
@@ -297,11 +298,11 @@ div.bottom span.flair { display: none; }
 
 .side .titlebox .md h3:nth-of-type(2) a:hover { color: #CCAC55; }
 
-.side .titlebox .md h3:nth-of-type(3) { top: 50px; left: 0; height: 50px; width: 300px; text-align: left; font-size: 0; text-transform: uppercase; -webkit-transition: background-color ease 0.2s; transition: background-color ease 0.2s; font-weight: lighter; border-right: 1px dashed rgba(250, 250, 250, 0.5); }
+.side .titlebox .md h3:nth-of-type(3) { top: 50px; left: 0; height: 50px; width: 300px; text-align: left; font-size: 0; text-transform: uppercase; font-weight: lighter; border-right: 1px dashed rgba(252, 252, 252, 0.5); }
 
 @media screen and (max-width: 1366px) { .side .titlebox .md h3:nth-of-type(3) { width: 180px; } }
 
-.side .titlebox .md h3:nth-of-type(3) a { padding: 0 10px; display: inline-block; font-size: 16px; text-align: center; color: #fafafa; line-height: 50px; width: 33%; box-sizing: border-box; font-family: "Brandon Grotesque", "Proxima Nova", Geneva, Verdana, sans-serif; float: left; }
+.side .titlebox .md h3:nth-of-type(3) a { padding: 0 10px; display: inline-block; font-size: 16px; text-align: center; color: #fcfcfc; line-height: 50px; width: 33%; box-sizing: border-box; font-family: "Brandon Grotesque", "Proxima Nova", Geneva, Verdana, sans-serif; float: left; }
 
 @media screen and (max-width: 1366px) { .side .titlebox .md h3:nth-of-type(3) a { padding: 0; font-size: 14px; } }
 
@@ -311,7 +312,7 @@ div.bottom span.flair { display: none; }
 
 @media screen and (max-width: 1366px) { .side .titlebox .md h3:nth-of-type(4) { left: 180px; } }
 
-.side .titlebox .md h3:nth-of-type(4) a { box-sizing: border-box; height: 50px; font-size: 13px;  -webkit-flex-grow: 1;  flex-grow: 1; width: 25%; padding: 3px 20px 0 50px; line-height: 1.2; color: #fafafa; font-weight: normal; float: left; position: relative; }
+.side .titlebox .md h3:nth-of-type(4) a { box-sizing: border-box; height: 50px; font-size: 13px;  -webkit-flex-grow: 1;  flex-grow: 1; width: 25%; padding: 3px 20px 0 50px; line-height: 1.2; color: #fcfcfc; font-weight: normal; float: left; position: relative; }
 
 @media screen and (max-width: 1366px) { .side .titlebox .md h3:nth-of-type(4) a { padding: 2px 4px 0 4px; }
   .side .titlebox .md h3:nth-of-type(4) a:before { display: none !important; } }
@@ -340,17 +341,17 @@ div.bottom span.flair { display: none; }
 
 .res-nightmode .search-page #search input[type="text"] { color: white !important; }
 
-#search input[type="text"] { padding: 5px; border: 2px solid rgba(132, 145, 153, 0.75) !important; background-color: transparent !important; font-size: 14px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; color: #fafafa !important; /* Grr... Reddit overrides this with an HTML based style :X */ -webkit-transition: border ease 0.2s; transition: border ease 0.2s; width: 100%; }
+#search input[type="text"] { padding: 5px; border: 2px solid rgba(132, 145, 153, 0.75) !important; background-color: transparent !important; font-size: 14px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; color: #fcfcfc !important; /* Grr... Reddit overrides this with an HTML based style :X */ -webkit-transition: border ease 0.2s; transition: border ease 0.2s; width: 100%; }
 
 #search input[type="text"]:focus { border: 2px solid #CCAC55 !important; outline: none; }
 
-#search div#searchexpando.infobar { background-color: transparent; border-radius: 0px; border: 2px solid #CCAC55; color: #fafafa; }
+#search div#searchexpando.infobar { background-color: transparent; border-radius: 0px; border: 2px solid #CCAC55; color: #fcfcfc; }
 
 body.search-page .side .sidebox-submit, body.search-page .side div.search-summary { display: none; }
 
 body.search-page input[type="text"] { color: #181c1f !important; }
 
-body:not(.embed) > .content { margin: 100px 340px 20px 0; background-color: #fafafa; }
+body:not(.embed) > .content { margin: 100px 340px 20px 0; background-color: #fcfcfc; }
 
 .link.last-clicked { border: none; }
 
@@ -445,7 +446,7 @@ button, .nextprev a, .next-suggestions a { padding: 3px 20px 3px 20px !important
 
 .commentarea .arrow.down:before, .commentarea .arrow.downmod:before { visibility: hidden; opacity: 0; -webkit-transition: visibility 0s ease 0s, opacity 0.2s ease 0s; transition: visibility 0s ease 0s, opacity 0.2s ease 0s; }
 
-.commentarea .arrow.down:before, .commentarea .arrow.down:hover:before, .commentarea .arrow.downmod:before, .commentarea .arrow.downmod:hover:before { position: absolute; display: block; z-index: 100; padding: 5px; content: "Don't downvote because you disagree!"; text-align: center; font-size: 11px; font-weight: normal; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; width: 250px; color: #00A651; background-color: rgba(255, 255, 255, 0.9); margin-left: 30px; }
+.commentarea .arrow.down:before, .commentarea .arrow.down:hover:before, .commentarea .arrow.downmod:before, .commentarea .arrow.downmod:hover:before { position: absolute; display: block; z-index: 100; padding: 8px 15px; content: "Don't downvote because you disagree!"; text-align: center; font-size: 12px; font-weight: bold; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; width: 250px; color: #00A651; background-color: #fff; margin-left: 25px; box-shadow: 0 0 10px rgba(24, 28, 31, 0.5); }
 
 .commentarea .arrow.down:hover:before, .commentarea .arrow.downmod:hover:before { visibility: visible; opacity: 1; }
 
@@ -455,13 +456,15 @@ button, .nextprev a, .next-suggestions a { padding: 3px 20px 3px 20px !important
 
 .commentarea .usertext-edit > div:nth-of-type(1):after { content: "Comments that do not contribute to the discussion, are low-effort, consist solely of a meme, or otherwise violate our guidelines will be removed. These comments should be reported."; padding: 5px; display: block; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 11px; font-weight: bold; text-align: center; box-sizing: border-box; color: #00A651; /* Moderator Green */ }
 
-.commentarea > div.sitetable > div.thing { padding: 5px; margin-bottom: 5px; border-left: 2px solid #849199; }
+.commentarea > div.sitetable > div.thing { padding: 5px; margin-bottom: 5px; border-left: 2px solid #849199 !important; }
 
-.commentarea > div.sitetable > div.thing:hover { border-left: 2px solid #CCAC55; }
+.commentarea > div.sitetable > div.thing:hover { border-left: 2px solid #CCAC55 !important; }
 
-.commentarea div.thing > .child { border-left: 1px solid #849199; }
+.commentarea div.thing > div.child { border-left: 1px solid #849199 !important; }
 
-.commentarea div.thing > .child:hover { border-left: 1px solid #CCAC55; }
+.commentarea div.thing > div.child > form { padding-left: 15px; }
+
+.commentarea div.thing > div.child:hover { border-left: 1px solid #CCAC55 !important; }
 
 @media (max-width: 1366px) { div.commentarea .usertext-edit > div:nth-of-type(1):after, div.commentarea .usertext-edit textarea, div.commentarea .usertext-edit .markdownEditor-wrapper, div.commentarea .usertext-edit .bottom-area { width: 500px; } }
 
@@ -493,23 +496,29 @@ body > .content .midcol, body .midcol, body.res-nightmode > .content .midcol, bo
 
 .expando-button.expanded:hover, .res.res-nightmode .expando-button.expanded:hover { background-position: 0 -240px !important; -webkit-transform: rotate(45deg) scale(0.9999); transform: rotate(45deg) scale(0.9999); }
 
-.link .usertext .md { background-color: #fafafa; border: 1px solid #CCAC55 !important; border-radius: 0px; }
+.link .usertext .md { background-color: #fcfcfc; border: 1px solid #CCAC55 !important; border-radius: 0px; }
 
 #noresults { margin: 0; padding: 10px 0 20px; font-size: 0; text-align: center; }
 
-#noresults:before { font-size: 16px; color: #849199; display: inline; content: "No comments. Start contributing!"; position: relative; font-family: "Helvetica Neue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; text-align: center; }
+#noresults:before { font-size: 16px; color: #849199; display: inline; content: "No comments. Start contributing!"; position: relative; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; text-align: center; }
 
 textarea { border: 1px solid #849199; -webkit-transition: border 0.2s ease 0s; transition: border 0.2s ease 0s; }
 
 textarea:focus { border: 1px solid #CCAC55; }
 
-.flat-list.buttons a { color: #849199; }
+.comment .entry .tagline { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px; color: #849199; }
 
-.flat-list.buttons .reply-button a { color: #424e56; }
+.comment .score { color: #424e56; }
 
-.entry.tb-comment-spam { background-color: transparent !important; opacity: 0.5; }
+.comment .score:before { content: "• "; margin: 0 2px; vertical-align: middle; line-height: 14px; }
 
-.entry.tb-comment-spam:hover { opacity: 1; }
+.comment .flat-list.buttons a:not(.pretty-button) { font-size: 11px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #849199 !important; }
+
+.comment .flat-list.buttons .reply-button a { color: #424e56 !important; }
+
+.comment .entry.tb-comment-spam { background-color: transparent !important; opacity: 0.5; }
+
+.comment .entry.tb-comment-spam:hover { opacity: 1; }
 
 [data-event-action="ignorereports"], [data-event-action="spam"] { display: none; }
 
@@ -517,7 +526,7 @@ textarea:focus { border: 1px solid #CCAC55; }
 
 .entry .buttons li.reported-stamp { width: 100px; font-weight: bold; }
 
-.pretty-button { opacity: 0.3; -webkit-transition: opacity ease 0.2s; transition: opacity ease 0.2s; }
+.pretty-button { opacity: 0.5; -webkit-transition: opacity ease 0.2s; transition: opacity ease 0.2s; }
 
 .pretty-button:hover { opacity: 1; }
 
@@ -537,7 +546,7 @@ ul.tabmenu.formtab li { display: inline-block; width: 50%; height: 30px; }
 
 ul.tabmenu.formtab li.selected { background-color: #CCAC55; }
 
-ul.tabmenu.formtab li a { width: 100%; text-align: center; font-size: 16px !important; text-transform: uppercase; background-color: transparent !important; border: none !important; padding: 0; margin: 0; line-height: 30px; display: inline-block; color: #fafafa; font-family: "Helvetica Neue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; letter-spacing: 1px; }
+ul.tabmenu.formtab li a { width: 100%; text-align: center; font-size: 16px !important; text-transform: uppercase; background-color: transparent !important; border: none !important; padding: 0; margin: 0; line-height: 30px; display: inline-block; color: #fcfcfc; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; letter-spacing: 1px; }
 
 form#newlink { border: none !important; margin-left: auto; margin-right: auto; width: 620px; padding: 10px; }
 
@@ -569,7 +578,7 @@ div.formtabs-content > div:nth-child(4) { position: absolute; top: 150px; height
 
 .res div.formtabs-content { border: none; }
 
-.roundfield span { color: #fafafa; }
+.roundfield span { color: #fcfcfc; }
 
 .roundfield span.gray { display: none; }
 
@@ -595,15 +604,15 @@ div.formtabs-content > div:nth-child(4) { position: absolute; top: 150px; height
 
 .submit_text.roundfield.enabled h1:before { content: "You are "; display: inline; }
 
-.submit_text.roundfield.enabled h1, .submit_text.roundfield.enabled .sr { color: #849199; font-family: "Helvetica Neue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 100; text-align: center; margin: 5px 0; }
+.submit_text.roundfield.enabled h1, .submit_text.roundfield.enabled .sr { color: #849199; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 100; text-align: center; margin: 5px 0; }
 
 .submit_text.roundfield.enabled:after { content: ""; width: 100%; height: 50px; display: block; position: absolute; overflow: hidden; bottom: -300px; background: -webkit-linear-gradient(top, rgba(55, 65, 72, 0) 0%, #374148 100%); background: linear-gradient(to bottom, rgba(55, 65, 72, 0) 0%, #374148 100%); }
 
-div.spacer > button.btn { width: 100%; padding: 10px 0 !important; font-size: 16px; font-family: "Helvetica Neue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif; position: relative; border: none; }
+div.spacer > button.btn { width: 100%; padding: 10px 0 !important; font-size: 16px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; position: relative; border: none; }
 
 .linkflairlabel, .flair { max-width: 100%; }
 
-.linkflairlabel { vertical-align: middle; height: 18px; line-height: 19px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: bold; padding: 0 8px 0 24px; border-radius: 2px; border: none; border-bottom: 3px solid #1a5980 !important; background-color: #2276AB !important; color: #fafafa !important; background-repeat: no-repeat; background-image: url(%%flair-sprites%%); background-size: 24px 85px; text-shadow: 0 0 #849199; position: relative; display: none; }
+.linkflairlabel { vertical-align: middle; height: 18px; line-height: 19px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: bold; padding: 0 8px 0 24px; border-radius: 2px; border: none; border-bottom: 3px solid #1a5980 !important; background-color: #2276AB !important; color: #fcfcfc !important; background-repeat: no-repeat; background-image: url(%%flair-sprites%%); background-size: 24px 85px; text-shadow: 0 0 #849199; position: relative; display: none; }
 
 .linkflair-liveupdates .linkflairlabel, .linkflair-official .linkflairlabel, .linkflair-community .linkflairlabel, .linkflair-directlink .linkflairlabel, .linkflair-warning .linkflairlabel, .linkflair-happeningnow .linkflairlabel, .linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel, .link-flair-modpost .linkflairlabel { display: inline-block; }
 
@@ -649,9 +658,9 @@ div.spacer > button.btn { width: 100%; padding: 10px 0 !important; font-size: 16
 
 p.title a.title { vertical-align: middle; }
 
-.link .flair, .comment .flair { font-size: 10px; margin-top: -1px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: bold; padding: 0px 5px; border: none; border-bottom: 2px solid rgba(95, 107, 114, 0.6); border-radius: 2px; color: #fafafa; height: 14px; line-height: 15px; background-color: rgba(132, 145, 153, 0.6); }
+.link .flair, .comment .flair { font-size: 10px; margin-top: -1px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-weight: bold; padding: 0px 5px; border: none; border-bottom: 2px solid rgba(95, 107, 114, 0.6); border-radius: 2px; color: #fcfcfc; height: 14px; line-height: 15px; background-color: rgba(132, 145, 153, 0.6); }
 
-body .thing .tagline .author.submitter, body .thing .tagline .author.moderator { color: #fafafa !important; font-weight: bold; padding: 1px 5px; border-radius: 0; }
+body .thing .tagline .author.submitter, body .thing .tagline .author.moderator { color: #fcfcfc !important; font-weight: bold; padding: 1px 5px; border-radius: 0; }
 
 body .thing .tagline .author.submitter, body .thing .tagline .author.submitter:hover { background-color: #2276AB !important; }
 
@@ -817,7 +826,7 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 .md.wiki div.toc + ul li a { padding: 6px 10px; display: block; width: 250px; background: #E7E7E7; font-family: sans-serif; font-size: 12px; font-weight: bold; color: #222; }
 
-.md.wiki div.toc + ul li a:hover { background: #fafafa; color: #2980B9; }
+.md.wiki div.toc + ul li a:hover { background: #fcfcfc; color: #2980B9; }
 
 .wiki-page .wiki-page-content .md.wiki div.toc + ul > li > a, .wiki-page .wiki-page-content .md.wiki div.toc + ul > li > a:hover { font-size: 15px; color: #333; }
 
@@ -833,7 +842,7 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
 
 .res-nightmode { background-color: #21272b !important; /*.entry.RES-keyNav-activeElement, .entry.RES-keyNav-activeElement .noncollapsed, .usertext-body, .usertext-body .md { background-color: transparent !important; }*/ }
 
-.res-nightmode .entry .flat-list li.first a { color: #fafafa !important; }
+.res-nightmode .entry .flat-list li.first a { color: #fcfcfc !important; }
 
 .res-nightmode > .content { background-color: #21272b !important; }
 
@@ -857,10 +866,14 @@ div.NERPageMarker, #NERFail { display: none !important; }
 
 .RESDropdownList { top: 50px !important; }
 
-body.res.res-nightmode textarea, body.res-nightmode .md-container, body.res-nightmode .RES-keyNav-activeElement, body.res-nightmode .RES-keyNav-activeElement .md-container, body.res .RES-keyNav-activeElement, body.res .RES-keyNav-activeElement .md-container, body.res-nightmode .commentreply .textarea, body.res-nightmode .pretty-form.long-text textarea, body.res-nightmode #quickMessage textarea, body.res-nightmode #newlink.submit textarea, body.res-nightmode .usertext-edit textarea, body.res-nightmode.res-commentBoxes .comment, body.res-nightmode.res-commentBoxes .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode .stylesheet-customize-container textarea, body.res-nightmode form#newlink, .res-nightmode body .content { background-color: transparent !important; }
+.res .res-commentBoxes .comment { border: none !important; border-radius: 0 !important; }
+
+.res .res-commentBoxes.res-commentBoxes-rounded .comment { border-radius: 0 !important; }
+
+body.res.res-nightmode textarea, body.res-nightmode .md-container, body.res-nightmode .RES-keyNav-activeElement, body.res-nightmode .RES-keyNav-activeElement .md-container, body.res .RES-keyNav-activeElement, body.res .RES-keyNav-activeElement .md-container, body.res-nightmode .commentreply .textarea, body.res-nightmode .pretty-form.long-text textarea, body.res-nightmode #quickMessage textarea, body.res-nightmode #newlink.submit textarea, body.res-nightmode .usertext-edit textarea, .res .res-commentBoxes .comment, .res .res-commentBoxes .comment .comment, .res .res-commentBoxes .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment, body.res-nightmode .stylesheet-customize-container textarea, body.res-nightmode form#newlink, .res-nightmode body .content { background-color: transparent !important; }
 
 html { height: 100%; background: url(%%banner2%%); background-color: #21272b; background-size: 2560px 200px; background-attachment: fixed; }
 
-body:not(.embed) { margin: 0 25px; top: 150px; position: absolute; width: calc(100% - (25px * 2)); box-shadow: 0 0 10px 2px #181c1f; background-color: #fafafa; }
+body:not(.embed) { margin: 0 25px; top: 150px; position: absolute; width: calc(100% - (25px * 2)); box-shadow: 0 0 10px 2px #181c1f; background-color: #fcfcfc; }
 
 :focus { outline: none !important; }
