@@ -36,7 +36,7 @@ body:not(.embed) > .content {
         }
 
         &:not(:first-child) {
-            border-top:1px dashed rgba($grey, 0.5);
+            border-top:1px dashed $grey--transparent;
         }
     }
 
@@ -55,7 +55,7 @@ body:not(.embed) > .content {
                 margin:0 10px 0 0;
 
                 a {
-                    color:lighten($lightslate, 15%);
+                    color:$slate--light;
                     font-weight:bold;
                     font-size:11px;
 
@@ -77,7 +77,7 @@ body:not(.embed) > .content {
 // Stickied link coloring
 body, body.res-nightmode {
     div.stickied {
-        background-color:rgba($green, 0.10) !important;
+        background-color:$green--transparent !important;
     }
     div.stickied a.title, div.stickied span.stickied-tagline {
         color:$green !important;

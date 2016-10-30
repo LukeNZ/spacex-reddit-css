@@ -1,7 +1,7 @@
 .side .usertext-body {
     // Table formatting for sidebar
     table, thead {
-        border: 2px solid $slate;
+        border: 2px solid $charcoal;
         margin:0 auto;
     }
 
@@ -17,12 +17,12 @@
     }
 
     thead {
-        background-color:rgba($grey, 0.3);
+        background:rgba($grey, 0.3);
         line-height:2;
     }
 
     table tr:nth-child(2n) {
-        background-color:rgba($grey, 0.2);
+        background:rgba($grey, 0.2);
     }
 
     th, td {
@@ -36,11 +36,11 @@
 
     // Links
     a {
-        color:lighten($webcastblue, 20%);
+        color:$webcastblue--light;
         transition:color ease $fast;
 
         &:hover {
-            color:lighten($webcastblue, 30%);
+            color:lighten($webcastblue--light, 15%);
         }
     }
 

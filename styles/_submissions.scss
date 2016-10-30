@@ -1,5 +1,5 @@
 body.submit-page, body.submit-page > .content {
-    background-color:lighten($lightslate, 10%) !important;
+    background-color:$slate--light !important;
 }
 
 div.content > h1 {
@@ -137,7 +137,7 @@ div.formtabs-content {
     width:600px;
 
     textarea, input[type="text"], input[type="url"], input[type="password"], input[type="number"] {
-        border:2px solid $slate;
+        border:2px solid $charcoal;
         transition:border ease $fast;
         box-sizing:content-box !important;
         width:592px;
@@ -163,7 +163,7 @@ div.formtabs-content {
 
     p {
         font-size:12px;
-        color:white;
+        color:$white;
 
         em:first-child {
             font-size:50px;
@@ -179,7 +179,7 @@ div.formtabs-content {
 
             a[title="sourcesrequired"] {
                 background-color: $gold;
-                color:$purewhite;
+                color:$white;
                 vertical-align: middle;
                 height: 18px;
                 line-height: 19px;
@@ -188,7 +188,7 @@ div.formtabs-content {
                 font-size:10px;
                 border-radius: 2px;
                 padding:0 8px;
-                border-bottom: 3px solid darken($gold, 15%);
+                border-bottom: 3px solid $gold--dark;
                 position: relative;
                 display: inline-block;
             }
@@ -221,9 +221,9 @@ div.formtabs-content {
         position:absolute;
         overflow:hidden;
         bottom:-300px;
-        background: -moz-linear-gradient(top, rgba(lighten($lightslate, 10%), 0) 0%, lighten($lightslate, 10%) 100%);
-        background: -webkit-linear-gradient(top, rgba(lighten($lightslate, 10%), 0) 0%, lighten($lightslate, 10%) 100%);
-        background: linear-gradient(to bottom, rgba(lighten($lightslate, 10%), 0) 0%, lighten($lightslate, 10%) 100%);
+        background: -moz-linear-gradient(top, rgba($slate--light, 0) 0%, $slate--light 100%);
+        background: -webkit-linear-gradient(top, rgba($slate--light, 0) 0%, $slate--light 100%);
+        background: linear-gradient(to bottom, rgba($slate--light, 0) 0%, $slate--light 100%);
     }
 }
 

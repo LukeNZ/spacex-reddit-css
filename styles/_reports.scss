@@ -30,7 +30,7 @@
 }
 
 .pretty-button.pressed {
-    background-color:darken($webcastblue, 20%) !important;
+    background-color:$webcastblue--dark !important;
 }
 
 ul.report-reasons {

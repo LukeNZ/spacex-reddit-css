@@ -21,7 +21,7 @@
     h3:nth-of-type(2), h3:nth-of-type(3), h3:nth-of-type(4) {
         box-sizing:border-box;
         position: absolute;
-        background-color:lighten($lightslate, 15%);
+        background-color:$slate--light;
         font-family:$lucidagrande;
         margin:0;
         height: $notificationHeight;
@@ -46,7 +46,7 @@
 
         // Links
         a {
-            color:lighten($webcastblue, 30%);
+            color:$webcastblue;
             transition:color ease $fast;
 
             &:hover {

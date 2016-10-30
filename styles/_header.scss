@@ -17,7 +17,7 @@ $headerHeight: $subredditNavigatorHeight + $bannerHeight;
 
 // Subreddit Navigator
 div#sr-header-area, .res-nightmode div#sr-header-area {
-    background-color: rgba($blue, 0.5);
+    background-color:$blue--transparent;
     border:none;
     text-transform:lowercase;
     line-height:$subredditNavigatorHeight;
@@ -27,10 +27,10 @@ div#sr-header-area, .res-nightmode div#sr-header-area {
     .drop-choices.srdrop {
         border:none;
         margin-left:0px;
-        background-color:rgba($blue, 0.8);
+        background-color:$blue;
 
         .choice {
-            color:$purewhite;
+            color:$white;
         }
     }
 }
@@ -156,8 +156,8 @@ div#header-bottom-left, body.res-nightmode div#header-bottom-left {
 body, body.res-nightmode {
     div#header-bottom-right {
         border:none;
-        background-color:rgba($blue, 0.5);
-        top:20px;
+        background:$blue--transparent;
+        top:20px !important;
         height:30px;
         line-height:30px;
         padding:0 10px;
@@ -170,7 +170,7 @@ body, body.res-nightmode {
             position: absolute;
             width: 0px;
             height: 0;
-            border-top: 30px solid rgba($blue, 0.5);
+            border-top: 30px solid $blue--transparent;
             border-left: 30px solid transparent;
             right: 100%;
         }
@@ -231,7 +231,7 @@ body, body.res-nightmode {
             vertical-align: top;
             line-height: 20px;
             text-align: center;
-            box-shadow: -5px 5px 5px 0 rgba($slate, 0.5);
+            box-shadow: -5px 5px 5px 0 rgba($charcoal, 0.5);
 
             &:hover {
                 color:$white;

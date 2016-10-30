@@ -25,7 +25,7 @@ $iconsize: 50px;
     padding:0 8px 0 24px;
     border-radius:2px;
     border:none;
-    border-bottom:3px solid darken($webcastblue, 10%) !important;
+    border-bottom:3px solid $webcastblue--dark !important;
     background-color:$webcastblue !important;
     color:$white !important;
     background-repeat:no-repeat;
@@ -106,13 +106,13 @@ $iconsize: 50px;
 
 .linkflair-sourcesrequired .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel {
     background-color: $gold !important;
-    border-color: darken($gold, 15%) !important;
+    border-color: $gold--dark !important;
     text-shadow:none;
 }
 
 .linkflair-modpost .linkflairlabel, .flairselector .linkflair-modpost .linkflairlabel {
     background-color: $green !important;
-    border-color: darken($green, 15%) !important;
+    border-color: $green--dark !important;
     text-shadow:none;
 }
 
@@ -129,12 +129,12 @@ p.title a.title {
     font-weight: bold;
     padding: 0px 5px;
     border:none;
-    border-bottom:2px solid darken(rgba($grey, 0.6), 15%);
+    border-bottom:2px solid rgba($slate--light, 0.5);
     border-radius: 2px;
     color: $white;
     height: 14px;
     line-height: 15px;
-    background-color: rgba($grey, 0.6);
+    background-color: $grey--transparent;
 }
 
 // ------------- OP & MOD HIGHLIGHTING ---------------

@@ -10,7 +10,7 @@ $sidebarHeadingHeight: 40px;
 }
 
 .side, body.res-nightmode .side {
-    background-color:lighten($lightslate, 15%);
+    background-color:$slate--light;
     background-repeat: no-repeat;
     font-family:$lucidagrande;
 
@@ -50,7 +50,7 @@ div.linkinfo {
     input#shortlink-text {
         background-color:transparent !important;
         color:$grey;
-        border:2px solid $slate !important;
+        border:2px solid $charcoal !important;
         transition:border $fast ease 0s;
 
         &::selection {
@@ -110,7 +110,7 @@ div.side .spacer {
         background-color:rgba($webcastblue,0.75) !important;
 
         &:hover {
-            background-color:lighten($webcastblue, 10%) !important;
+            background-color:$webcastblue--light !important;
         }
     }
 
@@ -163,7 +163,7 @@ div.sidebox.submit {
         }
 
         &:before {
-            color:$purewhite;
+            color:$white;
             display:block;
             text-align:center;
             content:"SpaceX";
@@ -338,7 +338,6 @@ div.bottom {
     border:none !important;
     margin-top:10px;
     padding:0;
-    color:#DDD;
     font-size:0 !important;
     position:relative;
 
@@ -351,7 +350,7 @@ div.bottom {
         left:0;
         font-size:10px;
         font-family:sans-serif;
-        color:#FFF;
+        color:$white;
         text-align:center;
         margin-top:-5px;
     }
@@ -406,11 +405,11 @@ div.bottom {
 
     .icon-menu a {
         background-color:transparent !important;
-        color:lighten($webcastblue, 20%);
+        color:$webcastblue--light;
         transition:color ease $fast;
 
         &:hover {
-            color: lighten($webcastblue, 30%);
+            color: lighten($webcastblue--light, 15%);
         }
     }
 
@@ -432,8 +431,8 @@ div.bottom {
 // Moderator Team
 .sidecontentbox a.helplink {
     display:block;
-    background-color:rgb(42,110,189);
-    color:#FFF !important;
+    background-color:$blue;
+    color:$white !important;
     float:none;
     text-align:center;
     width:60%;
@@ -442,12 +441,12 @@ div.bottom {
     padding:4px 8px;
     border-radius:2px;
     font-size:12px;
-    border-bottom:2px solid rgb(36, 72, 112);
+    border-bottom:2px solid $blue--dark;
     position:relative;
     top:60px;
 
     &:active {
-        background-color:rgb(36, 72, 112) !important;
+        background-color:$blue--dark !important;
     }
 
     &+div.title {
@@ -479,25 +478,25 @@ div.bottom {
                     width:100%;
 
                     a {
-                        color:#849199;
+                        color:$grey;
                     }
                 }
 
                 a.author {
-                    color:#FFF;
+                    color:$white;
                     text-align: center;
                     display:inline-block;
-                    background-color:rgb(39, 174, 96);
+                    background-color:$green;
                     padding:3px;
                     height:15px;
                     line-height:15px;
                     border-radius:2px;
                     width:130px;
-                    border-bottom:2px solid #156135;
+                    border-bottom:2px solid $green--dark;
                     margin:0;
 
                     &:active {
-                        background-color:#156135;
+                        background-color:$green--dark;
                     }
                 }
 

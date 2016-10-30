@@ -1,16 +1,29 @@
+// Constants
+$complement: 15%;
+
 // COLORS
-$slate: #181c1f;
-$lightslate: #21272b;
+$charcoal: #181c1f;
+$slate: #21272b;
+    $slate--light: lighten($slate, $complement);
 $grey: #849199;
-$gold: #CCAC55;
-$blue: #3569A4;
-$rocketblue: #185C89;
+    $grey--transparent: rgba($grey, 0.5);
+$blue: #2a6ebd;
+    $blue--dark:darken($blue, $complement);
+    $blue--transparent:rgba($blue, 0.5);
 $webcastblue: #2276AB;
-$lightblue: #83b6bd;
+    $webcastblue--light:lighten($webcastblue, $complement);
+    $webcastblue--dark:darken($webcastblue, $complement);
+$azure: #008BE3;
+    $azure--light:lighten($azure, $complement);
+    $azure--dark:darken($azure, $complement);
+$gold: #CCAC55;
+    $gold--dark: darken($gold, $complement);
 $red: #C3427D;
+    $red--dark: darken($red, $complement);
 $green: #00A651;
+    $green--dark: darken($green, $complement);
+    $green--transparent: rgba($green, 0.1);
 $white: #fcfcfc;
-$purewhite: #fff;
 
 // FONTS
 $generic: Verdana, Geneva, sans-serif;
@@ -30,24 +43,24 @@ $margin: 25px;
 
 // BUTTONS
 %button {
-    background-color:$webcastblue !important;
+    background:$webcastblue !important;
     border-radius:2px;
     border:none !important;
-    border-bottom:2px solid darken($webcastblue, 10%) !important;
-    transition:background-color ease $fast;
+    border-bottom:2px solid $webcastblue--dark !important;
+    transition:background ease $fast;
     color:$white !important;
     position:relative;
 
     &:hover {
-        background-color:lighten($webcastblue, 5%) !important;
+        background:$webcastblue--light !important;
     }
 
     &:active {
         top:1px;
-        border-bottom:1px solid darken($webcastblue, 10%) !important;
+        border-bottom:1px solid $webcastblue !important;
     }
 }
 
 .thing.spam {
-    background-color:transparent;
+    background:transparent;
 }

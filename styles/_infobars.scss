@@ -15,15 +15,15 @@
 // Gold info
 .gold-accent {
     background-color:rgba($gold,0.2) !important;
-    border:1px solid #CCAC55;
+    border:1px solid $gold;
     border-radius:0;
-    color:white;
+    color:$white;
 }
 
 // Viewing single comments
 .infobar {
     background-color:rgba($gold,0.2) !important;
-    border:1px solid #CCAC55;
+    border:1px solid $gold;
     padding:10px;
     margin:10px;
 }

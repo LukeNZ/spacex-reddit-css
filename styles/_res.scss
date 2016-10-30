@@ -1,12 +1,12 @@
 .res-nightmode {
-    background-color:$lightslate !important;
+    background-color:$slate !important;
 
     .entry .flat-list li.first a {
         color:$white !important;
     }
 
     > .content {
-        background-color:$lightslate !important;
+        background-color:$slate !important;
     }
 
     /*.entry.RES-keyNav-activeElement, .entry.RES-keyNav-activeElement .noncollapsed,
@@ -17,7 +17,7 @@
 
 // Never ending RES
 div[id^="siteTable-"].linklisting.sitetable {
-    border-top:1px dashed rgba($grey, 0.5);
+    border-top:1px dashed $grey--transparent;
 }
 
 #progressIndicator {
@@ -38,24 +38,24 @@ div.NERPageMarker, #NERFail {
 
 // RES prefs
 #RESPrefsDropdown {
-    background-color:rgb(132,145,153) !important;
-    border:2px solid #21272B !important;
-    box-shadow:0 10px 20px rgba(24,28,31,0.5) !important;
+    background-color:$grey !important;
+    border:2px solid $slate !important;
+    box-shadow:0 10px 20px rgba($slate,0.5) !important;
 }
 
 #RESPrefsDropdown li {
     border:none !important;
     transition:background-color 0.2s !important;
-    color:#FFF !important;
+    color:$white !important;
 }
 
 #RESPrefsDropdown a {
     background-color:inherit !important;
-    color:#FFF !important;
+    color:$white !important;
 }
 
 #RESPrefsDropdown li:hover {
-    background-color:#CCAC55 !important;
+    background-color:$gold !important;
 }
 
 // Style toggle (grr)

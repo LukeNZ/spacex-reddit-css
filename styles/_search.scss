@@ -15,17 +15,17 @@
 }
 
 .search-page #search input[type="text"] {
-    color:black !important;
+    color:$charcoal !important;
 }
 
 .res-nightmode .search-page #search input[type="text"] {
-    color:white !important;
+    color:$white !important;
 }
 
 #search {
     input[type="text"] {
         padding:5px;
-        border:2px solid rgba(132, 145, 153, 0.75) !important;
+        border:2px solid rgba($grey, 0.75) !important;
         background-color:transparent !important;
         font-size:14px;
         font-family:$lucidagrande;
@@ -55,7 +55,7 @@ body.search-page {
     }
 
     input[type="text"] {
-        color:$slate !important;
+        color:$charcoal !important;
     }
 }
 

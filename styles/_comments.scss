@@ -20,9 +20,9 @@
             font-family: $lucidagrande;
             width: 250px;
             color: $green;
-            background-color: $purewhite;
+            background: $white;
             margin-left: 25px;
-            box-shadow:0 0 10px rgba($slate, 0.5);
+            box-shadow:0 0 10px rgba($charcoal, 0.5);
         }
 
         &:hover:before {
@@ -111,7 +111,7 @@
 
 // Nightmode comment styling
 body.res-nightmode .commentarea {
-    background-color:transparent !important;
+    background:transparent !important;
 }
 
 // Arrows
@@ -129,7 +129,7 @@ body, body.res-nightmode {
 // The little dashed line thing
 .panestack-title {
     margin:10px;
-    border-bottom:1px dashed rgba($grey, 0.5);
+    border-bottom:1px dashed $grey--transparent;
 }
 
 #REScommentNavToggle {
@@ -143,7 +143,7 @@ body, body.res-nightmode {
     height:30px !important;
     max-width:30px !important;
     max-height:30px !important;
-    background-color:transparent;
+    background:transparent;
     cursor:pointer;
 
     &.collapsed, &.expanded {
@@ -174,7 +174,7 @@ body, body.res-nightmode {
 
 // Selfpost usertexts
 .link .usertext .md {
-    background-color:$white;
+    background:$white;
     border: 1px solid $gold !important;
     border-radius:0px;
 }
@@ -216,7 +216,7 @@ textarea {
     }
 
     .score {
-        color:lighten($lightslate, 15%);
+        color:$slate--light;
 
         &:before {
             content: "• ";
@@ -235,13 +235,13 @@ textarea {
         }
 
         .reply-button a {
-            color:lighten($lightslate, 15%) !important;
+            color:$slate--light !important;
         }
     }
 
     // Mark removed comments
     .entry.tb-comment-spam {
-        background-color:transparent !important;
+        background:transparent !important;
         opacity:0.5;
 
         &:hover {
