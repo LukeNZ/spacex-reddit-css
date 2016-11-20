@@ -214,8 +214,8 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
     @include mission-flair("jcsat-16", "JCSAT-16", 2, 1);
     // Upcoming
     @include mission-flair("amos-6", "Amos-6");
-    @include mission-flair("iridium-next-flight-1", "Iridium NEXT Flight 1");
-    @include mission-flair("iridium-next-flight-2", "Iridium NEXT Flight 2");
+    @include mission-flair("iridium-next-mission-1", "Iridium NEXT Mission 1");
+    @include mission-flair("iridium-next-mission-2", "Iridium NEXT Mission 2");
     @include mission-flair("formosat-5-sherpa", "Formosat-5/SHERPA");
     // Upcoming Dragon
     @include mission-flair("crs-10", "CRS-10", 4, 5);
