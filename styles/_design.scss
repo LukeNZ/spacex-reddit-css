@@ -26,10 +26,9 @@ $green: #00A651;
 $white: #fcfcfc;
 
 // FONTS
-$generic: Verdana, Geneva, sans-serif;
-$brandongrotesque: "Brandon Grotesque", "Proxima Nova", Geneva, Verdana, sans-serif;
-$lucidagrande: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$generic: Verdana,Geneva,sans-serif;
+$brandongrotesque: "Brandon Grotesque",Avenir,"Gill Sans","Trebuchet MS",sans-serif;
+$lucidagrande: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,"Trebuchet MS",sans-serif;
 
 // TRANSITIONS
 $fast: 0.2s;
@@ -39,7 +38,12 @@ $break-small: 1366px;
 $break-large: 1920px;
 
 // PAGE MARGIN
-$margin: 25px;
+$margin: 30px;
+
+// HEADER
+$subreddit-navigator-height: 30px;
+$banner-height: 170px;
+$header-height: $subreddit-navigator-height + $banner-height;
 
 // BUTTONS
 %button {

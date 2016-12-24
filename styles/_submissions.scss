@@ -39,7 +39,7 @@ ul.tabmenu.formtab {
             line-height:30px;
             display:inline-block;
             color:$white;
-            font-family: $helvetica;
+            font-family: $lucidagrande;
             font-weight:300;
             letter-spacing: 1px;
         }
@@ -207,7 +207,7 @@ div.formtabs-content {
 
     h1, .sr {
         color:$grey;
-        font-family:$helvetica;
+        font-family:$lucidagrande;
         font-weight:100;
         text-align:center;
         margin:5px 0;
@@ -236,7 +236,7 @@ div.spacer > button.btn {
     width:100%;
     padding:10px 0 !important;
     font-size:16px;
-    font-family:$helvetica;
+    font-family:$lucidagrande;
     position:relative;
     border:none;
     @extend %button;
