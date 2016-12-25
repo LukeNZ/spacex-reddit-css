@@ -1,9 +1,13 @@
-$expandoWidth: 35px;
-$expandHeight: 30px;
+$expando-width: 35px;
+$expando-height: 30px;
 
 // Titles, main content
 body:not(.embed) > .content {
-    margin:100px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
+    @if $subreddit == "spacex" {
+        margin:100px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
+    } @else {
+        margin:50px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
+    }
     background-color:$white;
 }
 
@@ -129,7 +133,7 @@ body, body.res-nightmode {
         height: 23px !important;
         width: 23px !important;
         background-size:23px 92px !important;
-        background-image: url('arrowsprites.png') !important;
+        background-image: url('arrow-sprites.png') !important;
     }
 
     .arrow.up {

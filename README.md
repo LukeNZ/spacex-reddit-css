@@ -1,7 +1,12 @@
-# r/SpaceX Subreddit CSS & Design
+# Subreddit Design for r/SpaceX & r/SpaceXLounge
 
-This repository holds all the necessary assets, styles, and buildsteps necessary to generate a working, paste-able copy of the r/SpaceX CSS directly into the subreddit stylesheet. 
-Edit the styles you wish, and then run the `gulp` `styles` and `reddify` tasks to generate a build. The output will appear as `subreddit.css` in the `/build` directory.
+The **MaxQ** theme is used on r/SpaceX & r/SpaceXLounge.
+
+This repository holds all the necessary assets, styles, and buildsteps necessary to generate a working, paste-able copy of the r/SpaceX & r/SpaceXLounge CSS directly into the subreddit stylesheet.
+
+# How to Build
+
+Edit the styles you wish, and then run either the `generate-spacex` or `generated-spacexlounge` task to generate a build for that subreddit. The output will appear as either `spacex.css` or `spacexlounge.css` in the `/build` directory.
 
 # Bugs
 

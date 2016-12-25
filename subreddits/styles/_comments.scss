@@ -2,32 +2,34 @@
 .commentarea {
     // Arrows
     .arrow.down, .arrow.downmod {
-        &:before {
-            visibility:hidden;
-            opacity:0;
-            transition:visibility 0s ease 0s, opacity $fast ease 0s;
-        }
+        @if $subreddit == "spacex" {
+            &:before {
+                visibility:hidden;
+                opacity:0;
+                transition:visibility 0s ease 0s, opacity $fast ease 0s;
+            }
 
-        &:before, &:hover:before {
-            position: absolute;
-            display: block;
-            z-index:100;
-            padding:8px 15px;
-            content: "Don't downvote because you disagree!";
-            text-align: center;
-            font-size: 12px;
-            font-weight: bold;
-            font-family: $lucidagrande;
-            width: 250px;
-            color: $green;
-            background: $white;
-            margin-left: 25px;
-            box-shadow:0 0 10px rgba($charcoal, 0.5);
-        }
+            &:before, &:hover:before {
+                position: absolute;
+                display: block;
+                z-index:100;
+                padding:8px 15px;
+                content: "Don't downvote because you disagree!";
+                text-align: center;
+                font-size: 12px;
+                font-weight: bold;
+                font-family: $lucidagrande;
+                width: 250px;
+                color: $green;
+                background: $white;
+                margin-left: 25px;
+                box-shadow:0 0 10px rgba($charcoal, 0.5);
+            }
 
-        &:hover:before {
-            visibility:visible;
-            opacity:1;
+            &:hover:before {
+                visibility:visible;
+                opacity:1;
+            }
         }
     }
 
@@ -43,16 +45,18 @@
         }
 
         // Low effort comment warning
-        >div:nth-of-type(1):after {
-            content: "Comments that do not contribute to the discussion, are low-effort, consist solely of a meme, or otherwise violate our guidelines will be removed. These comments should be reported.";
-            padding: 5px;
-            display: block;
-            font-family: $lucidagrande;
-            font-size: 11px;
-            font-weight: bold;
-            text-align: center;
-            box-sizing:border-box;
-            color: $green; /* Moderator Green */
+        @if $subreddit == "spacex" {
+            >div:nth-of-type(1):after {
+                content: "Comments that do not contribute to the discussion, are low-effort, consist solely of a meme, or otherwise violate our guidelines will be removed. These comments should be reported.";
+                padding: 5px;
+                display: block;
+                font-family: $lucidagrande;
+                font-size: 11px;
+                font-weight: bold;
+                text-align: center;
+                box-sizing:border-box;
+                color: $green; /* Moderator Green */
+            }
         }
     }
 

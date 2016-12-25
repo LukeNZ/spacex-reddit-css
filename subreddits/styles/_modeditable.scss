@@ -1,0 +1,34 @@
+/* MISSION PATCH */
+.side, body.res-nightmode .side {
+    padding:0 10px;
+
+    &:before {
+        content:"";
+        display:block;
+        position:relative;
+        z-index:100;
+        background:url("sidebar.png") 0 0 / contain no-repeat;
+        width:340px;        /* 320px or 340px */
+        height:200px;       /* image height or larger */
+        border-radius:5px;  /* 0 or 5px */
+        top:-40px;          /* 0 or -40px */
+        left:-10px;         /* 0 if width:320px or -10px if width:340px */
+        margin-bottom:-20px;/* 0 or -20px */
+    }
+}
+
+/* THUMBNAIL FOR SUBMISSION */
+/* #thing_t3_{{id}} a.thumbnail {
+    height: 70px;
+	background: 0 0 url(%%image%%) no-repeat;
+	background-size:70px 60px;
+}*/
+
+/* TITLE FOR SUBMISSION */
+/* div#thing_{{id}} a.title { font-size:0; }
+
+div#thing_{{id}} a.title:after {
+    content:"{{title}}";
+    vertical-align:middle;
+    font-size:16px;
+}*/

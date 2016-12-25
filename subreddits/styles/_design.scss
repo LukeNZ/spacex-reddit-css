@@ -3,26 +3,39 @@ $complement: 15%;
 
 // COLORS
 $charcoal: #181c1f;
+
 $slate: #21272b;
+
+@if $subreddit == "spacexlounge" {
+    $slate: #29353e;
+}
     $slate--light: lighten($slate, $complement);
+
 $grey: #849199;
     $grey--transparent: rgba($grey, 0.5);
+
 $blue: #2a6ebd;
     $blue--dark:darken($blue, $complement);
     $blue--transparent:rgba($blue, 0.5);
+
 $webcastblue: #2276AB;
     $webcastblue--light:lighten($webcastblue, $complement);
     $webcastblue--dark:darken($webcastblue, $complement);
+
 $azure: #008BE3;
     $azure--light:lighten($azure, $complement);
     $azure--dark:darken($azure, $complement);
+
 $gold: #CCAC55;
     $gold--dark: darken($gold, $complement);
+
 $red: #C3427D;
     $red--dark: darken($red, $complement);
+
 $green: #00A651;
     $green--dark: darken($green, $complement);
     $green--transparent: rgba($green, 0.1);
+
 $white: #fcfcfc;
 
 // FONTS

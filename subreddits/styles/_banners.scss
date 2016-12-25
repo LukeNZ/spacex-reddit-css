@@ -1,0 +1,12 @@
+// Backgrounds for SpaceXLounge
+@if $subreddit == "spacexlounge" {
+    input[name=uh] ~ a:after {
+        content:"";
+        position:absolute;
+        right:-35px;
+        top:-25px;
+        height:400px;
+        width:100vw;
+        z-index:-1;
+    }
+}

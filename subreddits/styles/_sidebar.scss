@@ -6,7 +6,6 @@ $sidebarHeadingHeight: 40px;
     width:$sidebarWidth;
     margin:0;
     color:$white;
-    overflow:hidden;
 }
 
 .side, body.res-nightmode .side {
@@ -163,10 +162,14 @@ div.sidebox.submit {
         }
 
         &:before {
+            @if $subreddit == "spacex" {
+                content:"SpaceX";
+            } @else {
+                content:"SpaceX Lounge";
+            }
             color:$white;
             display:block;
             text-align:center;
-            content:"SpaceX";
             font-family:$brandongrotesque;
             letter-spacing:1px;
             font-weight:100;
@@ -313,6 +316,7 @@ div.sidebox.submit {
             height:$sidebarHeadingHeight;
             margin-top:30px !important;
             margin-bottom:10px !important;
+            margin-right:20px;
 
             &:after {
                 content:"";
