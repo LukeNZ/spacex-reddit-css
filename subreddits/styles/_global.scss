@@ -1,11 +1,8 @@
 html {
     height:100%;
-    background-color:$slate;
-
-    // For SpaceXLounge backgrounds, see _header.scss
-    @if $subreddit == "spacex" {
-        background:url('banner.jpg') 2560px 200px fixed;
-    }
+    background-color: $slate;
+    // We can append a global banner here.
+    // background:url('banner.jpg') 2560px 200px fixed;
 }
 
 body:not(.embed) {
@@ -13,8 +10,9 @@ body:not(.embed) {
     top: $header-height;
     position: absolute;
     width: calc(100% - (#{$margin} * 2));
-    box-shadow:0 0 10px 2px $charcoal;
+    box-shadow:0 0 10px 2px $spacex-charcoal;
     background-color:$white;
+    z-index:auto;
 }
 
 :focus {

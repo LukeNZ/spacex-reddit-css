@@ -1,7 +1,7 @@
 .side .usertext-body {
     // Table formatting for sidebar
     table, thead {
-        border: 2px solid $charcoal;
+        border: 2px solid $spacex-charcoal;
         margin:0 auto;
     }
 
@@ -17,12 +17,12 @@
     }
 
     thead {
-        background:rgba($grey, 0.3);
+        background:rgba($spacex-grey, 0.3);
         line-height:2;
     }
 
     table tr:nth-child(2n) {
-        background:rgba($grey, 0.2);
+        background:rgba($spacex-grey, 0.2);
     }
 
     th, td {

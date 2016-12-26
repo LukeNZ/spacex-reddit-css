@@ -23,7 +23,7 @@
                 color: $green;
                 background: $white;
                 margin-left: 25px;
-                box-shadow:0 0 10px rgba($charcoal, 0.5);
+                box-shadow:0 0 10px rgba($spacex-charcoal, 0.5);
             }
 
             &:hover:before {
@@ -35,7 +35,7 @@
 
     // Menu area (sort by top, enable contest mode, sticky this post
     .menuarea, .menuarea .toggle a {
-        color:$grey;
+        color: $spacex-grey;
     }
 
     .usertext-edit {
@@ -64,7 +64,7 @@
     &> div.sitetable > div.thing {
         padding:5px;
         margin-bottom:5px;
-        border-left:2px solid $grey !important;
+        border-left:2px solid $spacex-grey !important;
 
         &:hover {
             border-left:2px solid $gold !important;
@@ -77,7 +77,7 @@
             padding-left:15px;
         }
 
-        border-left:1px solid $grey !important;
+        border-left:1px solid $spacex-grey !important;
 
         &:hover {
             border-left:1px solid $gold !important;
@@ -133,7 +133,7 @@ body, body.res-nightmode {
 // The little dashed line thing
 .panestack-title {
     margin:10px;
-    border-bottom:1px dashed $grey--transparent;
+    border-bottom:1px dashed $spacex-grey--transparent;
 }
 
 #REScommentNavToggle {
@@ -192,7 +192,7 @@ body, body.res-nightmode {
 
     &:before {
         font-size:16px;
-        color:$grey;
+        color: $spacex-grey;
         display:inline;
         content:"No comments. Start contributing!";
         position:relative;
@@ -203,7 +203,7 @@ body, body.res-nightmode {
 }
 
 textarea {
-    border:1px solid $grey;
+    border:1px solid $spacex-grey;
     transition:border 0.2s ease 0s;
 
     &:focus {
@@ -216,11 +216,11 @@ textarea {
     .entry .tagline {
         font-family:$lucidagrande;
         font-size:11px;
-        color:$grey;
+        color: $spacex-grey;
     }
 
     .score {
-        color:$slate--light;
+        color: $slate--light;
 
         &:before {
             content: "• ";
@@ -235,11 +235,11 @@ textarea {
         a:not(.pretty-button) {
             font-size:11px;
             font-family:$lucidagrande;
-            color:$grey !important;
+            color: $spacex-grey !important;
         }
 
         .reply-button a {
-            color:$slate--light !important;
+            color: $slate--light !important;
         }
     }
 

@@ -1,12 +1,74 @@
-// Backgrounds for SpaceXLounge
-@if $subreddit == "spacexlounge" {
-    input[name=uh] ~ a:after {
-        content:"";
-        position:absolute;
-        right:-35px;
-        top:-25px;
-        height:400px;
-        width:100vw;
-        z-index:-1;
-    }
+// Style the two psuedo elements so they are both fixed and take up the entirety of
+// horizontal space on the screen;
+[name=uh] ~ a:before, [name=uh] ~ a:after {
+    content:"";
+    position:fixed;
+    left:0;
+    right:-25px;
 }
+
+// A linear gradient placed horizontally across where the background banner images end,
+// and the background color starts. Needed to allow for a smooth transition.
+[name=uh] ~ a:before {
+    top:350px;
+    height:50px;
+    z-index:-1;
+    background: linear-gradient(transparent, $slate);
+}
+
+// Element to support background images. Note that we don't individually set a background for
+// [value]s 4 through to 9 as we use the below selector to set a default banner to save ~210 bytes.
+[name=uh] ~ a:after {
+    top:0;
+    height:400px;
+    z-index:-2;
+    background-size:cover !important;
+    background:url('banner1.jpg');
+}
+
+// "Rotating" banners are based on the first character of the value attribute
+[name=uh][value^="a"] ~ a:after,
+[name=uh][value^="b"] ~ a:after,
+[name=uh][value^="c"] ~ a:after,
+[name=uh][value^="d"] ~ a:after,
+[name=uh][value^="e"] ~ a:after,
+[name=uh][value^="f"] ~ a:after {
+    background:url('banner2.jpg');
+}
+
+[name=uh][value^="g"] ~ a:after,
+[name=uh][value^="h"] ~ a:after,
+[name=uh][value^="i"] ~ a:after,
+[name=uh][value^="j"] ~ a:after,
+[name=uh][value^="k"] ~ a:after,
+[name=uh][value^="l"] ~ a:after {
+    background:url('banner3.jpg');
+}
+
+[name=uh][value^="m"] ~ a:after,
+[name=uh][value^="n"] ~ a:after,
+[name=uh][value^="o"] ~ a:after,
+[name=uh][value^="p"] ~ a:after,
+[name=uh][value^="q"] ~ a:after,
+[name=uh][value^="r"] ~ a:after {
+    background:url('banner4.jpg');
+}
+
+[name=uh][value^="s"] ~ a:after,
+[name=uh][value^="t"] ~ a:after,
+[name=uh][value^="u"] ~ a:after,
+[name=uh][value^="v"] ~ a:after,
+[name=uh][value^="w"] ~ a:after,
+[name=uh][value^="x"] ~ a:after {
+    background:url('banner5.jpg');
+}
+
+[name=uh][value^="y"] ~ a:after,
+[name=uh][value^="z"] ~ a:after,
+[name=uh][value^="0"] ~ a:after,
+[name=uh][value^="1"] ~ a:after,
+[name=uh][value^="2"] ~ a:after,
+[name=uh][value^="3"] ~ a:after {
+    background:url('banner6.jpg');
+}
+

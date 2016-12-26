@@ -4,11 +4,13 @@
     background:transparent !important;
     border-bottom:none;
     font-family:$generic;
-    height: $header-height;
+    height: 400px;
     position:absolute;
     margin-left:-$margin;
     width:calc(100% - -#{$margin} * 2); // Reddit's CSS compressor can't handle calc with addition. See: https://github.com/reddit/reddit/issues/1042
     top: -1 * $header-height;
+    z-index:auto;
+    overflow:hidden;
 }
 
 // Subreddit Navigator
@@ -35,7 +37,7 @@ div.dropdown.srdrop > span.selected,
 ul.sr-bar li > span.separator, ul.sr-bar li > a,
 div#RESShortcuts > span.separator, div#RESShortcuts > a,
 div#srDropdownContainer a, div#RESStaticShortcuts > span.separator, div#RESStaticShortcuts > a {
-    color:$grey;
+    color: $spacex-grey;
     transition:color ease $fast;
 
     &:hover {
@@ -50,11 +52,8 @@ div#srDropdownContainer a, div#RESStaticShortcuts > span.separator, div#RESStati
 // Banner
 #header-img-a {
     margin:0;
-    background-image: url('dragon.png');
-    background-repeat: no-repeat;
+    background: url('dragon.png') 10px 35px / 130px 100px no-repeat;
     display: inline-block;
-    background-size:130px 100px;
-    background-position:10px 35px;
     vertical-align: bottom;
     width:130px;
     height: $banner-height;
@@ -87,12 +86,11 @@ div#header-bottom-left, body.res-nightmode div#header-bottom-left {
         display:inline-block;
         margin:0 10px;
         vertical-align:top;
-        background-image:url('spacex.png');
+        background:url('spacex.png') no-repeat;
         background-size:210px 130px;
         width:210px;
         height:130px;
         font-size:0;
-        background-repeat:no-repeat;
         position:relative;
         margin:20px 0;
         top:-3px;
@@ -123,6 +121,7 @@ div#header-bottom-left, body.res-nightmode div#header-bottom-left {
                 letter-spacing:0.5px;
                 text-transform:uppercase;
                 padding:0;
+                text-shadow:0 0 5px $slate;
 
                 &:hover {
                     border-bottom:2px solid $gold !important;
@@ -184,7 +183,7 @@ body, body.res-nightmode {
         }
 
         .user {
-            color: $grey;
+            color: $spacex-grey;
         }
 
         #userbarToggle, span.separator, #RESAccountSwitcherIcon {
@@ -227,7 +226,7 @@ body, body.res-nightmode {
             vertical-align: top;
             line-height: 20px;
             text-align: center;
-            box-shadow: -5px 5px 5px 0 rgba($charcoal, 0.5);
+            box-shadow: -5px 5px 5px 0 rgba($spacex-charcoal, 0.5);
 
             &:hover {
                 color:$white;
@@ -268,7 +267,7 @@ body, body.res-nightmode {
             }
         }
 
-        .flat-list a, #openRESPrefs #RESSettingsButton, .logout a {
+        .flat-list a, #openRESPrefs #RESSettingsButton {
             vertical-align: top;
             display:inline-block;
             font-size:0;
@@ -294,7 +293,34 @@ body, body.res-nightmode {
         }
 
         .logout a {
-            background-position:0 -180px;
+            vertical-align: top;
+            display:inline-block;
+            font-size:0;
+            width:30px;
+            height:30px;
+            margin:5px 0 0 10px;
+            position:absolute;
+            right:0;
+            top:0;
+        }
+
+        form.logout {
+            position:relative;
+            display:inline-block;
+        }
+
+        form.logout:before {
+            content: '';
+            display: inline-block;
+            @extend .mail;
+            background-position: 0 -180px;
+            pointer-events:none;
+        }
+
+        form.logout:hover:before {
+            content:'';
+            display: inline-block;
+            transform:scale(1.2) !important;
         }
 
         // Make RES gear less annoying

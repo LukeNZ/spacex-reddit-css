@@ -1,18 +1,17 @@
-// Constants
+// CONSTANTS
 $complement: 15%;
 
 // COLORS
-$charcoal: #181c1f;
+$spacex-charcoal: #181c1f;
 
-$slate: #21272b;
+$spacex-slate: #21272b;
+    $spacex-slate--light: lighten($spacex-slate, $complement);
 
-@if $subreddit == "spacexlounge" {
-    $slate: #29353e;
-}
+$slate:#29353e;
     $slate--light: lighten($slate, $complement);
 
-$grey: #849199;
-    $grey--transparent: rgba($grey, 0.5);
+$spacex-grey: #849199;
+    $spacex-grey--transparent: rgba($spacex-grey, 0.5);
 
 $blue: #2a6ebd;
     $blue--dark:darken($blue, $complement);

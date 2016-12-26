@@ -3,11 +3,11 @@
     margin:0 10px 20px 10px;
 
     &.archived-infobar {
-        border-color:$grey;
+        border-color: $spacex-grey;
         background-color:transparent;
 
         &:before {
-            background-color:$grey;
+            background-color: $spacex-grey;
         }
     }
 }

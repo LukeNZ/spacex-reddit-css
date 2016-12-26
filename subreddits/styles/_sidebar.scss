@@ -9,7 +9,7 @@ $sidebarHeadingHeight: 40px;
 }
 
 .side, body.res-nightmode .side {
-    background-color:$slate--light;
+    background-color: $slate--light;
     background-repeat: no-repeat;
     font-family:$lucidagrande;
 
@@ -27,7 +27,7 @@ $sidebarHeadingHeight: 40px;
 div.linkinfo {
     background-color:transparent;
     border:none;
-    border-bottom:1px dashed $grey;
+    border-bottom:1px dashed $spacex-grey;
     padding-bottom:10px;
     margin-bottom:0px;
     position:relative;
@@ -35,7 +35,7 @@ div.linkinfo {
 
     .date, .score, .totalvotes, .shortlink {
         text-align:center;
-        color:$grey;
+        color: $spacex-grey;
     }
 
     .totalvotes {
@@ -48,8 +48,8 @@ div.linkinfo {
 
     input#shortlink-text {
         background-color:transparent !important;
-        color:$grey;
-        border:2px solid $charcoal !important;
+        color: $spacex-grey;
+        border:2px solid $spacex-charcoal !important;
         transition:border $fast ease 0s;
 
         &::selection {
@@ -141,7 +141,7 @@ div.sidebox.submit {
         &:after {
             content:"Immediately before, during, and after a launch, submissions are restricted. Please try again soon.";
             font-size:10px;
-            color:$grey;
+            color: $spacex-grey;
             display:inline-block;
             text-align:center;
             position:relative;
@@ -275,7 +275,7 @@ div.sidebox.submit {
     // Reddit show subreddit style and flair toggles
     .sr_style_toggle, .flairtoggle {
         background-color:transparent !important;
-        color:$grey !important;
+        color: $spacex-grey !important;
         display:inline-block;
         text-align:center;
         font-size:0;
@@ -295,7 +295,7 @@ div.sidebox.submit {
 
 // Sidebar description
 .side .usertext-body {
-    border-bottom:1px dashed $grey;
+    border-bottom:1px dashed $spacex-grey;
 
     .md {
         font-family:$lucidagrande;
@@ -482,7 +482,7 @@ div.bottom {
                     width:100%;
 
                     a {
-                        color:$grey;
+                        color: $spacex-grey;
                     }
                 }
 
