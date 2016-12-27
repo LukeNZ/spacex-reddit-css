@@ -9,6 +9,7 @@ body:not(.embed) > .content {
         margin:50px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
     }
     background-color:$white;
+    position:relative; // To allow inputs to be interacted with due to banners
 }
 
 .link.last-clicked {

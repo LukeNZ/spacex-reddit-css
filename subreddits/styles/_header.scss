@@ -95,6 +95,24 @@ div#header-bottom-left, body.res-nightmode div#header-bottom-left {
         margin:20px 0;
         top:-3px;
         overflow:hidden;
+        text-decoration:none;
+
+        @if $subreddit == "spacexlounge" {
+            &:after {
+                content:"LOUNGE";
+                display: block;
+                font-size: 14px;
+                width: 180px;
+                text-align: center;
+                top: 90px;
+                position: relative;
+                color: white;
+                font-weight: 100;
+                letter-spacing: 10px;
+                font-style: italic;
+                font-family: $brandongrotesque;
+            }
+        }
     }
 
     // Tabmenu
@@ -170,7 +188,7 @@ body, body.res-nightmode {
             right: 100%;
         }
 
-        a {
+        .user a {
             color:$white;
             border-bottom:2px solid transparent;
             transition:color $fast ease, border-bottom $fast ease;
