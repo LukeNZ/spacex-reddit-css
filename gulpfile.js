@@ -33,6 +33,8 @@ gulp.task('reddify', gulp.series(function() {
         // and we aren't allowed to use backslashes as a workaround either, so remove
         // the charset from the page.
         .pipe(replace('@charset "UTF-8";', ''))
+        // Remove extra spaces to save space (currently saves about ~1.2KB on r/spacex)
+        .pipe(replace(': ', ':'))
         .pipe(gulp.dest('build/'));
 }));
 

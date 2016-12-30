@@ -1,35 +1,36 @@
-
-// Header
+// Header. This is the containing element for all header-related functionality.
 #header {
-    background:transparent !important;
-    border:none;
-    font-family:$generic;
+    background: transparent;
+    border: none;
+    font-family: $generic;
     height: 400px;
-    position:absolute;
-    margin-left:-$margin;
-    width:calc(100% - -#{$margin} * 2); // Reddit's CSS compressor can't handle calc with addition. See: https://github.com/reddit/reddit/issues/1042
+    position: absolute;
+    margin-left: -$margin;
+    // Reddit's CSS compressor can't handle calc with addition. See: https://github.com/reddit/reddit/issues/1042
+    width: calc(100% - -#{$margin} * 2);
     top: -1 * $header-height;
-    z-index:auto;
-    overflow:hidden;
+    // Needs to be explicitly set for logout-related backgrounds
+    z-index: auto;
 }
 
-// Subreddit Navigator
+// Subreddit Navigator. This is the list of subreddits running horizontally across the screen.
 #sr-header-area, .res-nightmode div#sr-header-area {
-    background-color:$blue--transparent;
-    border:none;
-    text-transform:lowercase;
+    background-color: $blue--transparent;
+    border: none;
+    text-transform: lowercase;
     line-height: $subreddit-navigator-height;
     height: $subreddit-navigator-height;
     top: 0;
+}
 
-    .drop-choices.srdrop {
-        border:none;
-        margin-left:0px;
-        background-color:$blue;
+// Subreddit selector dropdown choices, accessed from the top left of the subreddit navigator.
+.drop-choices.srdrop {
+    border: none;
+    margin-left :0px;
+    background-color: $blue;
 
-        .choice {
-            color:$white;
-        }
+    .choice {
+        color: $white;
     }
 }
 
@@ -45,9 +46,8 @@ div#srDropdownContainer a, div#RESStaticShortcuts > span.separator, div#RESStati
     }
 }
 
-// Banner
+// The link that takes you back to Reddit. Currently a Dragon 1 logo.
 #header-img-a {
-    margin:0;
     background: url('dragon.png') 10px 35px / 130px 100px no-repeat;
     display: inline-block;
     width:130px;
@@ -58,15 +58,11 @@ div#srDropdownContainer a, div#RESStaticShortcuts > span.separator, div#RESStati
     }
 }
 
+// Dragon floating in space animation
 @keyframes dragon-float {
-    0% {
-        transform:rotate(0deg);
-    }
-    100% {
-        transform:rotate(-30deg);
-    }
+    0% { transform:rotate(0deg); }
+    100% { transform:rotate(-30deg); }
 }
-
 
 div#header-bottom-left, body.res-nightmode div#header-bottom-left {
     height: $banner-height;
@@ -75,79 +71,68 @@ div#header-bottom-left, body.res-nightmode div#header-bottom-left {
     // SpaceX Logo
     .redditname a {
         display:inline-block;
-        margin:0 10px;
         vertical-align:top;
         background:url('spacex.png') no-repeat;
         background-size:210px 130px;
         width:210px;
         height:130px;
-        font-size:0;
         position:relative;
         margin:20px 0;
         top:-3px;
-        overflow:hidden;
+
+        // If this is SpaceX lounge, we should also append a "LOUNGE" psuedo element onto the SpaceX logo for
+        // subreddit differentiation
+        @if $subreddit == "spacexlounge" {
         text-decoration:none;
 
-        @if $subreddit == "spacexlounge" {
             &:after {
                 content:"LOUNGE";
                 display: block;
-                font-size: 14px;
+                position: relative;
+                font:italic 100 14px $brandongrotesque;
                 width: 180px;
                 text-align: center;
-                top: 90px;
-                position: relative;
+                top: 80px;
                 color: white;
-                font-weight: 100;
                 letter-spacing: 10px;
-                font-style: italic;
-                font-family: $brandongrotesque;
             }
         }
     }
+}
 
-    // Tabmenu
-    ul.tabmenu {
-        height: $banner-height;
-        display:inline-block;
-        margin:0;
-        vertical-align:top;
-        overflow:hidden;
-        position:absolute;
+// Tabmenu
+ul.tabmenu {
+    height: $banner-height;
+    margin:0;
+    overflow:hidden;
+    position:absolute;
 
-        li {
-            background-color:transparent;
-            display:inline-block;
-            width:auto;
-            line-height: $banner-height;
-            margin:0 10px;
+    li {
+        line-height: $banner-height;
+        margin:0 10px;
 
-            a {
-                color:$white;
-                font-family:$brandongrotesque;
-                font-size:15px;
-                font-weight:lighter;
-                letter-spacing:0.5px;
-                text-transform:uppercase;
-                padding:0;
-                text-shadow:0 0 5px $slate;
+        a {
+            color:$white;
+            font:lighter 15px $brandongrotesque;
+            letter-spacing:0.5px;
+            text-transform:uppercase;
+            padding:0;
+            text-shadow:0 0 5px $slate;
 
-                &:hover {
-                    border-bottom:2px solid $gold !important;
-                }
+            &:hover {
+                border-bottom:2px solid $gold !important;
             }
+        }
 
-            &.selected a, a {
-                background-color:transparent;
-                border:none;
-                border-bottom:2px solid transparent;
-                transition:border $fast ease 0s;
-                line-height:0;
-            }
+        &.selected a, a {
+            background:transparent;
+            border:none;
+            border-bottom:2px solid transparent;
+            transition:border $fast ease 0s;
+        }
 
-            &.selected a {
-                color:$gold;
-            }
+        &.selected a {
+            color:$gold;
         }
     }
 }
@@ -159,7 +144,6 @@ div#header-bottom-left, body.res-nightmode div#header-bottom-left {
 // User controls & Account settings
 body, body.res-nightmode {
     div#header-bottom-right {
-        border:none;
         background:$blue--transparent;
         top:$subreddit-navigator-height !important;
         height:40px;
@@ -172,31 +156,27 @@ body, body.res-nightmode {
             content: "";
             display: block;
             position: absolute;
-            width: 0px;
+            width: 0;
             height: 0;
             border-top: 40px solid $blue--transparent;
             border-left: 40px solid transparent;
             right: 100%;
         }
 
-        .user a {
-            color:$white;
-            border-bottom:2px solid transparent;
-            transition:color $fast ease, border-bottom $fast ease;
-
-            &:hover {
-                color:$gold;
-                border-bottom:2px solid $gold;
-                text-decoration:none !important;
-            }
-        }
-
-        .user {
+        .user  {
             color: $spacex-grey;
-        }
 
-        #userbarToggle, span.separator, #RESAccountSwitcherIcon {
-            display:none !important;
+            a {
+                color:$white;
+                border-bottom:2px solid transparent;
+                transition:color $fast ease, border-bottom $fast ease;
+
+                &:hover {
+                    color:$gold;
+                    border-bottom:2px solid $gold;
+                    text-decoration:none !important;
+                }
+            }
         }
 
         .user .userkarma, #mail.nohavemail:hover, #new_modmail.nohavemail:hover  {
@@ -345,7 +325,10 @@ body, body.res-nightmode {
     }
 }
 
-// Display none
-#RESShortcutsEditContainer, a#sr-more-link, #header-img {
-    display:none;
+// Display none of these elements in the header. There's a mix of Reddit native and
+// RES elements here. Note we filter span.separator by #header-bottom-right because other
+// span.separators are useful
+#RESShortcutsEditContainer, a#sr-more-link, #header-img, #userbarToggle,
+#header-bottom-right span.separator, #RESAccountSwitcherIcon {
+    display:none !important;
 }

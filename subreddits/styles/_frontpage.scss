@@ -105,21 +105,17 @@ body, body.res-nightmode {
         background: 0 0 url('awaitingvehicledownlink.png') no-repeat;
     }
 
-    // Spacenews Twitter posts
-    &[href*="https://twitter.com/pbdes"],
-    &[href*="https://twitter.com/Leone_SN"],
-    &[href*="https://twitter.com/gruss_sn"],
+    // Although we do love our SpaceNews Twitter reporters, seeing all of their faces
+    // every day on r/SpaceX can get kinda' creepy (especially during tweetstorms).
+    // So we hide them behind an alternate image.
+    &[href*="https://twitter.com/CHenry_SN"],
     &[href*="https://twitter.com/jeff_foust"] {
-        background:0 0 url('spacenewstwitter.png') no-repeat;
-        background-size:70px 70px;
+        background:0 0/70px 70px url('spacenewstwitter.png') no-repeat;
         height:70px;
-    }
 
-    &[href*="https://twitter.com/pbdes"] img,
-    &[href*="https://twitter.com/gruss_sn"] img,
-    &[href*="https://twitter.com/Leone_SN"] img,
-    &[href*="https://twitter.com/jeff_foust"] img {
-        display:none;
+        img {
+            display:none;
+        }
     }
 }
 
