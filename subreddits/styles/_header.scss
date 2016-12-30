@@ -11,18 +11,6 @@
     top: -1 * $header-height;
     z-index:auto;
     overflow:hidden;
-
-    // Use this to ensure the logout functionality can't be clicked anywhere.
-    &:before {
-        content: "";
-        display: block;
-        position: fixed;
-        height: 400px;
-        width: 100vw;
-        z-index: -1;
-        top: 0;
-        left: 0;
-    }
 }
 
 // Subreddit Navigator
@@ -57,25 +45,16 @@ div#srDropdownContainer a, div#RESStaticShortcuts > span.separator, div#RESStati
     }
 }
 
-#RESShortcutsEditContainer, a#sr-more-link {
-    display:none;
-}
-
 // Banner
 #header-img-a {
     margin:0;
     background: url('dragon.png') 10px 35px / 130px 100px no-repeat;
     display: inline-block;
-    vertical-align: bottom;
     width:130px;
     height: $banner-height;
 
     &:hover {
         animation:dragon-float 3s ease-in-out infinite alternate;
-    }
-
-    #header-img {
-        display:none;
     }
 }
 
@@ -354,7 +333,7 @@ body, body.res-nightmode {
         }
 
         // Make RES gear less annoying
-        /* RES Gear Settings */
+        // RES gear settings
         #RESMainGearOverlay {
             border:none !important;
             background-color:transparent !important;
@@ -366,3 +345,7 @@ body, body.res-nightmode {
     }
 }
 
+// Display none
+#RESShortcutsEditContainer, a#sr-more-link, #header-img {
+    display:none;
+}
