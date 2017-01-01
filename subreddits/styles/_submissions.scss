@@ -11,7 +11,7 @@ form .spacer + .spacer {
 }
 
 // Tabs
-ul.tabmenu.formtab {
+#newlink ul.tabmenu.formtab {
     position:relative;
     width:640px;
     padding:0;
@@ -117,7 +117,7 @@ div.formtabs-content {
     // Make the submission text appear above the inputs
     > div:nth-child(4) {
         position:absolute;
-        top:150px;
+        top:50px;
         height:0;
     }
 }

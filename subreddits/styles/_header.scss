@@ -3,7 +3,7 @@
     background: transparent;
     border: none;
     font-family: $generic;
-    height: 400px;
+    height: $header-height;
     position: absolute;
     margin-left: -$margin;
     // Reddit's CSS compressor can't handle calc with addition. See: https://github.com/reddit/reddit/issues/1042
@@ -101,7 +101,7 @@ div#header-bottom-left, body.res-nightmode div#header-bottom-left {
 }
 
 // Tabmenu
-ul.tabmenu {
+#header ul.tabmenu {
     height: $banner-height;
     margin:0;
     overflow:hidden;
