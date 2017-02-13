@@ -212,11 +212,11 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
     @include mission-flair("eutelsat-abs-2", "Eutelsat/ABS 2", 0, 1);
     @include mission-flair("crs-9", "CRS-9", 1, 1);
     @include mission-flair("jcsat-16", "JCSAT-16", 2, 1);
+    @include mission-flair("iridium-next-flight-1", "Iridium NEXT Flight 1", 3, 1);
     // Upcoming
-    @include mission-flair("amos-6", "Amos-6");
-    @include mission-flair("iridium-next-flight-1", "Iridium NEXT Flight 1");
     @include mission-flair("iridium-next-flight-2", "Iridium NEXT Flight 2");
     @include mission-flair("formosat-5-sherpa", "Formosat-5/SHERPA");
+    @include mission-flair("amos-6", "Amos-6");
     // Upcoming Dragon
     @include mission-flair("crs-10", "CRS-10", 4, 5);
     @include mission-flair("crs-11", "CRS-11", 4, 5);
