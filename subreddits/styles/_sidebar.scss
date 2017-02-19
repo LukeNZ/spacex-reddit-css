@@ -6,11 +6,10 @@ $sidebarHeadingHeight: 40px;
     width:$sidebarWidth;
     margin:0;
     color:$white;
-    overflow:hidden;
 }
 
 .side, body.res-nightmode .side {
-    background-color:$slate--light;
+    background-color: $slate--light;
     background-repeat: no-repeat;
     font-family:$lucidagrande;
 
@@ -28,7 +27,7 @@ $sidebarHeadingHeight: 40px;
 div.linkinfo {
     background-color:transparent;
     border:none;
-    border-bottom:1px dashed $grey;
+    border-bottom:1px dashed $spacex-grey;
     padding-bottom:10px;
     margin-bottom:0px;
     position:relative;
@@ -36,7 +35,7 @@ div.linkinfo {
 
     .date, .score, .totalvotes, .shortlink {
         text-align:center;
-        color:$grey;
+        color: $spacex-grey;
     }
 
     .totalvotes {
@@ -49,8 +48,8 @@ div.linkinfo {
 
     input#shortlink-text {
         background-color:transparent !important;
-        color:$grey;
-        border:2px solid $charcoal !important;
+        color: $spacex-grey;
+        border:2px solid $spacex-charcoal !important;
         transition:border $fast ease 0s;
 
         &::selection {
@@ -142,7 +141,7 @@ div.sidebox.submit {
         &:after {
             content:"Immediately before, during, and after a launch, submissions are restricted. Please try again soon.";
             font-size:10px;
-            color:$grey;
+            color: $spacex-grey;
             display:inline-block;
             text-align:center;
             position:relative;
@@ -163,10 +162,14 @@ div.sidebox.submit {
         }
 
         &:before {
+            @if $subreddit == "spacex" {
+                content:"SpaceX";
+            } @else {
+                content:"SpaceX Lounge";
+            }
             color:$white;
             display:block;
             text-align:center;
-            content:"SpaceX";
             font-family:$brandongrotesque;
             letter-spacing:1px;
             font-weight:100;
@@ -241,7 +244,6 @@ div.sidebox.submit {
         margin:10px 0;
         position:relative;
         float:left;
-        color:$white;
         text-align:center;
 
         .number {
@@ -272,7 +274,7 @@ div.sidebox.submit {
     // Reddit show subreddit style and flair toggles
     .sr_style_toggle, .flairtoggle {
         background-color:transparent !important;
-        color:$grey !important;
+        color: $spacex-grey !important;
         display:inline-block;
         text-align:center;
         font-size:0;
@@ -292,7 +294,7 @@ div.sidebox.submit {
 
 // Sidebar description
 .side .usertext-body {
-    border-bottom:1px dashed $grey;
+    border-bottom:1px dashed $spacex-grey;
 
     .md {
         font-family:$lucidagrande;
@@ -307,12 +309,13 @@ div.sidebox.submit {
             right:-30px;
             line-height:$sidebarHeadingHeight;
             color:$white;
-            font-family:$helvetica;
+            font-family:$lucidagrande;
             font-weight:300;
             font-size:16px;
             height:$sidebarHeadingHeight;
             margin-top:30px !important;
             margin-bottom:10px !important;
+            margin-right:20px;
 
             &:after {
                 content:"";
@@ -374,12 +377,13 @@ div.bottom {
         right:-30px;
         line-height:$sidebarHeadingHeight;
         color:$white;
-        font-family:"Helvetica Neue-Light", "Helvetica Neue", "Helvetica", "Verdana", sans-serif;
+        font-family:"lucidagrande Neue-Light", "lucidagrande Neue", "lucidagrande", "Verdana", sans-serif;
         font-weight:300;
         font-size:16px;
         height:$sidebarHeadingHeight;
         margin-top:30px !important;
         margin-bottom:10px !important;
+        margin-right:20px;
         transition:background-color $fast ease;
 
         &:after {
@@ -478,7 +482,7 @@ div.bottom {
                     width:100%;
 
                     a {
-                        color:$grey;
+                        color: $spacex-grey;
                     }
                 }
 

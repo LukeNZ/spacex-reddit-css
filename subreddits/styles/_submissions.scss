@@ -1,5 +1,5 @@
 body.submit-page, body.submit-page > .content {
-    background-color:$slate--light !important;
+    background-color: $slate--light !important;
 }
 
 div.content > h1 {
@@ -11,12 +11,12 @@ form .spacer + .spacer {
 }
 
 // Tabs
-ul.tabmenu.formtab {
+#newlink ul.tabmenu.formtab {
     position:relative;
     width:640px;
     padding:0;
     left:-10px;
-    border:1px dashed $grey;
+    border:1px dashed $spacex-grey;
 
     li {
         display:inline-block;
@@ -39,7 +39,7 @@ ul.tabmenu.formtab {
             line-height:30px;
             display:inline-block;
             color:$white;
-            font-family: $helvetica;
+            font-family: $lucidagrande;
             font-weight:300;
             letter-spacing: 1px;
         }
@@ -76,7 +76,7 @@ form#newlink {
     }
 
     .clear-input-button {
-        color:$grey;
+        color: $spacex-grey;
         top:7px;
         line-height:15px;
     }
@@ -84,7 +84,7 @@ form#newlink {
     #new-link-image-input {
         background-color:transparent;
         padding:5px;
-        border:1px dashed $grey;
+        border:1px dashed $spacex-grey;
         transition:border ease $fast;
 
         &:hover {
@@ -117,7 +117,7 @@ div.formtabs-content {
     // Make the submission text appear above the inputs
     > div:nth-child(4) {
         position:absolute;
-        top:150px;
+        top:50px;
         height:0;
     }
 }
@@ -137,7 +137,7 @@ div.formtabs-content {
     width:600px;
 
     textarea, input[type="text"], input[type="url"], input[type="password"], input[type="number"] {
-        border:2px solid $charcoal;
+        border:2px solid $spacex-charcoal;
         transition:border ease $fast;
         box-sizing:content-box !important;
         width:592px;
@@ -149,7 +149,7 @@ div.formtabs-content {
     }
 
     .roundfield-content label {
-        color:$grey;
+        color: $spacex-grey;
     }
 }
 
@@ -206,8 +206,8 @@ div.formtabs-content {
     }
 
     h1, .sr {
-        color:$grey;
-        font-family:$helvetica;
+        color: $spacex-grey;
+        font-family:$lucidagrande;
         font-weight:100;
         text-align:center;
         margin:5px 0;
@@ -236,7 +236,7 @@ div.spacer > button.btn {
     width:100%;
     padding:10px 0 !important;
     font-size:16px;
-    font-family:$helvetica;
+    font-family:$lucidagrande;
     position:relative;
     border:none;
     @extend %button;

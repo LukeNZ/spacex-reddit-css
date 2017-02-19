@@ -13,6 +13,9 @@
 // Styles and design of the header and containing elements of the subreddit.
 @import 'header';
 
+// Allows for rotating banners to be set
+@import 'banners';
+
 // Styles related to Reddit-created infobars (such as archived, locked, etc)
 @import "infobars";
 

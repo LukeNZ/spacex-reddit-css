@@ -2,38 +2,40 @@
 .commentarea {
     // Arrows
     .arrow.down, .arrow.downmod {
-        &:before {
-            visibility:hidden;
-            opacity:0;
-            transition:visibility 0s ease 0s, opacity $fast ease 0s;
-        }
+        @if $subreddit == "spacex" {
+            &:before {
+                visibility:hidden;
+                opacity:0;
+                transition:visibility 0s ease 0s, opacity $fast ease 0s;
+            }
 
-        &:before, &:hover:before {
-            position: absolute;
-            display: block;
-            z-index:100;
-            padding:8px 15px;
-            content: "Don't downvote because you disagree!";
-            text-align: center;
-            font-size: 12px;
-            font-weight: bold;
-            font-family: $lucidagrande;
-            width: 250px;
-            color: $green;
-            background: $white;
-            margin-left: 25px;
-            box-shadow:0 0 10px rgba($charcoal, 0.5);
-        }
+            &:before, &:hover:before {
+                position: absolute;
+                display: block;
+                z-index:100;
+                padding:8px 15px;
+                content: "Don't downvote because you disagree!";
+                text-align: center;
+                font-size: 12px;
+                font-weight: bold;
+                font-family: $lucidagrande;
+                width: 250px;
+                color: $green;
+                background: $white;
+                margin-left: 25px;
+                box-shadow:0 0 10px rgba($spacex-charcoal, 0.5);
+            }
 
-        &:hover:before {
-            visibility:visible;
-            opacity:1;
+            &:hover:before {
+                visibility:visible;
+                opacity:1;
+            }
         }
     }
 
     // Menu area (sort by top, enable contest mode, sticky this post
     .menuarea, .menuarea .toggle a {
-        color:$grey;
+        color: $spacex-grey;
     }
 
     .usertext-edit {
@@ -43,16 +45,18 @@
         }
 
         // Low effort comment warning
-        >div:nth-of-type(1):after {
-            content: "Comments that do not contribute to the discussion, are low-effort, consist solely of a meme, or otherwise violate our guidelines will be removed. These comments should be reported.";
-            padding: 5px;
-            display: block;
-            font-family: $lucidagrande;
-            font-size: 11px;
-            font-weight: bold;
-            text-align: center;
-            box-sizing:border-box;
-            color: $green; /* Moderator Green */
+        @if $subreddit == "spacex" {
+            >div:nth-of-type(1):after {
+                content: "Comments that do not contribute to the discussion, are low-effort, consist solely of a meme, or otherwise violate our guidelines will be removed. These comments should be reported.";
+                padding: 5px;
+                display: block;
+                font-family: $lucidagrande;
+                font-size: 11px;
+                font-weight: bold;
+                text-align: center;
+                box-sizing:border-box;
+                color: $green; /* Moderator Green */
+            }
         }
     }
 
@@ -60,7 +64,7 @@
     &> div.sitetable > div.thing {
         padding:5px;
         margin-bottom:5px;
-        border-left:2px solid $grey !important;
+        border-left:2px solid $spacex-grey !important;
 
         &:hover {
             border-left:2px solid $gold !important;
@@ -73,7 +77,7 @@
             padding-left:15px;
         }
 
-        border-left:1px solid $grey !important;
+        border-left:1px solid $spacex-grey !important;
 
         &:hover {
             border-left:1px solid $gold !important;
@@ -129,7 +133,7 @@ body, body.res-nightmode {
 // The little dashed line thing
 .panestack-title {
     margin:10px;
-    border-bottom:1px dashed $grey--transparent;
+    border-bottom:1px dashed $spacex-grey--transparent;
 }
 
 #REScommentNavToggle {
@@ -188,18 +192,18 @@ body, body.res-nightmode {
 
     &:before {
         font-size:16px;
-        color:$grey;
+        color: $spacex-grey;
         display:inline;
         content:"No comments. Start contributing!";
         position:relative;
-        font-family:$helvetica;
+        font-family:$lucidagrande;
         font-weight:300;
         text-align:center;
     }
 }
 
 textarea {
-    border:1px solid $grey;
+    border:1px solid $spacex-grey;
     transition:border 0.2s ease 0s;
 
     &:focus {
@@ -210,13 +214,13 @@ textarea {
 .comment {
 
     .entry .tagline {
-        font-family:$helvetica;
+        font-family:$lucidagrande;
         font-size:11px;
-        color:$grey;
+        color: $spacex-grey;
     }
 
     .score {
-        color:$slate--light;
+        color: $slate--light;
 
         &:before {
             content: "• ";
@@ -230,12 +234,12 @@ textarea {
     .flat-list.buttons {
         a:not(.pretty-button) {
             font-size:11px;
-            font-family:$helvetica;
-            color:$grey !important;
+            font-family:$lucidagrande;
+            color: $spacex-grey !important;
         }
 
         .reply-button a {
-            color:$slate--light !important;
+            color: $slate--light !important;
         }
     }
 

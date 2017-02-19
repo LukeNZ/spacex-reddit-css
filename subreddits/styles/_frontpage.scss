@@ -1,10 +1,15 @@
-$expandoWidth: 35px;
-$expandHeight: 30px;
+$expando-width: 35px;
+$expando-height: 30px;
 
 // Titles, main content
 body:not(.embed) > .content {
-    margin:100px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
+    @if $subreddit == "spacex" {
+        margin:100px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
+    } @else {
+        margin:50px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
+    }
     background-color:$white;
+    position:relative; // To allow inputs to be interacted with due to banners
 }
 
 .link.last-clicked {
@@ -18,7 +23,7 @@ body:not(.embed) > .content {
 // Individual listings
 #siteTable {
     padding:0;
-    color:$grey;
+    color: $spacex-grey;
 
     .thing {
         margin:0;
@@ -36,12 +41,12 @@ body:not(.embed) > .content {
         }
 
         &:not(:first-child) {
-            border-top:1px dashed $grey--transparent;
+            border-top:1px dashed $spacex-grey--transparent;
         }
     }
 
     .tagline {
-        color:$grey;
+        color: $spacex-grey;
     }
 
     // User options for each listing
@@ -55,7 +60,7 @@ body:not(.embed) > .content {
                 margin:0 10px 0 0;
 
                 a {
-                    color:$slate--light;
+                    color: $slate--light;
                     font-weight:bold;
                     font-size:11px;
 
@@ -67,7 +72,7 @@ body:not(.embed) > .content {
             }
 
             a, > span {
-                color:$grey;
+                color: $spacex-grey;
                 padding:2px;
             }
         }
@@ -100,21 +105,17 @@ body, body.res-nightmode {
         background: 0 0 url('awaitingvehicledownlink.png') no-repeat;
     }
 
-    // Spacenews Twitter posts
-    &[href*="https://twitter.com/pbdes"],
-    &[href*="https://twitter.com/Leone_SN"],
-    &[href*="https://twitter.com/gruss_sn"],
+    // Although we do love our SpaceNews Twitter reporters, seeing all of their faces
+    // every day on r/SpaceX can get kinda' creepy (especially during tweetstorms).
+    // So we hide them behind an alternate image.
+    &[href*="https://twitter.com/CHenry_SN"],
     &[href*="https://twitter.com/jeff_foust"] {
-        background:0 0 url('spacenewstwitter.png') no-repeat;
-        background-size:70px 70px;
+        background:0 0/70px 70px url('spacenewstwitter.png') no-repeat;
         height:70px;
-    }
 
-    &[href*="https://twitter.com/pbdes"] img,
-    &[href*="https://twitter.com/gruss_sn"] img,
-    &[href*="https://twitter.com/Leone_SN"] img,
-    &[href*="https://twitter.com/jeff_foust"] img {
-        display:none;
+        img {
+            display:none;
+        }
     }
 }
 
@@ -129,7 +130,7 @@ body, body.res-nightmode {
         height: 23px !important;
         width: 23px !important;
         background-size:23px 92px !important;
-        background-image: url('arrowsprites.png') !important;
+        background-image: url('arrow-sprites.png') !important;
     }
 
     .arrow.up {
@@ -150,7 +151,7 @@ body, body.res-nightmode {
 }
 
 .link .score {
-    color:$grey;
+    color: $spacex-grey;
 }
 
 .thing .title {
@@ -164,7 +165,7 @@ body, body.res-nightmode {
 
     a {
         font-size:10px;
-        color:$grey;
+        color: $spacex-grey;
         display:inline;
 
         &:before {

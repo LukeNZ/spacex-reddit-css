@@ -1,39 +1,69 @@
-.side .titlebox .md {
+$notification-height: 50px;
+$notification-width-small: 300px;
+$notification-width-small--break-small: 180px;
+
+.side .md {
+
+    h1 {
+        position:absolute;
+        box-sizing:border-box;
+        overflow:hidden;
+        font-family:$lucidagrande;
+        margin:0;
+    }
+
     // SpaceX Disclaimer
-    h3:nth-of-type(1) {
-        position: absolute;
+    h1:nth-of-type(1) {
         top: -30px;
         left: 0px;
         right: 0px;
-        height: 30px;
         line-height: 30px;
         text-align: center;
         font-size: 10px;
-        color: $white;
-        font-family:$lucidagrande;
         font-weight:normal;
-        opacity:0.5;
-        margin:0;
-        z-index:1000;
+        opacity:0.4;
     }
 
-    $notificationHeight: 50px;
-    h3:nth-of-type(2), h3:nth-of-type(3), h3:nth-of-type(4) {
-        box-sizing:border-box;
-        position: absolute;
-        background-color:$slate--light;
-        font-family:$lucidagrande;
-        margin:0;
-        height: $notificationHeight;
-        overflow:hidden;
+    h1:nth-of-type(2), h1:nth-of-type(3), h1:nth-of-type(4), h1:nth-of-type(5) {
+        background-color: $slate--light;
+        height: $notification-height;
+    }
+
+    // SpaceX(Lounge) Link
+    h1:nth-of-type(2) {
+        top: 0;
+        left: 0;
+        height: $notification-height;
+        width: $notification-width-small;
+        border-right:1px dashed $spacex-grey;
+        line-height: $notification-height;
+        text-align:center;
+        font-weight:100;
+        font-size:16px;
+        font-family: $brandongrotesque;
+
+        // Small screens
+        @media screen and (max-width: $break-small) {
+            font-size:0;
+            width:$notification-width-small--break-small;
+
+            a {
+                font-size:20px !important;
+                padding:0;
+            }
+        }
+
+        a {
+            font-size:24px;
+            padding:0 5px;
+        }
     }
 
     // Latest notification message
-    h3:nth-of-type(2) {
+    h1:nth-of-type(3) {
         top: 0px;
-        left: 0px;
+        left: $notification-width-small;
         right:($sidebarPadding * 2) + $sidebarWidth;
-        border-bottom:1px dashed rgba($white, 0.5);
         text-align: left;
         font-size:13px;
         padding: 5px 10px !important;
@@ -42,6 +72,7 @@
         @media screen and (max-width: $break-small) {
             font-size:12px;
             padding:3px 10px !important;
+            left:$notification-width-small--break-small;
         }
 
         // Links
@@ -56,20 +87,19 @@
     }
 
     // Rules, Wiki, FAQ
-    h3:nth-of-type(3) {
-        top:$notificationHeight;
+    h1:nth-of-type(4) {
+        top: $notification-height;
         left: 0;
-        height: $notificationHeight;
-        width:300px;
+        height: $notification-height;
+        width: $notification-width-small;
         text-align: left;
         font-size:0;
-        text-transform:uppercase;
         font-weight:lighter;
         border-right:1px dashed rgba($white, 0.5);
 
         // Small screens
         @media screen and (max-width: $break-small) {
-            width:180px;
+            width:$notification-width-small--break-small;
         }
 
         a {
@@ -96,19 +126,19 @@
         }
     }
 
-    // Curation
-    h3:nth-of-type(4) {
+    // Curated Links of importance
+    h1:nth-of-type(5) {
         position: absolute;
-        top:$notificationHeight;
-        left:300px;
+        top: $notification-height;
+        left: $notification-width-small;
         right:($sidebarPadding * 2) + $sidebarWidth;
-        height:$notificationHeight;
+        height: $notification-height;
         font-size:0;
         display:flex;
 
         // Small screens
         @media screen and (max-width: $break-small) {
-            left:180px;
+            left:$notification-width-small--break-small;
         }
 
         a {
@@ -161,7 +191,7 @@
                 background-position:-50px 0;
             }
 
-            &[title="Ask Anything"]:before {
+            &[title="Questions & News"]:before {
                 background-position:-150px 0;
             }
 

@@ -29,9 +29,9 @@ $iconsize: 50px;
     background-color:$webcastblue !important;
     color:$white !important;
     background-repeat:no-repeat;
-    background-image:url('flairsprites.png');
+    background-image:url('flair-sprites.png');
     background-size:24px 85px;
-    text-shadow:0 0 $grey;
+    text-shadow:0 0 $spacex-grey;
     position:relative;
     display:none; // Display none by default, then enable for specific flair types
 }
@@ -134,7 +134,7 @@ p.title a.title {
     color: $white;
     height: 14px;
     line-height: 15px;
-    background-color: $grey--transparent;
+    background-color: $spacex-grey--transparent;
 }
 
 // ------------- OP & MOD HIGHLIGHTING ---------------

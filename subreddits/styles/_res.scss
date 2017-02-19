@@ -1,12 +1,12 @@
 .res-nightmode {
-    background-color:$slate !important;
+    background-color: $slate !important;
 
     .entry .flat-list li.first a {
         color:$white !important;
     }
 
     > .content {
-        background-color:$slate !important;
+        background-color: $slate !important;
     }
 
     /*.entry.RES-keyNav-activeElement, .entry.RES-keyNav-activeElement .noncollapsed,
@@ -17,7 +17,7 @@
 
 // Never ending RES
 div[id^="siteTable-"].linklisting.sitetable {
-    border-top:1px dashed $grey--transparent;
+    border-top:1px dashed $spacex-grey--transparent;
 }
 
 #progressIndicator {
@@ -38,7 +38,7 @@ div.NERPageMarker, #NERFail {
 
 // RES prefs
 #RESPrefsDropdown {
-    background-color:$grey !important;
+    background-color: $spacex-grey !important;
     border:2px solid $slate !important;
     box-shadow:0 10px 20px rgba($slate,0.5) !important;
 }
@@ -62,13 +62,18 @@ div.NERPageMarker, #NERFail {
 .res-sr-style-toggle {
     text-align:center !important;
     background-color:transparent !important;
-    color:$grey !important;
+    color: $spacex-grey !important;
 }
 
 // sr dropdown list
 #srList {
     top:-130px !important;
     left:-30px !important;
+}
+
+// RESShortcuts
+#srLeftContainer, #RESShortcutsViewport {
+    max-height:30px !important;
 }
 
 // RES Dropdown List

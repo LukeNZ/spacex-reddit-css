@@ -1,0 +1,334 @@
+// Header. This is the containing element for all header-related functionality.
+#header {
+    background: transparent !important;
+    border: none;
+    font-family: $generic;
+    height: $header-height;
+    position: absolute;
+    margin-left: -$margin;
+    // Reddit's CSS compressor can't handle calc with addition. See: https://github.com/reddit/reddit/issues/1042
+    width: calc(100% - -#{$margin} * 2);
+    top: -1 * $header-height;
+    // Needs to be explicitly set for logout-related backgrounds
+    z-index: auto;
+}
+
+// Subreddit Navigator. This is the list of subreddits running horizontally across the screen.
+#sr-header-area, .res-nightmode div#sr-header-area {
+    background-color: $blue--transparent;
+    border: none;
+    text-transform: lowercase;
+    line-height: $subreddit-navigator-height;
+    height: $subreddit-navigator-height;
+    top: 0;
+}
+
+// Subreddit selector dropdown choices, accessed from the top left of the subreddit navigator.
+.drop-choices.srdrop {
+    border: none;
+    margin-left :0px;
+    background-color: $blue;
+
+    .choice {
+        color: $white;
+    }
+}
+
+div.dropdown.srdrop > span.selected,
+ul.sr-bar li > span.separator, ul.sr-bar li > a,
+div#RESShortcuts > span.separator, div#RESShortcuts > a,
+div#srDropdownContainer a, div#RESStaticShortcuts > span.separator, div#RESStaticShortcuts > a {
+    color: $spacex-grey;
+    transition:color ease $fast;
+
+    &:hover {
+        color:$gold;
+    }
+}
+
+// The link that takes you back to Reddit. Currently a Dragon 1 logo.
+#header-img-a {
+    background: url('dragon.png') 10px 35px / 130px 100px no-repeat;
+    display: inline-block;
+    width:130px;
+    height: $banner-height;
+
+    &:hover {
+        animation:dragon-float 3s ease-in-out infinite alternate;
+    }
+}
+
+// Dragon floating in space animation
+@keyframes dragon-float {
+    0% { transform:rotate(0deg); }
+    100% { transform:rotate(-30deg); }
+}
+
+div#header-bottom-left, body.res-nightmode div#header-bottom-left {
+    height: $banner-height;
+    overflow:hidden;
+
+    // SpaceX Logo
+    .redditname a {
+        display:inline-block;
+        vertical-align:top;
+        background:url('spacex.png') no-repeat;
+        background-size:210px 130px;
+        width:210px;
+        height:130px;
+        position:relative;
+        margin:20px 0;
+        top:-3px;
+
+        // If this is SpaceX lounge, we should also append a "LOUNGE" psuedo element onto the SpaceX logo for
+        // subreddit differentiation
+        @if $subreddit == "spacexlounge" {
+        text-decoration:none;
+
+            &:after {
+                content:"LOUNGE";
+                display: block;
+                position: relative;
+                font:italic 100 14px $brandongrotesque;
+                width: 180px;
+                text-align: center;
+                top: 80px;
+                color: white;
+                letter-spacing: 10px;
+            }
+        }
+    }
+}
+
+// Tabmenu
+#header ul.tabmenu {
+    height: $banner-height;
+    margin:0;
+    overflow:hidden;
+    position:absolute;
+
+    li {
+        line-height: $banner-height;
+        margin:0 10px;
+
+        a {
+            color:$white;
+            font:lighter 15px $brandongrotesque;
+            letter-spacing:0.5px;
+            text-transform:uppercase;
+            padding:0;
+            text-shadow:0 0 5px $slate;
+
+            &:hover {
+                border-bottom:2px solid $gold !important;
+            }
+        }
+
+        &.selected a, a {
+            background:transparent;
+            border:none;
+            border-bottom:2px solid transparent;
+            transition:border $fast ease 0s;
+        }
+
+        &.selected a {
+            color:$gold;
+        }
+    }
+}
+
+.pagename {
+    font-size:0;
+}
+
+// User controls & Account settings
+body, body.res-nightmode {
+    div#header-bottom-right {
+        background:$blue--transparent;
+        top:$subreddit-navigator-height !important;
+        height:40px;
+        line-height:40px;
+        padding:0 10px;
+        border-radius:0;
+        font-family:$lucidagrande;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 40px solid $blue--transparent;
+            border-left: 40px solid transparent;
+            right: 100%;
+        }
+
+        .user  {
+            color: $spacex-grey;
+
+            a {
+                color:$white;
+                border-bottom:2px solid transparent;
+                transition:color $fast ease, border-bottom $fast ease;
+
+                &:hover {
+                    color:$gold;
+                    border-bottom:2px solid $gold;
+                    text-decoration:none !important;
+                }
+            }
+        }
+
+        .user .userkarma, #mail.nohavemail:hover, #new_modmail.nohavemail:hover  {
+            border-bottom:none;
+            font-weight:normal;
+        }
+
+        // Mail iconography
+        .mail {
+            width:30px !important;
+            height:30px !important;
+            top:0 !important;
+            margin:5px 0 0 10px;
+            background-image:url('sprites.png') !important;
+            background-size:30px 330px;
+            cursor:pointer;
+            vertical-align: top;
+            border:none !important;
+            transform:scale(1);
+            transition:transform ease 0.2s;
+        }
+
+        .message-count {
+            background-color: $gold;
+            border-radius:50%;
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            padding: 0;
+            font-size: 11px;
+            display: inline-block;
+            border: none !important;
+            position: relative;
+            top: -3px;
+            left: -15px;
+            vertical-align: top;
+            line-height: 20px;
+            text-align: center;
+            box-shadow: -5px 5px 5px 0 rgba($spacex-charcoal, 0.5);
+
+            &:hover {
+                color:$white;
+            }
+        }
+
+        #mail, #new_modmail {
+            &.nohavemail, &.havemail {
+                @extend .mail;
+                &:hover {
+                    @extend .mail;
+                    transform:scale(1.2);
+                }
+            }
+        }
+
+        #mail {
+            &.nohavemail {
+                background-position:0 0;
+            }
+
+            &.havemail {
+                background-position:0 -30px;
+            }
+        }
+
+        #modmail {
+            display:none;
+        }
+
+        #new_modmail {
+            &.nohavemail {
+                background-position:0 -60px;
+            }
+
+            &.havemail {
+                background-position:0 -90px;
+            }
+        }
+
+        .flat-list a, #openRESPrefs #RESSettingsButton {
+            vertical-align: top;
+            display:inline-block;
+            font-size:0;
+            @extend .mail;
+
+            &:hover {
+                @extend .mail;
+                transform:scale(1.2);
+            }
+        }
+
+        .flat-list a {
+            background-position:0 -120px;
+        }
+
+        #openRESPrefs #RESSettingsButton {
+            background-position:0 -150px;
+            background-image:url('sprites.png') !important;
+
+            &:after {
+                display:none;
+            }
+        }
+
+        .logout a {
+            vertical-align: top;
+            display:inline-block;
+            font-size:0;
+            width:30px;
+            height:30px;
+            margin:5px 0 0 10px;
+            position:absolute;
+            right:0;
+            top:0;
+        }
+
+        form.logout {
+            position:relative;
+            display:inline-block;
+        }
+
+        form.logout:before {
+            content: '';
+            display: inline-block;
+            @extend .mail;
+            background-position: 0 -180px;
+            pointer-events:none;
+        }
+
+        form.logout:hover:before {
+            content:'';
+            display: inline-block;
+            transform:scale(1.2) !important;
+        }
+
+        // Make RES gear less annoying
+        // RES gear settings
+        #RESMainGearOverlay {
+            border:none !important;
+            background-color:transparent !important;
+
+            .gearIcon {
+                opacity:0 !important;
+            }
+        }
+    }
+}
+
+// Display none of these elements in the header. There's a mix of Reddit native and
+// RES elements here. Note we filter span.separator by #header-bottom-right because other
+// span.separators are useful
+#RESShortcutsEditContainer, a#sr-more-link, #header-img, #userbarToggle,
+#header-bottom-right span.separator, #RESAccountSwitcherIcon {
+    display:none !important;
+}

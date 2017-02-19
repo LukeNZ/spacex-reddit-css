@@ -1,35 +1,46 @@
-// Constants
+// CONSTANTS
 $complement: 15%;
 
 // COLORS
-$charcoal: #181c1f;
-$slate: #21272b;
+$spacex-charcoal: #181c1f;
+
+$spacex-slate: #21272b;
+    $spacex-slate--light: lighten($spacex-slate, $complement);
+
+$slate:#29353e;
     $slate--light: lighten($slate, $complement);
-$grey: #849199;
-    $grey--transparent: rgba($grey, 0.5);
+
+$spacex-grey: #849199;
+    $spacex-grey--transparent: rgba($spacex-grey, 0.5);
+
 $blue: #2a6ebd;
     $blue--dark:darken($blue, $complement);
     $blue--transparent:rgba($blue, 0.5);
+
 $webcastblue: #2276AB;
     $webcastblue--light:lighten($webcastblue, $complement);
     $webcastblue--dark:darken($webcastblue, $complement);
+
 $azure: #008BE3;
     $azure--light:lighten($azure, $complement);
     $azure--dark:darken($azure, $complement);
+
 $gold: #CCAC55;
     $gold--dark: darken($gold, $complement);
+
 $red: #C3427D;
     $red--dark: darken($red, $complement);
+
 $green: #00A651;
     $green--dark: darken($green, $complement);
     $green--transparent: rgba($green, 0.1);
+
 $white: #fcfcfc;
 
 // FONTS
-$generic: Verdana, Geneva, sans-serif;
-$brandongrotesque: "Brandon Grotesque", "Proxima Nova", Geneva, Verdana, sans-serif;
-$lucidagrande: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$generic: Verdana,Geneva,sans-serif;
+$brandongrotesque: "Brandon Grotesque",Avenir,"Gill Sans","Trebuchet MS",sans-serif;
+$lucidagrande: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,"Trebuchet MS",sans-serif;
 
 // TRANSITIONS
 $fast: 0.2s;
@@ -39,7 +50,12 @@ $break-small: 1366px;
 $break-large: 1920px;
 
 // PAGE MARGIN
-$margin: 25px;
+$margin: 30px;
+
+// HEADER
+$subreddit-navigator-height: 30px;
+$banner-height: 170px;
+$header-height: $subreddit-navigator-height + $banner-height;
 
 // BUTTONS
 %button {
