@@ -38,7 +38,7 @@ div.dropdown.srdrop > span.selected,
 ul.sr-bar li > span.separator, ul.sr-bar li > a,
 div#RESShortcuts > span.separator, div#RESShortcuts > a,
 div#srDropdownContainer a, div#RESStaticShortcuts > span.separator, div#RESStaticShortcuts > a {
-    color: $spacex-grey;
+    color: #ddd;
     transition:color ease $fast;
 
     &:hover {
