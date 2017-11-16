@@ -21,7 +21,12 @@ $notification-width-small--break-small: 180px;
         text-align: center;
         font-size: 10px;
         font-weight:normal;
-        opacity:0.4;
+        opacity:0.6;
+
+        a {
+          font-weight: bold;
+          color: $blue !important;
+        }
     }
 
     h1:nth-of-type(2), h1:nth-of-type(3), h1:nth-of-type(4), h1:nth-of-type(5) {
@@ -77,8 +82,9 @@ $notification-width-small--break-small: 180px;
 
         // Links
         a {
-            color:$webcastblue;
+            color:$webcastblue !important;
             transition:color ease $fast;
+            text-decoration: none;
 
             &:hover {
                 color:$gold;
@@ -113,6 +119,8 @@ $notification-width-small--break-small: 180px;
             box-sizing: border-box;
             font-family:$brandongrotesque;
             float:left;
+            
+            text-decoration: none;
 
             // Small screens
             @media screen and (max-width: $break-small) {
@@ -121,7 +129,7 @@ $notification-width-small--break-small: 180px;
             }
 
             &:hover {
-                color:$gold;
+                color:$gold !important;
             }
         }
     }
@@ -153,6 +161,8 @@ $notification-width-small--break-small: 180px;
             font-weight:normal;
             float:left;
             position:relative;
+            
+            text-decoration: none;
 
             // Small screens
             @media screen and (max-width: $break-small) {
@@ -170,7 +180,7 @@ $notification-width-small--break-small: 180px;
             }
 
             &:hover {
-                color:$gold;
+                color:$gold !important;
             }
 
             &:before {

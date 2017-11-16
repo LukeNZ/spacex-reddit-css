@@ -8,6 +8,13 @@ $sidebarHeadingHeight: 40px;
     color:$white;
 }
 
+.side .md {
+    a {
+        color: white !important;
+        text-decoration: underline;
+    }
+}
+
 .side, body.res-nightmode .side {
     background-color: $slate--light;
     background-repeat: no-repeat;

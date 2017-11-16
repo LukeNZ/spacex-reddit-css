@@ -7,7 +7,7 @@ $iconsize: 50px;
 // 4. The Y position of the patch.
 
 // (if X and Y are both missing, a default flair will be used instead.)
-@mixin mission-flair($name, $label, $offsetx: -4, $offsety: -4) {
+@mixin mission-flair($name, $label, $offsetx: 4, $offsety: 4) {
     #{unquote(".linkflair-mission-#{$name}")} {
         &:after { content: $label; background-position: (-$offsetx * $iconsize) (-$offsety * $iconsize); }
     }
@@ -212,14 +212,17 @@ body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:h
     @include mission-flair("eutelsat-abs-2", "Eutelsat/ABS 2", 0, 1);
     @include mission-flair("crs-9", "CRS-9", 1, 1);
     @include mission-flair("jcsat-16", "JCSAT-16", 2, 1);
+    @include mission-flair("iridium-next-mission-1", "Iridium NEXT Mission 1", 3, 1);
+    @include mission-flair("crs-10", "CRS-10", 4, 1);
+    @include mission-flair("echostar-23", "EchoStar-23", 0, 2);
+    @include mission-flair("ses-10", "SES-10", 1, 2);
     // Upcoming
     @include mission-flair("amos-6", "Amos-6");
-    @include mission-flair("iridium-next-flight-1", "Iridium NEXT Flight 1");
-    @include mission-flair("iridium-next-flight-2", "Iridium NEXT Flight 2");
+    @include mission-flair("iridium-next-mission-2", "Iridium NEXT Mission 2");
     @include mission-flair("formosat-5-sherpa", "Formosat-5/SHERPA");
     // Upcoming Dragon
-    @include mission-flair("crs-10", "CRS-10", 4, 5);
     @include mission-flair("crs-11", "CRS-11", 4, 5);
+    @include mission-flair("crs-12", "CRS-12", 4, 5);
 }
 
 @media (max-width: $break-small) {
