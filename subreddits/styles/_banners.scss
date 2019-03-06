@@ -62,26 +62,25 @@
 
 [name=uh][value^="q"]~a:after,
 [name=uh][value^="r"]~a:after,
-[name=uh][value^="s"]~a:after,
-[name=uh][value^="t"]~a:after {
+[name=uh][value^="s"]~a:after {
     background: url('banner7.jpg');
 }
 
+[name=uh][value^="t"]~a:after,
 [name=uh][value^="u"]~a:after,
-[name=uh][value^="v"]~a:after,
-[name=uh][value^="w"]~a:after {
+[name=uh][value^="v"]~a:after {
     background: url('banner8.jpg');
 }
 
+[name=uh][value^="w"]~a:after,
 [name=uh][value^="x"]~a:after,
-[name=uh][value^="y"]~a:after,
-[name=uh][value^="z"]~a:after {
+[name=uh][value^="y"]~a:after {
     background: url('banner9.jpg');
 }
 
+[name=uh][value^="z"]~a:after,
 [name=uh][value^="0"]~a:after,
-[name=uh][value^="1"]~a:after,
-[name=uh][value^="2"]~a:after {
+[name=uh][value^="1"]~a:after {
     background: url('banner10.jpg');
 }
 
@@ -106,6 +105,7 @@
 }
 */
 
+[name=uh][value^="2"]~a:after,
 [name=uh][value^="3"]~a:after,
 [name=uh][value^="4"]~a:after,
 [name=uh][value^="5"]~a:after,
