@@ -1,150 +1,141 @@
 $expando-width: 35px;
 $expando-height: 30px;
-
 // Titles, main content
-body:not(.embed) > .content {
-    @if $subreddit == "spacex" {
-        margin:100px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
-    } @else {
-        margin:50px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
+body:not(.embed)>.content {
+    @if $subreddit=="spacex" {
+        margin: 100px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
+    }
+    @else {
+        margin: 50px ($sidebarWidth + $sidebarPadding * 2) 20px 0;
     }
     background-color:$white;
     position:relative; // To allow inputs to be interacted with due to banners
 }
 
 .link.last-clicked {
-    border:none;
+    border: none;
 }
 
 .link .title {
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
 
 // Individual listings
 #siteTable {
-    padding:0;
+    padding: 0;
     color: $spacex-grey;
-
     .thing {
-        margin:0;
-        padding:6px 0;
-        border-left:5px solid transparent;
-        transition:border-left 0.2s ease 0s;
-        position:relative;
-
+        margin: 0;
+        padding: 6px 0;
+        border-left: 5px solid transparent;
+        transition: border-left 0.2s ease 0s;
+        position: relative;
         &[class*="linkflair-mission"] {
-            padding-right:70px;
+            padding-right: 70px;
         }
-
         &:hover {
-            border-left:5px solid $gold;
+            border-left: 5px solid $gold;
         }
-
         &:not(:first-child) {
-            border-top:1px dashed $spacex-grey--transparent;
+            border-top: 1px dashed $spacex-grey--transparent;
         }
     }
-
     .tagline {
         color: $spacex-grey;
     }
-
     // User options for each listing
     .entry .flat-list.buttons {
         li {
-            padding:3px 0px;
-            margin:0 3px;
-            font-size:10px;
-
+            padding: 3px 0px;
+            margin: 0 3px;
+            font-size: 10px;
             &.first {
-                margin:0 10px 0 0;
-
+                margin: 0 10px 0 0;
                 a {
                     color: $slate--light;
-                    font-weight:bold;
-                    font-size:11px;
-
+                    font-weight: bold;
+                    font-size: 11px;
                     .newComments {
-                        padding:0;
-                        color:orangered; // Default RES color
+                        padding: 0;
+                        color: orangered; // Default RES color
                     }
                 }
             }
-
-            a, > span {
+            a,
+            >span {
                 color: $spacex-grey;
-                padding:2px;
+                padding: 2px;
             }
         }
     }
 }
 
 // Stickied link coloring
-body, body.res-nightmode {
+body,
+body.res-nightmode {
     div.stickied {
-        background-color:$green--transparent !important;
+        background-color: $green--transparent !important;
     }
-    div.stickied a.title, div.stickied span.stickied-tagline {
-        color:$green !important;
+    div.stickied a.title,
+    div.stickied span.stickied-tagline {
+        color: $green !important;
     }
 }
 
 // Thumbnails
 .thumbnail {
-    margin-right:10px;
-
+    margin-right: 10px;
     // Selfposts
     &.self {
-        height: 63px; /*Adjust to your Images height*/
+        height: 63px;
+        /*Adjust to your Images height*/
         background: 0 0 url('swish.png') no-repeat;
     }
-
     // Links where a thumbnail is still being, or could not be resolved
     &.default {
         height: 70px;
         background: 0 0 url('awaitingvehicledownlink.png') no-repeat;
+        background-size: contain;
     }
-
     // Although we do love our SpaceNews Twitter reporters, seeing all of their faces
     // every day on r/SpaceX can get kinda' creepy (especially during tweetstorms).
     // So we hide them behind an alternate image.
     &[href*="https://twitter.com/CHenry_SN"],
     &[href*="https://twitter.com/jeff_foust"] {
-        background:0 0/70px 70px url('spacenewstwitter.png') no-repeat;
-        height:70px;
-
+        background: 0 0/70px 70px url('spacenewstwitter.png') no-repeat;
+        height: 70px;
         img {
-            display:none;
+            display: none;
         }
     }
 }
 
 // Disable the span ranking. It's pointless.
 span.rank {
-    display:none;
+    display: none;
 }
 
 // Voting Arrows
-body, body.res-nightmode {
-    .arrow.up, .arrow.upmod, .arrow.down, .arrow.downmod {
+body,
+body.res-nightmode {
+    .arrow.up,
+    .arrow.upmod,
+    .arrow.down,
+    .arrow.downmod {
         height: 23px !important;
         width: 23px !important;
-        background-size:23px 92px !important;
+        background-size: 23px 92px !important;
         background-image: url('arrow-sprites.png') !important;
     }
-
     .arrow.up {
         background-position: 0px 0px !important;
     }
-
     .arrow.upmod {
         background-position: 0px -46px !important;
     }
-
     .arrow.down {
         background-position: 0px -23px !important;
     }
-
     .arrow.downmod {
         background-position: 0px -69px !important;
     }
@@ -155,68 +146,76 @@ body, body.res-nightmode {
 }
 
 .thing .title {
-    margin:0 0 5px 0;
+    margin: 0 0 5px 0;
 }
 
 // Domain
 .thing .domain {
-    font-size:0;
+    font-size: 0;
     vertical-align: baseline;
-
     a {
-        font-size:10px;
+        font-size: 10px;
         color: $spacex-grey;
-        display:inline;
-
+        display: inline;
         &:before {
-            font-size:10px;
-            content:"from ";
+            font-size: 10px;
+            content: "from ";
         }
-
         // Customized domain tagging
         &[href*="imgur"] {
-            font-size:0;
-            &:before { content:"from imgur"; }
+            font-size: 0;
+            &:before {
+                content: "from imgur";
+            }
         }
-
         &[href*="r/spacex"] {
-            font-size:0;
-            &:before { content:"from r/SpaceX"; }
+            font-size: 0;
+            &:before {
+                content: "from r/SpaceX";
+            }
         }
-
         &[href*="spacenews"] {
-            font-size:0;
-            &:before { content:"from SpaceNews"; }
+            font-size: 0;
+            &:before {
+                content: "from SpaceNews";
+            }
         }
-
         &[href*="twitter"] {
-            font-size:0;
-            &:before { content:"from twitter"; }
+            font-size: 0;
+            &:before {
+                content: "from twitter";
+            }
         }
-
         &[href*="nasa.gov"] {
-            font-size:0;
-            &:before { content:"from NASA"; }
+            font-size: 0;
+            &:before {
+                content: "from NASA";
+            }
         }
-
         &[href*="spacex.com"] {
-            font-size:0;
-            &:before { content:"from SpaceX (Official)"; }
+            font-size: 0;
+            &:before {
+                content: "from SpaceX (Official)";
+            }
         }
     }
 }
 
+
 /* Next/Previous buttons */
+
 div.nav-buttons {
-    padding:10px;
-    text-align:center;
+    padding: 10px;
+    text-align: center;
 }
 
-button, .nextprev a, .next-suggestions a {
+button,
+.nextprev a,
+.next-suggestions a {
     @extend %button;
-    padding:3px 20px 3px 20px !important;
+    padding: 3px 20px 3px 20px !important;
     font-size: 12px;
     font-weight: 300 !important;
-    font-family:$generic;
-    position:relative;
+    font-family: $generic;
+    position: relative;
 }

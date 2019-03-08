@@ -19,13 +19,13 @@
 }
 
 // Element to support background images. Note that we don't individually set a background for
-// [value]s 7 through to 9 as we use the below selector to set a default banner to save ~210 bytes.
+// [value]s 2 through to 9 as we use the below selector to set a default banner to save ~210 bytes.
 [name=uh]~a:after {
     top: 0;
     height: 400px;
     z-index: -2;
     background-size: cover !important;
-    background: url('banner1.jpg');
+    background: url('banner13.jpg');
 }
 
 // "Rotating" banners are based on the first character of the value attribute
@@ -82,33 +82,4 @@
 [name=uh][value^="0"]~a:after,
 [name=uh][value^="1"]~a:after {
     background: url('banner10.jpg');
-}
-
-
-/*
-[name=uh][value^="y"] ~ a:after,
-[name=uh][value^="z"] ~ a:after,
-[name=uh][value^="0"] ~ a:after,
-[name=uh][value^="1"] ~ a:after,
-[name=uh][value^="2"] ~ a:after,
-[name=uh][value^="3"] ~ a:after {
-    background:url('banner11.jpg');
-}
-
-[name=uh][value^="y"] ~ a:after,
-[name=uh][value^="z"] ~ a:after,
-[name=uh][value^="0"] ~ a:after,
-[name=uh][value^="1"] ~ a:after,
-[name=uh][value^="2"] ~ a:after,
-[name=uh][value^="3"] ~ a:after {
-    background:url('banner12.jpg');
-}
-*/
-
-[name=uh][value^="2"]~a:after,
-[name=uh][value^="3"]~a:after,
-[name=uh][value^="4"]~a:after,
-[name=uh][value^="5"]~a:after,
-[name=uh][value^="6"]~a:after {
-    background: url('banner13.jpg');
 }

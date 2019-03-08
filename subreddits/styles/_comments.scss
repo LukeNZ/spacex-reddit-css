@@ -1,19 +1,20 @@
 // Downvote warning
 .commentarea {
     // Arrows
-    .arrow.down, .arrow.downmod {
-        @if $subreddit == "spacex" {
+    .arrow.down,
+    .arrow.downmod {
+        @if $subreddit=="spacex" {
             &:before {
-                visibility:hidden;
-                opacity:0;
-                transition:visibility 0s ease 0s, opacity $fast ease 0s;
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0s ease 0s, opacity $fast ease 0s;
             }
-
-            &:before, &:hover:before {
+            &:before,
+            &:hover:before {
                 position: absolute;
                 display: block;
-                z-index:100;
-                padding:8px 15px;
+                z-index: 100;
+                padding: 8px 15px;
                 content: "Don't downvote because you disagree!";
                 text-align: center;
                 font-size: 12px;
@@ -23,29 +24,25 @@
                 color: $green;
                 background: $white;
                 margin-left: 25px;
-                box-shadow:0 0 10px rgba($spacex-charcoal, 0.5);
+                box-shadow: 0 0 10px rgba($spacex-charcoal, 0.5);
             }
-
             &:hover:before {
-                visibility:visible;
-                opacity:1;
+                visibility: visible;
+                opacity: 1;
             }
         }
     }
-
     // Menu area (sort by top, enable contest mode, sticky this post
-    .menuarea, .menuarea .toggle a {
+    .menuarea,
+    .menuarea .toggle a {
         color: $spacex-grey;
     }
-
     .usertext-edit {
-
         .markdownEditor-wrapper {
-            max-height:100px !important;
+            max-height: 100px !important;
         }
-
         // Low effort comment warning
-        @if $subreddit == "spacex" {
+        @if $subreddit=="spacex" {
             >div:nth-of-type(1):after {
                 content: "Comments that do not contribute to the discussion, are low-effort, consist solely of a meme, or otherwise violate our guidelines will be removed. These comments should be reported.";
                 padding: 5px;
@@ -54,174 +51,172 @@
                 font-size: 11px;
                 font-weight: bold;
                 text-align: center;
-                box-sizing:border-box;
-                color: $green; /* Moderator Green */
+                box-sizing: border-box;
+                color: $green;
+                /* Moderator Green */
             }
         }
     }
-
     // Borders to the left of comments
-    &> div.sitetable > div.thing {
-        padding:5px;
-        margin-bottom:5px;
-        border-left:2px solid $spacex-grey !important;
-
+    &>div.sitetable>div.thing {
+        padding: 5px;
+        margin-bottom: 5px;
+        border-left: 2px solid $spacex-grey !important;
         &:hover {
-            border-left:2px solid $gold !important;
+            border-left: 2px solid $gold !important;
         }
     }
-
-    div.thing > div.child {
-
-        > form {
-            padding-left:15px;
+    div.thing>div.child {
+        >form {
+            padding-left: 15px;
         }
-
         border-left:1px solid $spacex-grey !important;
-
         &:hover {
-            border-left:1px solid $gold !important;
+            border-left: 1px solid $gold !important;
         }
     }
 }
 
 @media (max-width: $break-small) {
     div.commentarea .usertext-edit {
-        > div:nth-of-type(1):after,  textarea, .markdownEditor-wrapper, .bottom-area {
-            width:500px;
+        >div:nth-of-type(1):after,
+        textarea,
+        .markdownEditor-wrapper,
+        .bottom-area {
+            width: 500px;
         }
     }
 }
 
 @media (min-width:$break-small) and (max-width: $break-large) {
     div.commentarea .usertext-edit {
-        > div:nth-of-type(1):after,  textarea, .markdownEditor-wrapper, .bottom-area {
-            width:650px;
+        >div:nth-of-type(1):after,
+        textarea,
+        .markdownEditor-wrapper,
+        .bottom-area {
+            width: 650px;
         }
     }
 }
 
 @media (min-width: $break-large) {
     div.commentarea .usertext-edit {
-        > div:nth-of-type(1):after,  textarea, .markdownEditor-wrapper, .bottom-area {
-            width:800px;
+        >div:nth-of-type(1):after,
+        textarea,
+        .markdownEditor-wrapper,
+        .bottom-area {
+            width: 800px;
         }
     }
 }
 
 .usertext-body {
-    padding:5px 0;
+    padding: 5px 0;
 }
 
 // Nightmode comment styling
 body.res-nightmode .commentarea {
-    background:transparent !important;
+    background: transparent !important;
 }
 
 // Arrows
-body, body.res-nightmode {
-    >.content .midcol, .midcol {
-        min-width:25px !important;
+body,
+body.res-nightmode {
+    >.content .midcol,
+    .midcol {
+        min-width: 25px !important;
     }
 }
 
 // Reddit infobar/welcome graphic, displayed infrequently, but it should look good regardless
 .infobar.welcome {
-    margin-right:10px;
+    margin-right: 10px;
 }
 
 // The little dashed line thing
 .panestack-title {
-    margin:10px;
-    border-bottom:1px dashed $spacex-grey--transparent;
+    margin: 10px;
+    border-bottom: 1px dashed $spacex-grey--transparent;
 }
 
 #REScommentNavToggle {
-    display:none;
+    display: none;
 }
 
 // RES expando button
-.expando-button, .res.res-nightmode .expando-button {
-    margin:0 5px 0 0 !important;
-    width:30px !important;
-    height:30px !important;
-    max-width:30px !important;
-    max-height:30px !important;
-    background:transparent;
-    cursor:pointer;
-
-    &.collapsed, &.expanded {
-        background-image:url('sprites.png') !important;
-        background-size:30px 330px;
+.expando-button,
+.res.res-nightmode .expando-button {
+    margin: 0 5px 0 0 !important;
+    width: 30px !important;
+    height: 30px !important;
+    max-width: 30px !important;
+    max-height: 30px !important;
+    background: transparent;
+    cursor: pointer;
+    &.collapsed,
+    &.expanded {
+        background-image: url('sprites.png') !important;
+        background-size: 30px 330px;
     }
-
     &.collapsed {
-        background-position:0 -210px !important;
-        transition:transform ease $fast;
-
+        background-position: 0 -210px !important;
+        transition: transform ease $fast;
         &:hover {
-            background-position:0 -240px !important;
+            background-position: 0 -240px !important;
         }
     }
-
     &.expanded {
-        background-position:0 -210px !important;
-        transform:rotate(45deg) scale(0.9999);
-        transition:transform ease $fast;
-
+        background-position: 0 -210px !important;
+        transform: rotate(45deg) scale(0.9999);
+        transition: transform ease $fast;
         &:hover {
-            background-position:0 -240px !important;
-            transform:rotate(45deg) scale(0.9999);
+            background-position: 0 -240px !important;
+            transform: rotate(45deg) scale(0.9999);
         }
     }
 }
 
 // Selfpost usertexts
 .link .usertext .md {
-    background:$white;
+    background: $white;
     border: 1px solid $gold !important;
-    border-radius:0px;
+    border-radius: 0px;
 }
 
 // No comments!
 #noresults {
-    margin:0;
-    padding:10px 0 20px;
-    font-size:0;
-    text-align:center;
-
+    margin: 0;
+    padding: 10px 0 20px;
+    font-size: 0;
+    text-align: center;
     &:before {
-        font-size:16px;
+        font-size: 16px;
         color: $spacex-grey;
-        display:inline;
-        content:"No comments. Start contributing!";
-        position:relative;
-        font-family:$lucidagrande;
-        font-weight:300;
-        text-align:center;
+        display: inline;
+        content: "No comments. Start contributing!";
+        position: relative;
+        font-family: $lucidagrande;
+        font-weight: 300;
+        text-align: center;
     }
 }
 
 textarea {
-    border:1px solid $spacex-grey;
-    transition:border 0.2s ease 0s;
-
+    border: 1px solid $spacex-grey;
+    transition: border 0.2s ease 0s;
     &:focus {
-        border:1px solid $gold;
+        border: 1px solid $gold;
     }
 }
 
 .comment {
-
     .entry .tagline {
-        font-family:$lucidagrande;
-        font-size:11px;
+        font-family: $lucidagrande;
+        font-size: 11px;
         color: $spacex-grey;
     }
-
     .score {
         color: $slate--light;
-
         &:before {
             content: "• ";
             margin: 0 2px;
@@ -229,28 +224,23 @@ textarea {
             line-height: 14px;
         }
     }
-
     // Make comment reply button highlighted
     .flat-list.buttons {
         a:not(.pretty-button) {
-            font-size:11px;
-            font-family:$lucidagrande;
+            font-size: 11px;
+            font-family: $lucidagrande;
             color: $spacex-grey !important;
         }
-
         .reply-button a {
             color: $slate--light !important;
         }
     }
-
     // Mark removed comments
     .entry.tb-comment-spam {
-        background:transparent !important;
-        opacity:0.5;
-
+        background: transparent !important;
+        opacity: 0.5;
         &:hover {
-            opacity:1;
+            opacity: 1;
         }
     }
 }
-
