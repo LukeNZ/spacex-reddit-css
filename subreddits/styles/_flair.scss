@@ -1,62 +1,85 @@
 $iconsize: 50px;
-
 // arguments:
 // 1. flair css class, minus "mission-"
 // 2. The name of the mission. This will be displayed on the right.
 // 3. The X position of the patch.
 // 4. The Y position of the patch.
-
 // (if X and Y are both missing, a default flair will be used instead.)
 @mixin mission-flair($name, $label, $offsetx: 4, $offsety: 4) {
     #{unquote(".linkflair-mission-#{$name}")} {
-        &:after { content: $label; background-position: (-$offsetx * $iconsize) (-$offsety * $iconsize); }
+ &:after {
+        content: $label;
+        background-position: (-$offsetx * $iconsize) (-$offsety * $iconsize);
     }
 }
 
+
+}
 // ------------- LINK FLAIR ---------------
-.linkflairlabel, .flair { max-width: 100%; }
-
-.linkflairlabel {
-    vertical-align:middle;
-    height:18px;
-    line-height:19px;
-    font-family:$lucidagrande;
-    font-weight:bold;
-    padding:0 8px 0 24px;
-    border-radius:2px;
-    border:none;
-    border-bottom:3px solid $webcastblue--dark !important;
-    background-color:$webcastblue !important;
-    color:$white !important;
-    background-repeat:no-repeat;
-    background-image:url('flair-sprites.png');
-    background-size:24px 85px;
-    text-shadow:0 0 $spacex-grey;
-    position:relative;
-    display:none; // Display none by default, then enable for specific flair types
+.linkflairlabel,
+.flair {
+    max-width: 100%;
 }
-
+.linkflairlabel {
+    vertical-align: middle;
+    height: 18px;
+    line-height: 19px;
+    font-family: $lucidagrande;
+    font-weight: bold;
+    padding: 0 8px 0 24px;
+    border-radius: 2px;
+    border: none;
+    border-bottom: 3px solid $webcastblue--dark !important;
+    background-color: $webcastblue !important;
+    color: $white !important;
+    background-repeat: no-repeat;
+    background-image: url('flair-sprites.png');
+    background-size: 24px 85px;
+    text-shadow: 0 0 $spacex-grey;
+    position: relative;
+    display: none; // Display none by default, then enable for specific flair types
+}
 // Linkflair which requires a flair to be present
-.linkflair-liveupdates, .linkflair-official, .linkflair-community, .linkflair-directlink, .linkflair-warning,
-.linkflair-happeningnow, .linkflair-other, .linkflair-sourcesrequired, .link-flair-modpost {
+.linkflair-liveupdates,
+.linkflair-official,
+.linkflair-community,
+.linkflair-directlink,
+.linkflair-warning,
+.linkflair-happeningnow,
+.linkflair-other,
+.linkflair-sourcesrequired,
+.link-flair-modpost {
     .linkflairlabel {
-        display:inline-block;
+        display: inline-block;
     }
 }
-
 // Linkflair which requires an icon
-.linkflair-liveupdates .linkflairlabel, .flairselector .linkflair-liveupdates .linkflairlabel {    background-position:4px 1px; }
-.linkflair-official .linkflairlabel, .flairselector .linkflair-official .linkflairlabel {    background-position:2px -16px; }
-.linkflair-community .linkflairlabel, .flairselector .linkflair-community .linkflairlabel {    background-position:4px -33px;  }
-.linkflair-directlink .linkflairlabel, .flairselector .linkflair-directlink .linkflairlabel {    background-position:4px -50px; }
-.linkflair-warning .linkflairlabel, .flairselector .linkflair-warning .linkflairlabel {    background-position:4px -67px; }
-
+.linkflair-liveupdates .linkflairlabel,
+.flairselector .linkflair-liveupdates .linkflairlabel {
+    background-position: 4px 1px;
+}
+.linkflair-official .linkflairlabel,
+.flairselector .linkflair-official .linkflairlabel {
+    background-position: 2px -16px;
+}
+.linkflair-community .linkflairlabel,
+.flairselector .linkflair-community .linkflairlabel {
+    background-position: 4px -33px;
+}
+.linkflair-directlink .linkflairlabel,
+.flairselector .linkflair-directlink .linkflairlabel {
+    background-position: 4px -50px;
+}
+.linkflair-warning .linkflairlabel,
+.flairselector .linkflair-warning .linkflairlabel {
+    background-position: 4px -67px;
+}
 // 'Happening now' linkflair with red pulsing dot
-.linkflair-happeningnow, .flairselector .linkflair-happeningnow {
+.linkflair-happeningnow,
+.flairselector .linkflair-happeningnow {
     .linkflairlabel {
         background-image: none;
         overflow: visible;
-
         &:before {
             content: "";
             height: 10px;
@@ -69,181 +92,430 @@ $iconsize: 50px;
             top: 5px;
         }
     }
-
+    
     .title {
-        overflow:visible;
+        overflow: visible;
     }
 }
-
 @keyframes live {
-    0%{
-        transform:scale(1);
-        opacity:1;
+    0% {
+        transform: scale(1);
+        opacity: 1;
     }
-
-    25%{
-        transform:scale(1);
-        opacity:1;
+    
+    25% {
+        transform: scale(1);
+        opacity: 1;
     }
-
-    50%{
-        transform:scale(1);
-        opacity:0.9;
+    
+    50% {
+        transform: scale(1);
+        opacity: 0.9;
     }
-
-    100%{
-        transform:scale(3);
-        opacity:0.0;
+    
+    100% {
+        transform: scale(3);
+        opacity: 0.0;
     }
 }
-
 // Other types of linkflair which don't require icons, or are otherwise different
-.linkflair-other .linkflairlabel, .linkflair-sourcesrequired .linkflairlabel, .linkflair-modpost .linkflairlabel
-.flairselector .linkflair-other .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel, .flairselector .linkflair-modpost.linkflairlabel  {
-    background-image:none;
-    padding:0 8px;
+.linkflair-other .linkflairlabel,
+.linkflair-sourcesrequired .linkflairlabel,
+.linkflair-modpost .linkflairlabel .flairselector .linkflair-other .linkflairlabel,
+.flairselector .linkflair-sourcesrequired .linkflairlabel,
+.flairselector .linkflair-modpost.linkflairlabel {
+    background-image: none;
+    padding: 0 8px;
 }
-
-.linkflair-sourcesrequired .linkflairlabel, .flairselector .linkflair-sourcesrequired .linkflairlabel {
+.linkflair-sourcesrequired .linkflairlabel,
+.flairselector .linkflair-sourcesrequired .linkflairlabel {
     background-color: $gold !important;
     border-color: $gold--dark !important;
-    text-shadow:none;
+    text-shadow: none;
 }
-
-.linkflair-modpost .linkflairlabel, .flairselector .linkflair-modpost .linkflairlabel {
+.linkflair-modpost .linkflairlabel,
+.flairselector .linkflair-modpost .linkflairlabel {
     background-color: $green !important;
     border-color: $green--dark !important;
-    text-shadow:none;
+    text-shadow: none;
 }
-
 // Make the title vertically aligned centrally with the flair
 p.title a.title {
-    vertical-align:middle;
+    vertical-align: middle;
 }
-
 // ------------- USER FLAIR ---------------
-.link .flair, .comment .flair {
+.link .flair,
+.comment .flair {
     font-size: 10px;
     margin-top: -1px;
-    font-family:$lucidagrande;
+    font-family: $lucidagrande;
     font-weight: bold;
     padding: 0px 5px;
-    border:none;
-    border-bottom:2px solid rgba($slate--light, 0.5);
+    border: none;
+    border-bottom: 2px solid rgba($slate--light, 0.5);
     border-radius: 2px;
     color: $white;
     height: 14px;
     line-height: 15px;
     background-color: $spacex-grey--transparent;
 }
-
 // ------------- OP & MOD HIGHLIGHTING ---------------
-body .thing .tagline .author.submitter, body .thing .tagline .author.moderator {
+body .thing .tagline .author.submitter,
+body .thing .tagline .author.moderator {
     color: $white !important;
     font-weight: bold;
     padding: 1px 5px;
-    border-radius:0;
+    border-radius: 0;
 }
-
-body .thing .tagline .author.submitter, body .thing .tagline .author.submitter:hover {
+body .thing .tagline .author.submitter,
+body .thing .tagline .author.submitter:hover {
     background-color: $webcastblue !important;
 }
-
-body .thing .tagline .author.moderator, body .thing .tagline .author.moderator:hover {
+body .thing .tagline .author.moderator,
+body .thing .tagline .author.moderator:hover {
     background-color: $green !important;
 }
-
 // ------------- MISSION FLAIR ---------------
 .linklisting {
     // Global misison flair styles
     [class*="linkflair-mission"] {
         &:after {
-            width:$iconsize;
-            height:$iconsize;
-            top:10px;
-            right:0;
-            position:absolute;
-            background-size:250px 250px;
-            text-indent:-100px;
-            content:"";
+            width: $iconsize;
+            height: $iconsize;
+            top: 10px;
+            right: 0;
+            position: absolute;
+            background-size: 250px 250px;
+            text-indent: -100px;
+            content: "";
             line-height: 110px;
             text-align: right;
             margin-right: 10px;
-            background-position:-200px -200px;
+            background-position: -200px -200px;
         }
     }
-
+    
     // Specify the style sheet to be used
-    [class*="sprite-1"]:after { background-image:url('mission-sprites.png'); }
-    [class*="sprite-2"]:after { background-image:url('mission-sprites-2.png'); }
-
+    [class*="sprite-1"]:after {
+        background-image: url('mission-sprites.png');
+    }
+    
+    [class*="sprite-2"]:after {
+        background-image: url('mission-sprites-2.png');
+    }
+    
+    [class*="sprite-3"]:after {
+        background-image: url('mission-sprites-3.png');
+    }
+    
     // Spritesheet 1
-    @include mission-flair("f1f1", "Falcon 1 Flight 1", 0, 0);
-    @include mission-flair("f1f2", "Falcon 1 Flight 2", 1, 0);
-    @include mission-flair("f1f3", "Falcon 1 Flight 3", 2, 0);
-    @include mission-flair("f1f4", "RatSat", 3, 0);
-    @include mission-flair("f1f5", "RazakSAT", 4, 0);
-    @include mission-flair("dsqu", "DSQU", 0, 1);
-    @include mission-flair("cots-1", "COTS-1", 1, 1);
-    @include mission-flair("cots-2", "COTS-2+", 2, 1);
-    @include mission-flair("crs-1", "CRS-1", 3, 1);
-    @include mission-flair("crs-2", "CRS-2", 4, 1);
-    @include mission-flair("cassiope", "CASSIOPE", 0, 2);
-    @include mission-flair("ses-8", "SES-8", 1, 2);
-    @include mission-flair("thaicom-6", "Thaicom 6", 2, 2);
-    @include mission-flair("crs-3", "CRS-3", 3, 2);
-    @include mission-flair("og2-1", "Orbcomm OG2 Launch 1", 4, 2);
-    @include mission-flair("asiasat-8", "AsiaSat 8", 0, 3);
-    @include mission-flair("asiasat-6", "AsiaSat 6", 1, 3);
-    @include mission-flair("crs-4", "CRS-4", 2, 3);
-    @include mission-flair("crs-5", "CRS-5", 3, 3);
-    @include mission-flair("dscovr", "DSCOVR", 4, 3);
-    @include mission-flair("eutelsat-abs-1", "Eutelsat/ABS 1", 0, 4);
-    @include mission-flair("crs-6", "CRS-6", 1, 4);
-    @include mission-flair("crs-7", "CRS-7", 2, 4);
-    @include mission-flair("turkmenalem", "TurkmenAlem 52E", 3, 4);
-    @include mission-flair("og2-2", "Orbcomm OG2 Launch 2", 4, 4);
+    @include mission-flair("f1f1",
+    "Falcon 1 Flight 1",
+    0,
+    0);
+    @include mission-flair("f1f2",
+    "Falcon 1 Flight 2",
+    1,
+    0);
+    @include mission-flair("f1f3",
+    "Falcon 1 Flight 3",
+    2,
+    0);
+    @include mission-flair("f1f4",
+    "RatSat",
+    3,
+    0);
+    @include mission-flair("f1f5",
+    "RazakSAT",
+    4,
+    0);
+    @include mission-flair("dsqu",
+    "DSQU",
+    0,
+    1);
+    @include mission-flair("cots-1",
+    "COTS-1",
+    1,
+    1);
+    @include mission-flair("cots-2",
+    "COTS-2+",
+    2,
+    1);
+    @include mission-flair("crs-1",
+    "CRS-1",
+    3,
+    1);
+    @include mission-flair("crs-2",
+    "CRS-2",
+    4,
+    1);
+    @include mission-flair("cassiope",
+    "CASSIOPE",
+    0,
+    2);
+    @include mission-flair("ses-8",
+    "SES-8",
+    1,
+    2);
+    @include mission-flair("thaicom-6",
+    "Thaicom 6",
+    2,
+    2);
+    @include mission-flair("crs-3",
+    "CRS-3",
+    3,
+    2);
+    @include mission-flair("og2-1",
+    "Orbcomm OG2 Launch 1",
+    4,
+    2);
+    @include mission-flair("asiasat-8",
+    "AsiaSat 8",
+    0,
+    3);
+    @include mission-flair("asiasat-6",
+    "AsiaSat 6",
+    1,
+    3);
+    @include mission-flair("crs-4",
+    "CRS-4",
+    2,
+    3);
+    @include mission-flair("crs-5",
+    "CRS-5",
+    3,
+    3);
+    @include mission-flair("dscovr",
+    "DSCOVR",
+    4,
+    3);
+    @include mission-flair("eutelsat-abs-1",
+    "Eutelsat/ABS 1",
+    0,
+    4);
+    @include mission-flair("crs-6",
+    "CRS-6",
+    1,
+    4);
+    @include mission-flair("crs-7",
+    "CRS-7",
+    2,
+    4);
+    @include mission-flair("turkmenalem",
+    "TurkmenAlem 52E",
+    3,
+    4);
+    @include mission-flair("og2-2",
+    "Orbcomm OG2 Launch 2",
+    4,
+    4);
     // Spritesheet 2
-    @include mission-flair("jason-3", "Jason-3", 0, 0);
-    @include mission-flair("ses-9", "SES-9", 1, 0);
-    @include mission-flair("crs-8", "CRS-8", 2, 0);
-    @include mission-flair("jcsat-14", "JCSAT-14", 3, 0);
-    @include mission-flair("thaicom-8", "Thaicom 8", 4, 0);
-    @include mission-flair("eutelsat-abs-2", "Eutelsat/ABS 2", 0, 1);
-    @include mission-flair("crs-9", "CRS-9", 1, 1);
-    @include mission-flair("jcsat-16", "JCSAT-16", 2, 1);
-    @include mission-flair("iridium-next-mission-1", "Iridium NEXT Mission 1", 3, 1);
-    @include mission-flair("crs-10", "CRS-10", 4, 1);
-    @include mission-flair("echostar-23", "EchoStar-23", 0, 2);
-    @include mission-flair("ses-10", "SES-10", 1, 2);
+    @include mission-flair("jason-3",
+    "Jason-3",
+    0,
+    0);
+    @include mission-flair("ses-9",
+    "SES-9",
+    1,
+    0);
+    @include mission-flair("crs-8",
+    "CRS-8",
+    2,
+    0);
+    @include mission-flair("jcsat-14",
+    "JCSAT-14",
+    3,
+    0);
+    @include mission-flair("thaicom-8",
+    "Thaicom 8",
+    4,
+    0);
+    @include mission-flair("eutelsat-abs-2",
+    "Eutelsat/ABS 2",
+    0,
+    1);
+    @include mission-flair("crs-9",
+    "CRS-9",
+    1,
+    1);
+    @include mission-flair("jcsat-16",
+    "JCSAT-16",
+    2,
+    1);
+    @include mission-flair("iridium-next-mission-1",
+    "Iridium NEXT Mission 1",
+    3,
+    1);
+    @include mission-flair("crs-10",
+    "CRS-10",
+    4,
+    1);
+    @include mission-flair("echostar-23",
+    "EchoStar-23",
+    0,
+    2);
+    @include mission-flair("ses-10",
+    "SES-10",
+    1,
+    2);
+    @include mission-flair("amos-6",
+    "Amos-6",
+    4,
+    4);
+    @include mission-flair("iridium-next-mission-2",
+    "Iridium NEXT Mission 2",
+    4,
+    4);
+    @include mission-flair("formosat-5-sherpa",
+    "Formosat-5/SHERPA");
+    @include mission-flair("crs-11",
+    "CRS-11",
+    2,
+    2);
+    @include mission-flair("crs-12",
+    "CRS-12",
+    4,
+    4);
+    @include mission-flair("iridium-3",
+    "Iridium NEXT Mission 3",
+    3,
+    2);
+    @include mission-flair("ses-11",
+    "SES-11",
+    4,
+    2);
+    @include mission-flair("koreasat-5a",
+    "Koreasat-5A",
+    0,
+    3);
+    @include mission-flair("zuma",
+    "ZUMA",
+    1,
+    3);
+    @include mission-flair("crs-13",
+    "CRS-13",
+    2,
+    3);
+    @include mission-flair("iridium-4",
+    "Iridium NEXT Mission 4",
+    3,
+    3);
+    @include mission-flair("fh-demo",
+    "Falcon Heavy Demo",
+    4,
+    3);
+    @include mission-flair("iridium-5",
+    "Iridium NEXT Mission 5",
+    0,
+    4);
+    @include mission-flair("crs-14",
+    "CRS-14",
+    1,
+    4);
+    @include mission-flair("tess",
+    "TESS",
+    2,
+    4);
+    // Spritesheet 3
+    @include mission-flair("bangabandhu-1",
+    "Bangabandhu-1",
+    0,
+    0);
+    @include mission-flair("iridium-6",
+    "Iridium NEXT Mission 6",
+    1,
+    0);
+    @include mission-flair("ses-12",
+    "SES-12",
+    2,
+    0);
+    @include mission-flair("crs-15",
+    "CRS-15",
+    3,
+    0);
+    @include mission-flair("iridium-7",
+    "Iridium NEXT Mission 7",
+    4,
+    0);
+    @include mission-flair("telstar-19v",
+    "Telstar 19V",
+    0,
+    1);
+    @include mission-flair("merah-putih",
+    "Merah Putih",
+    1,
+    1);
+    @include mission-flair("telstar-18v",
+    "Telstar 18V",
+    2,
+    1);
+    @include mission-flair("saocom-1a",
+    "SAOCOM 1A",
+    3,
+    1);
+    @include mission-flair("eshail2",
+    "Es'hail 2",
+    4,
+    1);
+    @include mission-flair("sso-a",
+    "SSO-A",
+    0,
+    2);
+    @include mission-flair("crs-16",
+    "CRS-16",
+    1,
+    2);
+    @include mission-flair("gps-iii-2",
+    "GPS III-2",
+    2,
+    2);
+    @include mission-flair("iridium-8",
+    "Iridium NEXT Mission 8",
+    3,
+    2);
+    @include mission-flair("cctcap-dm-1",
+    "CCtCap DM-1",
+    4,
+    2);
     // Upcoming
-    @include mission-flair("amos-6", "Amos-6");
-    @include mission-flair("iridium-next-mission-2", "Iridium NEXT Mission 2");
-    @include mission-flair("formosat-5-sherpa", "Formosat-5/SHERPA");
-    // Upcoming Dragon
-    @include mission-flair("crs-11", "CRS-11", 4, 5);
-    @include mission-flair("crs-12", "CRS-12", 4, 5);
+    @include mission-flair("nusantara-satu",
+    "Nusantara Satu",
+    0,
+    3);
+    @include mission-flair("crs-17",
+    "CRS-17",
+    3,
+    4);
+    @include mission-flair("arabsat-6a",
+    "Arabsat-6A",
+    4,
+    4);
+    @include mission-flair("radarsat-cm",
+    "Radarsat CM",
+    4,
+    4);
+    @include mission-flair("crew-dragon-ifa",
+    "Crew Dragon IFA",
+    3,
+    4);
 }
-
 @media (max-width: $break-small) {
     [class*="linkflair-mission"] &:after {
-        display:none;
+        display: none;
     }
 }
-
 // Flair selector
 .flairselector {
     [class*="linkflair-mission"] {
         span {
-            display:inline-block !important;
+            display: inline-block !important;
         }
-
         &:after {
-            display:none !important;
+            display: none !important;
         }
     }
-
+    
     a.title {
-        display:none;
+        display: none;
     }
 }

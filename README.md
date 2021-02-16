@@ -8,6 +8,9 @@ This repository holds all the necessary assets, styles, and buildsteps necessary
 
 Edit the styles you wish, and then run either the `generate-spacex` or `generated-spacexlounge` task to generate a build for that subreddit. The output will appear as either `spacex.css` or `spacexlounge.css` in the `/build` directory.
 
+* `npm install`
+* `gulp generate-spacex`
+
 ## Bugs
 
 If you find a bug with the subreddit design at reddit.com/r/spacex, feel free to either message the moderators there or log an issue here on the repository. 

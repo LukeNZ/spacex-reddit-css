@@ -1,57 +1,50 @@
 .side .usertext-body {
     // Table formatting for sidebar
-    table, thead {
+    table,
+    thead {
         border: 2px solid $spacex-charcoal;
-        margin:0 auto;
+        margin: 0 auto;
     }
-
     table {
-        margin-bottom:2px;
-
+        margin-bottom: 2px;
         em {
             display: block;
             font-size: smaller;
-            color:$gold;
-            padding-top:3px;
+            color: $gold;
+            padding-top: 3px;
         }
-
         // Display recycling symbol larger
-        tr > td::nth-child(2) em sup {
+        tr>td::nth-child(2) em sup {
             font-size: 3em;
             font-style: normal;
             vertical-align: top;
+            float: right;
         }
     }
-
     thead {
-        background:rgba($spacex-grey, 0.3);
-        line-height:2;
+        background: rgba($spacex-grey, 0.3);
+        line-height: 2;
     }
-
     table tr:nth-child(2n) {
-        background:rgba($spacex-grey, 0.2);
+        background: rgba($spacex-grey, 0.2);
     }
-
-    th, td {
-        border:none;
-        padding:8px 5px;
-
+    th,
+    td {
+        border: none;
+        padding: 8px 5px;
         &:first-child {
-            width:68px;
+            width: 68px;
         }
     }
-
     // Links
     a {
-        color:$webcastblue--light;
-        transition:color ease $fast;
-
+        color: $webcastblue--light;
+        transition: color ease $fast;
         &:hover {
-            color:lighten($webcastblue--light, 15%);
+            color: lighten($webcastblue--light, 15%);
         }
     }
-
     del {
-        color:$red;
+        color: $red;
     }
 }

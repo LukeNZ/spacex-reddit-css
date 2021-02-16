@@ -1,130 +1,149 @@
 .wiki-page {
     .wiki-page-content {
-        margin:10px !important;
-
-        h1, h2, h3, h4, h5, h6 {
-            padding-top:20px;
+        margin: 10px !important;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            padding-top: 20px;
         }
     }
 }
 
 // FAQ table
 [id$="faqtable"] {
-    display:none;
-
-    + table {
-        border:none;
-        margin:0 auto;
-
-        th, td {
-            width:250px;
-            border:none;
+    display: none;
+    +table {
+        border: none;
+        margin: 0 auto;
+        th,
+        td {
+            width: 250px;
+            border: none;
         }
-
-        th, tr:nth-child(even) td {
-            height:100px;
-
+        th,
+        tr:nth-child(even) td {
+            height: 100px;
             a {
-                display:block;
-                width:100px;
-                height:100px;
-                margin:0 auto;
-                background-size:400px 300px;
-                background-image:url("wikisprites.png") no-repeat;
-                overflow:hidden;
+                display: block;
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+                background-size: 400px 300px;
+                background-image: url("wikisprites.png") no-repeat;
+                overflow: hidden;
             }
         }
-
         tr:nth-child(odd) td {
-            font-size:18px;
-            text-align:center;
-            padding-bottom:20px;
-
-             a {
-                 color: $spacex-charcoal;
-                 border-bottom:2px solid transparent;
-                 transition:border-bottom 0.2s;
-                 padding-bottom:2px;
-                 background:none;
-
-                 &:hover {
-                     border-bottom:2px solid $gold;
-                 }
-             }
+            font-size: 18px;
+            text-align: center;
+            padding-bottom: 20px;
+            a {
+                color: $spacex-charcoal;
+                border-bottom: 2px solid transparent;
+                transition: border-bottom 0.2s;
+                padding-bottom: 2px;
+                background: none;
+                &:hover {
+                    border-bottom: 2px solid $gold;
+                }
+            }
         }
-
-        [href$="Watching"] { background-position:0 0; }
-        [href$="launchprep"] { background-position:-100px 0; }
-        [href$="Falcon"] { background-position:-200px 0; }
-        [href$="Dragon"] { background-position:-300px 0; }
-        [href$="reusability"] { background-position:0 -100px; }
-        [href$="ElonMusk"] { background-position:-100px -100px; }
-        [href$="company"] { background-position:-200px -100px }
-        [href$="workingat"] { background-position:-300px -100px; }
-        [href$="orbits"] { background-position:0 -200px; }
-        [href$="Mars"] { background-position:-100px -200px; }
-        [href$="researchanddev"] { background-position:-200px -200px; }
-        [href$="nasa"] { background-position:-300px -200px; }
+        [href$="Watching"] {
+            background-position: 0 0;
+        }
+        [href$="launchprep"] {
+            background-position: -100px 0;
+        }
+        [href$="Falcon"] {
+            background-position: -200px 0;
+        }
+        [href$="Dragon"] {
+            background-position: -300px 0;
+        }
+        tr:nth-child(even) [href$="reusability"] {
+            background-position: 0 -100px;
+        }
+        tr:nth-child(even) [href$="ElonMusk"] {
+            background-position: -100px -100px;
+        }
+        tr:nth-child(even) [href$="company"] {
+            background-position: -200px -100px
+        }
+        tr:nth-child(even) [href$="workingat"] {
+            background-position: -300px -100px;
+        }
+        tr:nth-child(even) [href$="orbits"] {
+            background-position: 0 -200px;
+        }
+        tr:nth-child(even) [href$="Mars"] {
+            background-position: -100px -200px;
+        }
+        tr:nth-child(even) [href$="researchanddev"] {
+            background-position: -200px -200px;
+        }
+        tr:nth-child(even) [href$="nasa"] {
+            background-position: -300px -200px;
+        }
     }
 }
 
 // Timeline coloring
 .wiki-page-content .md {
     a[href$="#green"] {
-        color:$green;
-        cursor:default;
+        color: $green;
+        cursor: default;
     }
-
     a[href$="#amber"] {
-        color:$gold;
-        cursor:default;
+        color: $gold;
+        cursor: default;
     }
-
     a[href$="#red"] {
-        color:$red;
-        cursor:default;
+        color: $red;
+        cursor: default;
     }
 }
 
 // Wiki + FAQ Index
 .md.wiki div.toc {
     // Generic index list styling
-    + ul, + ul li, + ul li ul {
+    +ul,
+    +ul li,
+    +ul li ul {
         margin: 0;
-        padding:0;
+        padding: 0;
         list-style: none;
     }
-
     // Generic index list item styling
-    + ul li a {
+    +ul li a {
         padding: 6px 10px;
         display: block;
         width: 300px;
-        background:rgba($spacex-grey, 0.25);
+        background: rgba($spacex-grey, 0.25);
         font-family: sans-serif;
         font-size: 12px;
         font-weight: bold;
         color: $slate;
-
         &:hover {
             background: $white;
             color: $blue;
         }
-
         // Disable sublist by default
-         + ul {
-             display:none;
-         }
-
+        +ul {
+            display: none;
+        }
         // Show sublist when hovering enabled
-        &:hover + ul, + ul:hover {
+        &:hover+ul,
+        +ul:hover {
             display: block;
         }
     }
-
     // Ensure that the main index heading is different
     // and stays similar during hovering
-    + ul > li > a, + ul > li > a:hover {
+    +ul>li>a,
+    +ul>li>a:hover {
         font-size: 15px;
         background: $spacex-grey--transparent;
         color: $slate;
